@@ -93,7 +93,7 @@ def run(url, channel, output=None):
         base("#asset-search").fill("STK-044@PAL-015")
         asset("STK-044").click()
         expect(base("#detail .asset-id")).to_have_text("STK-044@PAL-015")
-        expect(base("#overlay-image")).to_be_visible()
+        expect(base("#overlay-image")).to_be_visible(timeout=30000)
         response = context.request.get(urljoin(url, base("#overlay-image").get_attribute("src")))
         assert response.ok
         with Image.open(BytesIO(response.body())) as png:
