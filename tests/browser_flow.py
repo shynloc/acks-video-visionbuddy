@@ -34,7 +34,7 @@ def run(base, channel=None, assets=201):
 
         page.locator("#nav-visual").click()
         frame = page.frame_locator("#visual-frame")
-        expect(frame.locator("#grid")).to_be_visible()
+        expect(frame.locator("#grid .entry").first).to_be_visible(timeout=30000)
         frame.locator("#asset-search").fill("OBJ-017@PAL-013")
         frame.locator('[data-asset-id="OBJ-017"]').click()
         expect(frame.locator("#detail code")).to_have_text("OBJ-017@PAL-013")
