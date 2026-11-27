@@ -85,6 +85,26 @@ def fetch_release(tag, release, stage):
     return path
 
 
+def planned_release(tag, studio):
+    url = f"https://github.com/{OWNER}/{LIBRARY}/releases/download/{tag}/manifest.json"
+    raw = read(url, 8 * 1024**2)
+    manifest = json.loads(raw)
+    if manifest["libraryRelease"] != tag[1:]:
+        raise ValueError("Public manifest does not match the release")
+    minimum = manifest["minimumWorkbench"]
+    if version(studio[1:]) < version(minimum):
+        print(f"Waiting for Talking Head Studio {minimum}", flush=True)
+        return None
+    url = (f"https://raw.githubusercontent.com/{OWNER}/{STUDIO}/{studio}"
+           "/assets/workbench/motion/visionbuddy-pair.json")
+    studio_pair = json.loads(read(url, 32768))
+    if (studio_pair["recommendedRelease"] != tag[1:]
+        or manifest["rendererVersion"] not in studio_pair["rendererVersions"]):
+        print(f"Waiting for a workbench release paired with VisionBuddy {tag[1:]}", flush=True)
+        return None
+    return raw
+
+
 def unpack_verified(archive, tag, target):
     with ZipFile(archive) as bundle:
         infos = bundle.infolist()
@@ -187,13 +207,16 @@ def apply(base, port):
     studio_archive = f"talking-head-studio-{studio}.zip"
     if not any(item["name"] == studio_archive for item in studio_metadata["assets"]):
         raise ValueError("Published workbench lacks its downloadable Skill ZIP")
+    public_manifest = planned_release(tag, studio)
+    if public_manifest is None:
+        return
     with tempfile.TemporaryDirectory(prefix=".incoming-", dir=revisions) as temp:
         stage = Path(temp)
         archive = fetch_release(tag, metadata, stage)
         extracted = stage / "application"
-        pair = unpack_verified(archive, tag, extracted)
-        if version(studio[1:]) < version(pair["minimumWorkbench"]):
-            raise ValueError(f"Waiting for Talking Head Studio {pair['minimumWorkbench']}")
+        unpack_verified(archive, tag, extracted)
+        if (extracted / "manifest.json").read_bytes() != public_manifest:
+            raise ValueError("Published manifest differs from the one shipped in the ZIP")
         smoke(extracted, base / "venv/bin/python", release)
         if target.exists():
             # A failed attempt may have left the staged revision. Compare all content.
