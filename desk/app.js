@@ -527,6 +527,7 @@ $('relink-video').onclick = () => {
   if (selected) selectRow(selected)
 }
 $('intake-form').onsubmit = submitPlan
+$('plan-button').disabled = false
 $('show-plain').onchange = lineList
 $('play').onclick = playSample
 $('adopt').onclick = () => {

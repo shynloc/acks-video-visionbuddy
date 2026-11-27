@@ -31,6 +31,7 @@ def same_site(handler, write=False):
 def page():
     html = (DESK / "index.html").read_text(encoding="utf8")
     html = html.replace("<body>", '<body data-online="true">', 1)
+    html = html.replace('id="plan-button" type="submit"', 'id="plan-button" type="submit" disabled', 1)
     html = html.replace('<a href="/my-assets/">我的素材</a>', "", 1)
     html = html.replace("从原句找到值得配图的地方，试看后把采用的画面一起带走。",
                         "稿件和字幕由网站生成画面建议。配套原片在浏览器中播放。", 1)
