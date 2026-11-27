@@ -4,11 +4,16 @@ const $ = id => document.getElementById(id)
 const api = '/api/personal/'
 const form = $('asset-form')
 const frame = $('personal-proof')
+const browserMode = document.body.dataset.browserAssets === 'true'
+const browserLibrary = browserMode ? window.VisionBuddyBrowserAssets : null
 const names = {png:'PNG',svg:'SVG',html:'HTML',video:'透明视频'}
+if (browserMode) names.video = '视频'
 let items = []
 let active = null
 let versions = []
 let proof = ''
+let previewMedia = null
+let previewUrl = ''
 let editMode = 'new'
 let parent = null
 let busy = false
@@ -34,6 +39,7 @@ function address(action, fields = {}) {
 }
 
 async function request(url, options) {
+  if (browserMode) throw Error('这里使用浏览器素材库。')
   const res = await fetch(url, options)
   if (!res.ok) {
     const error = await res.json().catch(() => ({}))
@@ -54,15 +60,22 @@ function paintList() {
     button.type = 'button'
     button.dataset.asset = item.assetId
     button.setAttribute('aria-pressed', String(active?.assetId === item.assetId))
-    const image = node('img', '', 'asset-thumb')
-    image.alt = ''
-    image.loading = 'lazy'
-    image.src = address('thumb', {ref:item.ref})
+    const kind = names[item.media.import.kind]
+    const image = browserMode ? node('span', kind, 'asset-thumb asset-format') : node('img', '', 'asset-thumb')
+    if (!browserMode) {
+      image.alt = ''
+      image.loading = 'lazy'
+      image.src = address('thumb', {ref:item.ref})
+    }
     const caption = node('span', '', 'asset-caption')
     caption.append(node('span', item.name, 'line-quote'),
                    node('span', names[item.media.import.kind] + ' · ' + item.ref, 'stamp'))
     button.append(image, caption)
     button.onclick = () => { select(item.assetId) }
+    if (browserMode) {
+      list.append(button)
+      continue
+    }
     const wrap = node('div', '', 'asset-list-row')
     const check = node('input', '', 'team-check')
     check.type = 'checkbox'
@@ -80,7 +93,9 @@ function paintList() {
 
 async function reload(chosen) {
   const ticket = ++listTicket
-  const { items: result } = await (await request(address('library', {q:$('asset-search').value}))).json()
+  const query = $('asset-search').value
+  const result = browserMode ? await browserLibrary.list(query) :
+    (await (await request(address('library', {q:query}))).json()).items
   if (ticket !== listTicket) return
   items = result
   paintList()
@@ -92,9 +107,10 @@ async function select(code) {
   const ticket = ++viewTicket
   status('detail-status', '正在读素材…')
   try {
-    const data = await (await request(address('versions', {ref:code}))).json()
+    const history = browserMode ? await browserLibrary.revisions(code) :
+      (await (await request(address('versions', {ref:code}))).json()).versions
     if (ticket !== viewTicket) return
-    versions = data.versions
+    versions = history
     const item = versions.find(value => value.ref === code) || versions[0]
     if (!item) throw Error('找不到这条个人素材。')
     await show(item, ticket)
@@ -103,10 +119,50 @@ async function select(code) {
   }
 }
 
+async function showOriginal(item, ticket) {
+  const original = await browserLibrary.original(item)
+  const kind = item.media.import.kind
+  const html = kind === 'html' ? await browserLibrary.htmlPreview(original) : ''
+  if (ticket !== viewTicket) return
+  previewUrl = URL.createObjectURL(original)
+  const download = $('download-original')
+  download.href = previewUrl
+  download.download = item.originalName
+  if (html) {
+    proof = html
+    frame.srcdoc = html
+    frame.hidden = false
+    return
+  }
+  previewMedia = node(kind === 'video' ? 'video' : 'img', '', 'browser-original')
+  if (kind === 'video') {
+    previewMedia.controls = true
+    previewMedia.playsInline = true
+    previewMedia.preload = 'metadata'
+    previewMedia.setAttribute('aria-label', item.name)
+  } else {
+    previewMedia.alt = item.name
+  }
+  previewMedia.addEventListener('error', () => {
+    if (ticket === viewTicket) status('detail-status', kind === 'video' ?
+      '当前浏览器无法播放这个编码。可下载原件，或换成浏览器支持的视频。' : '无法预览这份图片。', true)
+  })
+  previewMedia.src = previewUrl
+  $('own-stage').append(previewMedia)
+}
+
 async function show(item, ticket = ++viewTicket) {
   active = item
   proof = ''
   frame.removeAttribute('srcdoc')
+  if (browserMode) {
+    frame.hidden = true
+    previewMedia?.remove()
+    previewMedia = null
+    if (previewUrl) URL.revokeObjectURL(previewUrl)
+    previewUrl = ''
+    $('download-original').removeAttribute('href')
+  }
   $('asset-ref').textContent = item.ref
   $('detail-name').textContent = item.name
   $('detail-uses').textContent = item.uses
@@ -114,17 +170,26 @@ async function show(item, ticket = ++viewTicket) {
   for (const key of ['author','origin','license']) $('detail-' + key).textContent = item.rights[key] || '未登记'
   $('asset-versions').replaceChildren(...versions.map(v => new Option(v.ref + (v === versions[0] ? ' · 当前版' : ''), v.ref)))
   $('asset-versions').value = item.ref
-  $('version-note').textContent = item === versions[0] ? '当前版用于新推荐。' : '旧版保留，可供已有工程使用。'
+  $('version-note').textContent = browserMode ?
+    (item === versions[0] ? '正在查看当前版。' : '正在查看保留的旧版。') :
+    (item === versions[0] ? '当前版用于新推荐。' : '旧版保留，可供已有工程使用。')
   $('replace-asset').disabled = item !== versions[0]
   $('edit-asset').disabled = item !== versions[0]
-  $('download-original').href = address('original', {ref:item.ref})
-  $('replay-asset').hidden = item.media.frames === 1
+  if (!browserMode) $('download-original').href = address('original', {ref:item.ref})
+  $('replay-asset').hidden = browserMode ? !['video','html'].includes(item.media.import.kind) : item.media.frames === 1
   $('asset-detail').hidden = false
   $('own-stage').hidden = false
-  $('own-stage').style.setProperty('--overlay-aspect', item.media.width + ' / ' + item.media.height)
-  $('own-stage').style.setProperty('--asset-ratio', item.media.width / item.media.height)
+  if (!browserMode) {
+    $('own-stage').style.setProperty('--overlay-aspect', item.media.width + ' / ' + item.media.height)
+    $('own-stage').style.setProperty('--asset-ratio', item.media.width / item.media.height)
+  }
   paintList()
   try {
+    if (browserMode) {
+      await showOriginal(item, ticket)
+      if (ticket === viewTicket) status('detail-status')
+      return
+    }
     const html = await (await request(address('preview', {ref:item.ref}))).text()
     if (ticket !== viewTicket) return
     proof = html
@@ -136,6 +201,7 @@ async function show(item, ticket = ++viewTicket) {
 }
 
 function importOptions() {
+  if (browserMode) return
   const name = $('asset-file').files[0]?.name.toLowerCase() || ''
   const video = /\.(mov|mp4|webm|mkv)$/.test(name)
   const html = /\.html?$/.test(name)
@@ -154,7 +220,7 @@ function openEditor(mode = 'new', item = null) {
   form.reset()
   $('file-label').hidden = mode === 'edit'
   $('form-label').textContent = mode === 'replace' ? '换版 · ' + item.ref :
-    mode === 'edit' ? '修改登记 · ' + item.ref : '导入本机素材'
+    mode === 'edit' ? '修改登记 · ' + item.ref : browserMode ? '导入素材' : '导入本机素材'
   $('save-asset').textContent = mode === 'replace' ? '保存新版' : mode === 'edit' ? '保存登记新版' : '导入素材'
   $('cancel-asset').hidden = mode === 'new'
   if (item) {
@@ -186,12 +252,17 @@ form.onsubmit = async event => {
   if (parent) meta.ref = parent.ref
   busy = true
   for (const input of form.querySelectorAll('input, textarea, select, button')) input.disabled = true
-  status('asset-status', '正在本机保存并生成小样…')
+  status('asset-status', browserMode ? '正在保存到浏览器…' : '正在本机保存并生成小样…')
   try {
-    const options = file ? {method:'POST', body:file, headers:{
-      'Content-Type':'application/octet-stream', 'X-VisionBuddy-Metadata':utf8Header({...meta, filename:file.name})
-    }} : {method:'POST', body:JSON.stringify(meta), headers:{'Content-Type':'application/json'}}
-    const { item } = await (await request(api + (file ? 'import' : 'edit'), options)).json()
+    let item
+    if (browserMode) {
+      item = await browserLibrary.save(meta, file, parent)
+    } else {
+      const options = file ? {method:'POST', body:file, headers:{
+        'Content-Type':'application/octet-stream', 'X-VisionBuddy-Metadata':utf8Header({...meta, filename:file.name})
+      }} : {method:'POST', body:JSON.stringify(meta), headers:{'Content-Type':'application/json'}}
+      item = (await (await request(api + (file ? 'import' : 'edit'), options)).json()).item
+    }
     $('asset-search').value = ''
     openEditor()
     $('asset-form-card').open = false
@@ -255,6 +326,21 @@ $('asset-versions').onchange = () => {
 $('asset-file').onchange = importOptions
 $('replace-asset').onclick = () => { if (!busy) openEditor('replace',active) }
 $('edit-asset').onclick = () => { if (!busy) openEditor('edit',active) }
-$('replay-asset').onclick = () => { if (proof) frame.srcdoc = proof }
+$('replay-asset').onclick = () => {
+  if (proof) frame.srcdoc = proof
+  else if (previewMedia?.tagName === 'VIDEO' && previewMedia.readyState) {
+    previewMedia.currentTime = 0
+    previewMedia.play().catch(() => status('detail-status', '可在播放器中点播放。', true))
+  }
+}
 $('cancel-asset').onclick = () => { openEditor(); $('asset-form-card').open = false }
-reload(new URL(location.href).searchParams.get('ref')).catch(error => status('detail-status', error.message, true))
+const selectedRef = new URL(location.href).searchParams.get('ref')
+if (browserMode && !browserLibrary) {
+  status('detail-status', '浏览器素材库未载入，请刷新页面。', true)
+} else {
+  const ready = browserMode ? browserLibrary.database() : Promise.resolve()
+  ready.then(() => {
+    $('save-asset').disabled = false
+    return reload(selectedRef)
+  }).catch(error => status('detail-status', error.message || '无法读取浏览器素材库。', true))
+}

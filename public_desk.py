@@ -16,6 +16,13 @@ from portable_bundle import MANIFEST, PROJECT, PROJECT_FILE, read_struct, save_p
 
 
 DESK = Path(__file__).resolve().parent / "desk"
+PERSONAL_PAGES = {
+    "/my-assets": ("my-assets.html", "text/html"),
+    "/my-assets/": ("my-assets.html", "text/html"),
+    "/my-assets/app.js": ("my-assets.js", "text/javascript"),
+    "/my-assets/browser.js": ("browser-assets.js", "text/javascript"),
+    "/my-assets/style.css": ("my-assets.css", "text/css"),
+}
 POSTS = {"plan", "preview", "save-project", "open-project", "export"}
 CAPACITY = BoundedSemaphore(4)
 INPUT_LIMIT = 2 * 1024**2
@@ -32,7 +39,6 @@ def page():
     html = (DESK / "index.html").read_text(encoding="utf8")
     html = html.replace("<body>", '<body data-online="true">', 1)
     html = html.replace('id="plan-button" type="submit"', 'id="plan-button" type="submit" disabled', 1)
-    html = html.replace('<a href="/my-assets/">我的素材</a>', "", 1)
     html = html.replace("从原句找到值得配图的地方，试看后把采用的画面一起带走。",
                         "稿件和字幕由网站生成画面建议。配套原片在浏览器中播放。", 1)
     html = html.replace("配套 SRT <span class=\"note\">可选</span>", "配套 SRT", 1)
@@ -42,14 +48,38 @@ def page():
     return html.encode("utf8")
 
 
+def personal_page():
+    html = (DESK / "my-assets.html").read_text(encoding="utf8")
+    return (html
+            .replace("<body>", '<body data-browser-assets="true">', 1)
+            .replace('  <script src="/my-assets/app.js"', '  <script src="/my-assets/browser.js" defer></script>\n'
+                     '  <script src="/my-assets/app.js"', 1)
+            .replace("给本机原件登记用途。给口播配画面时，个人素材会和公共库一起参与推荐。",
+                     "原件和版本记录保存在当前浏览器。", 1)
+            .replace("导入本机素材", "导入素材", 1)
+            .replace("推荐关键词", "关键词", 1)
+            .replace("支持 PNG、SVG、带 Alpha 的视频和可离线打开的单文件 HTML。",
+                     "支持 PNG、SVG、浏览器可播放的视频，以及单文件 HTML／CSS 预览。", 1)
+            .replace("本机素材库", "浏览器素材库", 1)
+            .replace("本机素材和预览", "浏览器素材和预览", 1)
+            .replace("正在读取本机素材…", "正在读取浏览器素材…", 1)
+            .replace('class="actions sharing"', 'class="actions sharing" hidden', 1)
+            .replace('sandbox="allow-scripts"', 'sandbox=""', 1)
+            .replace('class="primary" id="save-asset"', 'class="primary" id="save-asset" disabled', 1)
+            .encode("utf8"))
+
+
 def get(handler, path):
-    if path not in http.ASSETS:
+    entry = http.ASSETS.get(path) or PERSONAL_PAGES.get(path)
+    if not entry:
         return False
     if not same_site(handler):
         http.json_response(handler, {"error": "请从 VisionBuddy 在线素材册打开。"}, 403)
     else:
-        filename, mime = http.ASSETS[path]
-        http.response(handler, page() if filename == "index.html" else (DESK / filename).read_bytes(), mime)
+        filename, mime = entry
+        content = page() if filename == "index.html" else (
+            personal_page() if filename == "my-assets.html" else (DESK / filename).read_bytes())
+        http.response(handler, content, mime)
     return True
 
 

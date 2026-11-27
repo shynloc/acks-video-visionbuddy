@@ -84,3 +84,14 @@ class PublicDeskTest(unittest.TestCase):
             with self.assertRaises(HTTPError) as unavailable:
                 self.request(path, b"data")
             self.assertEqual(unavailable.exception.code, 404)
+
+    def test_personal_page_uses_browser_storage(self):
+        self.assertIn(b'href="/my-assets/"', self.request("/visual/index.html"))
+        self.assertIn(b'href="/my-assets/"', self.request("/desk/"))
+        body = self.request("/my-assets/")
+        self.assertIn(b'data-browser-assets="true"', body)
+        self.assertIn(b'sandbox=""', body)
+        self.assertIn(b"indexedDB.open", self.request("/my-assets/browser.js"))
+        with self.assertRaises(HTTPError) as remote_library:
+            self.request("/api/personal/library")
+        self.assertEqual(remote_library.exception.code, 404)

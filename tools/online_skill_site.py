@@ -46,6 +46,7 @@ def main():
             link = f' <a{css} href="{url}">下载 VisionBuddy Skill {version}</a>'.encode()
             if desk:
                 link += f' <a{css} href="/desk/">给口播配画面</a>'.encode()
+                link += f' <a{css} href="/my-assets/">我的素材</a>'.encode()
             body = serve.live_page(page).replace(marker, marker + link, 1)
             return self.response(body, "text/html; charset=utf-8")
 
