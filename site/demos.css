@@ -1,0 +1,10 @@
+main h1 { color: var(--blue); }
+.demodesk { display: grid; grid-template-columns: minmax(230px, 1fr) minmax(0, 1.2fr); gap: 18px; align-items: start; }
+.demolist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.demo-choice { display: grid; gap: 6px; text-align: left; padding: 12px; color: var(--ink); }
+.demo-choice[aria-pressed="true"] { border-color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+.demo-choice span { color: var(--muted); }
+.demopreview { padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
+#demo-preview { width: 100%; aspect-ratio: 560 / 395; border: 0; background: conic-gradient(#dedacf 25%, #f6f2e7 0 50%, #dedacf 0 75%, #f6f2e7 0); background-size: 16px 16px; }
+#demo-text { width: 100%; }
+@media(max-width: 740px) { .demodesk { grid-template-columns: 1fr; } .demopreview { position: static; grid-row: 1; } }

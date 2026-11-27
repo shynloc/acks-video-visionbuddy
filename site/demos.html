@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>部位演示 · VisionBuddy</title>
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="demos.css">
+<header>
+  <a href="./" class="brand"><i aria-hidden="true">◧</i>VisionBuddy</a>
+  <nav aria-label="素材库">
+    <a href="./">动效词库</a>
+    <a href="./?view=visual">风格与素材册</a>
+    <a href="https://github.com/shynloc/acks-video-visionbuddy" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a>
+  </nav>
+</header>
+<main>
+  <div class="sectionline">
+    <h1>部位演示</h1>
+    <label class="search"><input id="demo-search" type="search" placeholder="搜名称或编号，如 DEMO-002" aria-label="搜部位演示"></label>
+  </div>
+  <div class="demodesk">
+    <div class="demolist" id="demo-cards" aria-label="部位演示列表"></div>
+    <section class="demopreview">
+      <h2 id="demo-title">试看</h2>
+      <div class="bar"><button id="demo-copy" class="orangebtn" disabled>复制到稿件</button><span id="demo-notice" role="status"></span></div>
+      <textarea id="demo-text" aria-label="可复制的画面标注" hidden readonly rows="2"></textarea>
+      <iframe id="demo-preview" title="透明部位演示" sandbox="allow-scripts"></iframe>
+    </section>
+  </div>
+</main>
+<script src="demos.js"></script>
+</html>

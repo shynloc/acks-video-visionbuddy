@@ -1,0 +1,3 @@
+/site/** -text
+*.py text eol=lf
+*.command text eol=lf
