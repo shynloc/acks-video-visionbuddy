@@ -5,6 +5,102 @@
 .toolrow,.view-switch{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0}.toolrow input[type=search]{font:inherit;flex:1;min-width:130px;border:1px solid var(--line);border-radius:7px;padding:7px}.toolrow label{font-size:13px;white-space:nowrap}.asset-id{font:12px/1.3 ui-monospace,monospace;letter-spacing:.04em;color:#344e81}.view-switch button[aria-pressed=true]{background:var(--blue);color:white}.grid{max-height:54vh;overflow:auto;align-content:start;padding:3px}.entry{align-content:start}.inline .top,.inline .refs,.inline #promptbox,.inline #copy,.inline #copy-annotation{display:none}.inline main{width:100%;padding:0}.inline .desk{margin:0}.inline .proof{position:static}
 #overlay{height:220px;display:grid;place-items:center;border-radius:8px}#overlay img{max-width:100%;max-height:210px;object-fit:contain}#overlay-message:empty{display:none}
 @media(max-width:830px){.desk .proof{grid-row:1}.grid{max-height:45vh}.inline .panel{padding:10px}.inline #overlay{height:140px}.inline #overlay img{max-height:138px}}
+
+.web-kinds,.web-devices{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.web-kinds[hidden],.web-devices[hidden],.color-lab [hidden],.color-lab[hidden]{display:none}
+.web-kinds button,.web-devices button,.web-devices label{font-size:.84rem}
+.web-kinds button[aria-pressed="true"],.web-devices button[aria-pressed="true"]{background:#002fa7;color:white;border-color:#002fa7}
+.web-devices label{align-self:center}
+.web-card{min-height:66px;padding:9px;display:grid;align-content:center;gap:4px;background:var(--card-bg);color:var(--card-ink);border-radius:7px;border-bottom:4px solid var(--card-accent);text-align:left}
+.web-card small{font-size:10px!important;color:inherit!important}
+.web-card b{font-size:15px;line-height:1.1;overflow-wrap:anywhere}
+.web-card[data-theme="product"]{text-align:center}
+.web-card[data-theme="type"],.web-card[data-theme="editorial"]{font-family:Georgia,"Songti SC",serif}
+.web-card[data-theme="workshop"]{border:1px solid var(--card-ink);border-left:5px solid var(--card-accent);border-radius:0}
+.web-card[data-theme="bento"]{border-right:14px solid var(--card-accent)}
+.web-card[data-theme="adaptive"]{border:1px dashed var(--card-ink);border-radius:13px}
+#preview.is-website{max-height:clamp(290px,64vh,700px);overflow:auto;overscroll-behavior-y:contain;border:1px solid #c9bda8;border-radius:12px;background:#d9d1c3;scrollbar-gutter:stable}
+#preview.is-website .website{margin-inline:auto}
+#preview.is-website.is-phone .website{max-width:324px}
+.color-lab{margin:9px 0 14px;padding:13px;border:1px solid #d7cbb6;border-radius:12px;background:#fffaf1}
+.color-lab h3{font-size:1.05rem;margin:0 0 6px}
+.color-lab p{font-size:.83rem;margin:5px 0 9px}
+.color-fields{display:flex;gap:7px 12px;flex-wrap:wrap;align-items:center}
+.color-fields label{display:flex;gap:5px;align-items:center;font-size:.82rem}
+.color-fields select{padding:4px;border:1px solid #b6aa99;border-radius:5px;font:inherit;color:inherit;background:white}
+.color-fields input[type="color"]{width:43px;height:33px;padding:2px;border:1px solid #b6aa99;border-radius:5px;background:white;cursor:pointer}
+.color-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:4px}
+.color-chip{min-height:50px;padding:5px 6px;border:1px solid #0002;border-radius:6px;display:grid;align-content:center;font-size:.72rem}
+.color-chip code{color:inherit;font-size:.69rem}
+.color-lab .actions{margin-top:6px}
+#detail .color-chips{margin:8px 0}
+
+</style><style id="website-css">
+.website{color:var(--web-text);background:var(--web-surface);font-family:system-ui,sans-serif;line-height:1.55;container-type:inline-size;isolation:isolate;overflow:clip}
+.website *{box-sizing:border-box}
+.website a{color:inherit}
+.website a:focus-visible,.website summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.website .web-header{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:16px clamp(14px,5cqi,54px);border-bottom:1px solid color-mix(in srgb,currentColor 20%,transparent);position:sticky;top:0;background:var(--web-surface);z-index:1}
+.website .web-brand{font-weight:800;letter-spacing:.02em;font-size:clamp(.83rem,2.7cqi,1.2rem);text-decoration:none}
+.website nav{display:flex;align-items:center;gap:clamp(7px,3.2cqi,30px);padding:0;background:none;margin:0;font-size:clamp(.69rem,2.2cqi,.92rem)}
+.website nav a{white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
+.website section{scroll-margin-top:74px}
+.website .web-cover{display:grid;grid-template-columns:1.05fr 1fr;min-height:min(60cqi,610px);align-items:stretch}
+.website .web-words{padding:clamp(23px,7cqi,92px) clamp(16px,5cqi,70px);align-self:center}
+.website .web-kicker{margin:0 0 12px;font-size:clamp(.72rem,1.75cqi,.9rem);font-weight:650;letter-spacing:.08em}
+.website .web-headline{font-size:clamp(1.55rem,6.5cqi,5rem);margin:0;line-height:1.06;letter-spacing:-.055em;overflow-wrap:anywhere;text-wrap:balance}
+.website .web-intro{margin:14px 0 18px;font-size:clamp(.83rem,2.35cqi,1.12rem);max-width:32ch}
+.website .web-action{display:inline-flex;align-items:center;gap:.35em;text-decoration:none;color:var(--web-action-text,var(--web-surface));background:var(--web-accent);padding:8px 14px;border-radius:6px;font-size:clamp(.75rem,1.8cqi,1rem);font-weight:700;border:1px solid var(--web-text)}
+.website .web-art{min-width:0;position:relative;display:grid;place-items:center;overflow:hidden;background:color-mix(in srgb,var(--web-object),var(--web-surface) 65%)}
+.website .web-art .web-shape{position:absolute;inset:13% 12%;border:1px solid currentColor;border-radius:47%;background:radial-gradient(ellipse at 40% 30%,var(--web-surface),var(--web-object));opacity:.66}
+.website .web-art img{position:relative;width:90%;max-height:440px;object-fit:contain;filter:drop-shadow(0 15px 20px #0003)}
+.website .web-art .web-sticker{position:absolute;width:23%;max-width:145px;right:8%;top:14%;filter:none}
+.website .website-section{padding:clamp(20px,5cqi,72px) clamp(14px,5cqi,54px)}
+.website .website-section h4{font-size:clamp(1.2rem,3.4cqi,2.4rem);margin:0 0 18px}
+.website .web-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.website .web-feature{padding:clamp(10px,2.6cqi,30px);border:1px solid color-mix(in srgb,currentColor 26%,transparent);border-radius:14px;background:color-mix(in srgb,var(--web-object),var(--web-surface) 84%);overflow-wrap:anywhere}
+.website .web-feature h5{font-size:clamp(.93rem,2.6cqi,1.5rem);margin:5px 0}
+.website .web-feature p,.website details p{margin:0;font-size:clamp(.78rem,1.85cqi,1rem)}
+.website .web-index{font:700 .72rem/1.2 ui-monospace,monospace}
+.website .web-questions{background:color-mix(in srgb,var(--web-object),var(--web-surface) 90%)}
+.website details{margin:0;border-top:1px solid color-mix(in srgb,currentColor 30%,transparent);padding:11px 0}
+.website details p{padding:8px 0}
+.website summary{cursor:pointer;font-weight:650;font-size:.93rem;color:inherit}
+.website .web-footer{padding:18px clamp(14px,5cqi,54px);display:flex;justify-content:space-between;gap:10px;border-top:1px solid color-mix(in srgb,currentColor 22%,transparent);font-size:.85rem}
+.website[data-theme="product"] .web-cover{grid-template-columns:1fr;text-align:center}
+.website[data-theme="product"] .web-words{padding-bottom:14px}
+.website[data-theme="product"] .web-intro{margin-inline:auto}
+.website[data-theme="product"] .web-action{border-radius:100px}
+.website[data-theme="product"] .web-art{min-height:135px;background:linear-gradient(var(--web-surface),color-mix(in srgb,var(--web-surface),var(--web-object) 17%))}
+.website[data-theme="product"] .web-shape{border:0;inset:15% 23%;opacity:.32}
+.website[data-theme="product"] .web-art img{width:62%;max-height:min(44cqi,390px)}
+.website[data-theme="product"] .web-art .web-sticker{width:20%}
+.website[data-theme="type"] .web-headline,.website[data-theme="editorial"] .web-headline{font-family:Georgia,"Songti SC","SimSun",serif;font-weight:800}
+.website[data-theme="type"] .web-headline{font-size:clamp(1.75rem,8.1cqi,6.7rem)}
+.website[data-theme="type"] .web-art{transform:rotate(-6deg);border-radius:50%;margin:8% 10% 8% 0}
+.website[data-theme="type"] .web-feature:nth-child(2){border:3px double var(--web-text);border-radius:0}
+.website[data-theme="editorial"] .web-cover{border-bottom:2px solid var(--web-text)}
+.website[data-theme="editorial"] .web-art{margin:12px}
+.website[data-theme="editorial"] .web-shape{border-radius:0;inset:10%}
+.website[data-theme="editorial"] .web-feature{border:0;border-inline-start:1px solid currentColor;background:none;border-radius:0}
+.website[data-theme="workshop"]{background-image:linear-gradient(to bottom,#8882 1px,transparent 1px),linear-gradient(to right,#8882 1px,transparent 1px);background-size:24px 24px}
+.website[data-theme="workshop"] .web-art{border:1px solid var(--web-text);margin:16px}
+.website[data-theme="workshop"] .web-shape{border-radius:0;inset:7%;background:transparent}
+.website[data-theme="workshop"] .web-feature{border-radius:0;border-color:var(--web-text);background:var(--web-surface)}
+.website[data-theme="bento"] .web-art{margin:10px;border-radius:26px}
+.website[data-theme="bento"] .web-features{grid-template-columns:1.7fr 1fr}
+.website[data-theme="bento"] .web-feature:first-child{grid-row:span 2;border-radius:25px}
+.website[data-theme="bento"] .web-feature:nth-child(2){border-radius:8px 26px 8px 26px}
+.website[data-theme="adaptive"] .web-cover{margin:12px;overflow:hidden;outline:1px solid currentColor;outline-offset:-1px;border-radius:22px}
+.website[data-theme="adaptive"] .web-shape{inset:9% 11%;border-radius:20%;border-style:dashed}
+.website[data-theme="adaptive"] .web-feature{border-radius:0;border-width:0 0 2px;background:none}
+@container (max-width:380px){
+ .website .web-cover{grid-template-columns:1fr}
+ .website .web-art{min-height:135px;margin:0!important;transform:none!important}
+ .website .web-art img{width:60%;max-height:220px}
+ .website .web-features{grid-template-columns:1fr}
+ .website .web-feature{grid-row:auto!important}
+}
 </style><style id="scene-css">
 .scene{--surface:#f4eddf;--text:#201e22;--object:#e8833e;--accent:#002fa7;container-type:inline-size;background:var(--surface);color:var(--text);font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;padding:20px;min-height:244px;line-height:1.4;position:relative;isolation:isolate;overflow:hidden;border:1px solid color-mix(in srgb,var(--text) 24%,transparent);border-radius:10px}.scene *{box-sizing:border-box}.scene h3{font-size:clamp(22px,7cqw,40px);letter-spacing:-.06em;line-height:1.12;margin:0 0 9px}.scene p,.scene ul,.scene ol,.scene figure{margin:0}.scene img{width:100%;height:125px;object-fit:contain}.scene figure{min-width:0}.scene figcaption,.scene .label{font-size:12px}.scene .badge{position:absolute;right:9px;top:9px;width:60px;height:42px;object-fit:contain;z-index:2}.scene .contents{display:flex;flex-wrap:wrap;gap:7px}.scene .contents span{padding:3px 6px;border-bottom:2px solid var(--object);font-size:13px}.field{display:grid;grid-template-columns:42% 1fr;align-items:center;gap:13px}.field h3,.editorial h3{font-family:"Songti SC","SimSun",Georgia,serif}.field figure{border-right:1px solid var(--object)}.field .contents{display:grid}.manual{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:12px}.manual ol{padding:0;list-style:none;counter-reset:step}.manual li{counter-increment:step;padding:7px 0;border-bottom:1px solid var(--object);font-weight:650}.manual li:before{content:counter(step,decimal-leading-zero);font:13px monospace;margin-right:7px;color:var(--text);border-bottom:3px solid var(--accent)}.editorial{display:grid;grid-template-columns:1.2fr 1fr;align-content:center;gap:7px}.editorial header{grid-column:1/-1;border-top:3px solid var(--text);padding-top:10px}.editorial h3{font-size:clamp(26px,9cqw,48px)}.editorial p{align-self:center}.measure{display:grid;align-content:center;gap:15px}.measure header{display:flex;align-items:center;justify-content:space-between;gap:7px}.measure .meter{display:flex;justify-content:space-around;border-bottom:3px solid var(--object);padding:8px 0}.meter strong{display:block;font:700 clamp(23px,8cqw,42px)/1.05 monospace}.meter small{font-size:13px}.meter div:last-child{border-left:5px solid var(--accent);padding-left:12px}.exhibit{display:flex;flex-direction:column;align-items:center;justify-content:center}.exhibit img{height:120px;filter:drop-shadow(0 4px 2px #0002)}.exhibit .plate{width:78%;border-top:1px solid var(--text);padding:7px 0}.exhibit h3{font-size:22px;margin-bottom:2px}.route{display:grid;align-content:center;gap:18px}.route .path{display:flex;justify-content:space-between;padding:0;position:relative;list-style:none}.route .path:before{content:"";position:absolute;left:6%;right:6%;top:7px;border-top:2px dashed var(--object)}.path li{position:relative;font-size:14px;font-weight:bold}.path li:before{content:"";display:block;margin:0 auto 7px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:2px solid var(--text)}.path li:last-child:before{background:var(--accent)}.textonly.field{display:block;align-content:center}.textonly figure{display:none}.textonly.editorial p{grid-column:1/-1}.route img,.measure img{position:absolute;right:14px;top:10px;width:50px;height:50px}
 .mini{height:115px}.mini>.scene{width:calc(100% / .52);height:216px;min-height:216px;zoom:.52;overflow:hidden}.mini>.scene img{max-height:90px}.mini .scene h3{font-size:25px}.mini .scene header{padding-top:4px}.mini .scene{padding:13px}.mini .meter{padding:2px 0}
@@ -14,9 +110,9 @@
 .scene.contactsheet{display:grid;grid-template-columns:2fr 1fr;gap:7px;padding:12px;border:6px solid var(--text)}.scene.contactsheet header{grid-column:1/-1;border-bottom:1px solid var(--text)}.scene.contactsheet figure{background:color-mix(in srgb,var(--object) 20%,var(--surface));margin:0;overflow:hidden}.scene.contactsheet figure:nth-of-type(2) img{transform:scale(1.55)}.scene.contactsheet h3,.scene.recipeleaf h3,.scene.signalcard h3{margin:3px 0}
 .scene.recipeleaf{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:repeating-linear-gradient(0deg,transparent 0 22px,color-mix(in srgb,var(--object) 17%,transparent) 22px 23px),var(--surface)}.scene.recipeleaf ol{padding-left:1.1em;margin:4px 0}.scene.recipeleaf figure{margin:0}
 .scene.signalcard{display:grid;grid-template-columns:1fr 1fr;align-items:center;border-left:8px solid var(--accent)}.scene.signalcard figure{margin:0}.scene.signalcard .wave{grid-column:1/-1;height:24px;display:flex;align-items:center;gap:4px}.scene.signalcard .wave i{flex:1;background:var(--object);border-radius:2px}
-</style><main><header class="top"><h1>口播视觉素材册</h1><p>挑版式、配颜色，把喜欢的搭配交给助手。</p><a class="act" href="https://github.com/shynloc/acks-video-visionbuddy" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a></header><div class="desk"><section class="panel"><h2>挑一款搭配</h2><nav aria-label="素材类别" id="tabs"></nav><div class="toolrow"><input type="search" id="asset-search" aria-label="按名称、用途或素材编号搜索" placeholder="搜名称、用途或编号，如 OBJ-017"><label><input type="checkbox" id="recent-only"> 本次新增</label></div><div class="grid" id="grid"></div><div id="detail"></div></section><section class="panel proof"><div class="bar"><h2>搭配预览</h2><button id="reset">还原默认</button></div><p id="choice" class="choice"></p><div class="view-switch" aria-label="预览方式"><button id="layout-view">网页排版</button><button id="overlay-view">透明叠加</button></div><div id="preview"></div><div id="overlay" class="checkboard" hidden><img alt="所选物件与贴纸的真实透明合成" id="overlay-image"><p id="overlay-message" role="status"></p></div><details><summary>把我的原句写进生成说明</summary><textarea style="min-height:75px" rows="2" id="quote" aria-label="口播原句" placeholder="粘贴一句原话（可选）"></textarea></details><div class="actions"><button class="go" id="copy">复制给 AI 的说明</button><button id="copy-annotation">复制到稿件</button><button id="json">保存搭配 JSON</button></div><div id="status" role="status"></div><details id="promptbox"><summary>查看生成说明</summary><textarea id="prompt" aria-label="生成说明" readonly></textarea></details><details><summary>下载这个搭配的素材</summary><div id="files"></div></details></section></div><details class="refs"><summary>词条来源与制作标准</summary><p>网页、配色、模型和贴纸为本批原创。以下资料用于研究网格、颜色角色、模型格式和图形规范。</p><div id="evidence"></div></details></main><script id="catalog" type="application/json">{
+</style><main><header class="top"><h1>口播视觉素材册</h1><p>看整站设计、搭颜色和素材，把选好的搭配交给助手。</p><a class="act" href="https://github.com/shynloc/acks-video-visionbuddy" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a></header><div class="desk"><section class="panel"><h2>挑一款搭配</h2><nav aria-label="素材类别" id="tabs"></nav><div class="toolrow"><input type="search" id="asset-search" aria-label="按名称、用途或素材编号搜索" placeholder="搜名称、用途或编号，如 OBJ-017"><label><input type="checkbox" id="recent-only"> 本次新增</label></div><div class="web-kinds" id="web-kinds" aria-label="网页风格类别" hidden><button data-style-kind="web">整站设计</button><button data-style-kind="scene">口播画面版式</button></div><section class="color-lab" id="color-lab" hidden></section><div class="grid" id="grid"></div><div id="detail"></div></section><section class="panel proof"><div class="bar"><h2>搭配预览</h2><button id="reset">还原默认</button></div><p id="choice" class="choice"></p><div class="view-switch" aria-label="预览方式"><button id="layout-view">网页预览</button><button id="overlay-view">透明叠加</button></div><div class="web-devices" id="web-devices" aria-label="网页预览尺寸" hidden><button id="desktop-layout">桌面</button><button id="phone-layout">手机</button><label><input type="checkbox" id="use-website-object"> 使用已选物件</label></div><div id="preview"></div><div id="overlay" class="checkboard" hidden><img alt="所选物件与贴纸的真实透明合成" id="overlay-image"><p id="overlay-message" role="status"></p></div><details><summary>把我的原句写进生成说明</summary><textarea style="min-height:75px" rows="2" id="quote" aria-label="口播原句" placeholder="粘贴一句原话（可选）"></textarea></details><div class="actions"><button class="go" id="copy">复制给 AI 的说明</button><button id="copy-annotation">复制到稿件</button><button id="json">保存搭配 JSON</button></div><div id="status" role="status"></div><details id="promptbox"><summary>查看生成说明</summary><textarea id="prompt" aria-label="生成说明" readonly></textarea></details><details><summary>下载这个搭配的素材</summary><div id="files"></div></details></section></div><details class="refs"><summary>词条来源与制作标准</summary><p>网页、配色、模型和贴纸为本批原创。以下资料用于研究网格、颜色角色、模型格式和图形规范。</p><div id="evidence"></div></details></main><script id="catalog" type="application/json">{
   "schema": "visual-library/1",
-  "revision": 3,
+  "revision": 4,
   "styles": [
     {
       "id": "field",
@@ -261,6 +357,408 @@
         "waveRole": "decorative"
       },
       "assetId": "WEB-012"
+    },
+    {
+      "id": "siteproduct",
+      "name": "产品故事 · Apple 官网参考",
+      "uses": "新品发布、消费电子、实体产品、官网首页",
+      "layout": "统一顶栏；首屏用单一产品主张、明确行动按钮和大幅产品图；随后分段讲利益点、规格与问题。",
+      "type": "无衬线大标题，短句分行，正文收窄；产品名和行动入口用简洁权重区分。",
+      "detail": "产品图居中留白；浅背景和深色字建立层级；完整示例保留导航、功能区、问答和页脚。",
+      "source": "apple",
+      "when": "新品发布、消费电子、实体产品、官网首页",
+      "assetId": "WEB-013",
+      "summary": "品牌参考 · 产品细节",
+      "overlay": "保留局部标题、物件或标签，按原片留白做透明叠加。",
+      "tokens": {
+        "layout": "responsive-website",
+        "theme": "product",
+        "breakpointPx": 380,
+        "regions": [
+          "navigation",
+          "hero",
+          "guide",
+          "faq",
+          "footer"
+        ]
+      },
+      "website": {
+        "tag": "品牌参考",
+        "theme": "product",
+        "brand": "弧线制造",
+        "kicker": "轻巧系列",
+        "headline": "少一点负担。",
+        "intro": "把电力放进口袋，留出双手继续赶路。",
+        "action": "探索产品",
+        "guide": "产品细节",
+        "features": [
+          [
+            "放进口袋",
+            "四角做圆，单手也能取放。"
+          ],
+          [
+            "接口顺手",
+            "充电口集中在一侧，桌面布置更整齐。"
+          ],
+          [
+            "看一眼电量",
+            "四颗灯显示剩余电量。"
+          ]
+        ],
+        "questions": [
+          [
+            "适合什么场景？",
+            "上下班、旅行和随身设备补电。示例为虚构产品。"
+          ],
+          [
+            "移动版怎么排？",
+            "保留一句主张，产品图在下方，购买或了解入口始终清楚。"
+          ]
+        ],
+        "palette": "nordic",
+        "picture": "powerbank",
+        "colors": {
+          "surface": "#F7F6EF",
+          "text": "#263532",
+          "object": "#A8BEAC",
+          "accent": "#455D76"
+        }
+      }
+    },
+    {
+      "id": "sitetype",
+      "name": "排版即主视觉",
+      "uses": "创意工作室、品牌发布、文化活动、展览",
+      "layout": "让少量大字先构成首屏视觉，再由项目流程、案例和问答解释服务。",
+      "type": "用衬线和无衬线区分品牌表达和操作，标题可局部变字重，移动端随容器宽度收缩。",
+      "detail": "用一处大胆的造型或颜色配重；清晰排列按钮和正文，动效控制在标题附近。",
+      "source": "webflow26",
+      "when": "创意工作室、品牌发布、文化活动、展览",
+      "assetId": "WEB-014",
+      "summary": "2026 趋势观察 · 我们怎样工作",
+      "overlay": "保留局部标题、物件或标签，按原片留白做透明叠加。",
+      "tokens": {
+        "layout": "responsive-website",
+        "theme": "type",
+        "breakpointPx": 380,
+        "regions": [
+          "navigation",
+          "hero",
+          "guide",
+          "faq",
+          "footer"
+        ]
+      },
+      "website": {
+        "tag": "2026 趋势观察",
+        "theme": "type",
+        "brand": "风几工作室",
+        "kicker": "创作访谈与声音采集",
+        "headline": "让声音有形。",
+        "intro": "我们记录工作室里的一段真实声音，并把它编进你的品牌故事。",
+        "action": "看三个环节",
+        "guide": "我们怎样工作",
+        "features": [
+          [
+            "采集",
+            "先问一件具体的事，让说话人从细节讲起。"
+          ],
+          [
+            "挑选",
+            "留下真正听得见个性的语气和停顿。"
+          ],
+          [
+            "排版",
+            "重要的一句话占据最大位置，字幕仍可清楚阅读。"
+          ]
+        ],
+        "questions": [
+          [
+            "页面动效在哪里？",
+            "可以给首句很短的进入动效，正文和导航保持稳定。"
+          ],
+          [
+            "超大字如何适配手机？",
+            "缩短标题，把单行尺寸改成随容器变化。"
+          ]
+        ],
+        "palette": "terracotta",
+        "picture": "mic",
+        "colors": {
+          "surface": "#FFF0DC",
+          "text": "#39241F",
+          "object": "#C97D64",
+          "accent": "#28635F"
+        }
+      }
+    },
+    {
+      "id": "siteeditorial",
+      "name": "数字杂志 · 编辑排版",
+      "uses": "媒体专栏、播客、知识站、独立杂志、读书",
+      "layout": "报头、头条和目录建立阅读顺序；页面向下按主题分栏，问答和期刊导航收在下方。",
+      "type": "衬线标题搭配紧凑无衬线导航，长文保留足够行距；卡片由细线连接。",
+      "detail": "以网格对齐标题、图注和栏目，长段落保持舒适行宽，窄屏回到单栏阅读。",
+      "source": "carbon",
+      "when": "媒体专栏、播客、知识站、独立杂志、读书",
+      "assetId": "WEB-015",
+      "summary": "成熟风格 · 本期目录",
+      "overlay": "保留局部标题、物件或标签，按原片留白做透明叠加。",
+      "tokens": {
+        "layout": "responsive-website",
+        "theme": "editorial",
+        "breakpointPx": 380,
+        "regions": [
+          "navigation",
+          "hero",
+          "guide",
+          "faq",
+          "footer"
+        ]
+      },
+      "website": {
+        "tag": "成熟风格",
+        "theme": "editorial",
+        "brand": "页外通讯",
+        "kicker": "本期专题 / 独处与阅读",
+        "headline": "把时间留给一页。",
+        "intro": "每周挑一个具体的问题，带你从一本书里找到新的观察角度。",
+        "action": "阅读本期目录",
+        "guide": "本期目录",
+        "features": [
+          [
+            "一本书",
+            "为什么我们愿意在同一页停留很久。"
+          ],
+          [
+            "一则手记",
+            "读书时如何记下一个能反复用的细节。"
+          ],
+          [
+            "一个片段",
+            "从结尾回看作者如何安放问题。"
+          ]
+        ],
+        "questions": [
+          [
+            "怎样继续读？",
+            "用目录找到专题，从标题和摘要判断是否值得深入。"
+          ],
+          [
+            "长文如何处理？",
+            "正文限制行宽，图注、旁注和正文使用各自的字号。"
+          ]
+        ],
+        "palette": "morandi",
+        "picture": "books",
+        "colors": {
+          "surface": "#F3EDE6",
+          "text": "#323238",
+          "object": "#A69B98",
+          "accent": "#56675C"
+        }
+      }
+    },
+    {
+      "id": "sitebento",
+      "name": "拼块式功能导览",
+      "uses": "工具官网、功能导览、SaaS、创作者服务、作品集",
+      "layout": "首屏给出单一任务主张；主功能块占大面积，辅助功能块按清晰的阅读顺序嵌入网格。",
+      "type": "标题强调动词，卡片内数字适合等宽，简短解释保持一致字号。",
+      "detail": "区块尺寸体现优先级，使用受控的色块和弧度展示各功能，手机布局按优先级叠放。",
+      "source": "gleam26",
+      "when": "工具官网、功能导览、SaaS、创作者服务、作品集",
+      "assetId": "WEB-016",
+      "summary": "2026 趋势观察 · 清单如何帮你",
+      "overlay": "保留局部标题、物件或标签，按原片留白做透明叠加。",
+      "tokens": {
+        "layout": "responsive-website",
+        "theme": "bento",
+        "breakpointPx": 380,
+        "regions": [
+          "navigation",
+          "hero",
+          "guide",
+          "faq",
+          "footer"
+        ]
+      },
+      "website": {
+        "tag": "2026 趋势观察",
+        "theme": "bento",
+        "brand": "顺手清单",
+        "kicker": "给做事的人",
+        "headline": "一眼看清下一步。",
+        "intro": "把待办、截止时间和最近完成放回同一个地方。",
+        "action": "查看主要功能",
+        "guide": "清单如何帮你",
+        "features": [
+          [
+            "今天先做",
+            "在首格凸显今天必须完成的一件事。"
+          ],
+          [
+            "到期提醒",
+            "把日期和时间集中显示。"
+          ],
+          [
+            "完成回顾",
+            "看本周结束了哪些任务。"
+          ]
+        ],
+        "questions": [
+          [
+            "格子越多越好吗？",
+            "按重要性决定面积。把同类信息放进同一格，窄屏按优先顺序排列。"
+          ],
+          [
+            "可以把模板当任务用吗？",
+            "可以从日期、事项和完成状态三类信息开始做自己的版本。"
+          ]
+        ],
+        "palette": "monitor",
+        "picture": "deskcalendar",
+        "colors": {
+          "surface": "#191B2B",
+          "text": "#EFF1FE",
+          "object": "#767BDA",
+          "accent": "#CDEB5C"
+        }
+      }
+    },
+    {
+      "id": "siteworkshop",
+      "name": "工具文档 · 网格导航",
+      "uses": "工具、帮助中心、说明文档、技术教程、参数表",
+      "layout": "紧凑导航和首屏任务入口；步骤、说明和常见问题使用同一基础网格，强调可找到、可重复执行。",
+      "type": "无衬线正文，编号等宽，图注短而明确；缩窄屏幕时顺序稳定。",
+      "detail": "通过边线和模块间距传达层级，颜色负责提示状态，操作可用键盘完成。",
+      "source": "carbon",
+      "when": "工具、帮助中心、说明文档、技术教程、参数表",
+      "assetId": "WEB-017",
+      "summary": "设计系统参考 · 三个测量步骤",
+      "overlay": "保留局部标题、物件或标签，按原片留白做透明叠加。",
+      "tokens": {
+        "layout": "responsive-website",
+        "theme": "workshop",
+        "breakpointPx": 380,
+        "regions": [
+          "navigation",
+          "hero",
+          "guide",
+          "faq",
+          "footer"
+        ]
+      },
+      "website": {
+        "tag": "设计系统参考",
+        "theme": "workshop",
+        "brand": "小尺研究所",
+        "kicker": "家庭测量指南",
+        "headline": "量对，再下单。",
+        "intro": "用一段路径完成家具入户尺寸检查，避开过道和门框的误差。",
+        "action": "开始按步骤测量",
+        "guide": "三个测量步骤",
+        "features": [
+          [
+            "量入口",
+            "记录最窄处宽度，把阻挡门扇的物件一起考虑。"
+          ],
+          [
+            "量转角",
+            "把转弯前后的水平尺寸写下来。"
+          ],
+          [
+            "留余量",
+            "根据包装规格给搬运留一点余量。"
+          ]
+        ],
+        "questions": [
+          [
+            "怎样快速定位步骤？",
+            "页面导航保留步骤和问答入口；图表和正文在同一网格上对齐。"
+          ],
+          [
+            "能套用到其他教程吗？",
+            "将区块换成顺序固定的准备、执行、检查即可。"
+          ]
+        ],
+        "palette": "nordic",
+        "picture": "taperule",
+        "colors": {
+          "surface": "#F7F6EF",
+          "text": "#263532",
+          "object": "#A8BEAC",
+          "accent": "#455D76"
+        }
+      }
+    },
+    {
+      "id": "siteadaptive",
+      "name": "适配式网页 · 2027 前瞻",
+      "uses": "响应式产品页、内容组件、主题切换、无障碍",
+      "layout": "优先设计可移入不同容器的组件；首屏、任务入口与辅助内容始终按阅读顺序组织。",
+      "type": "连贯的字号、间距和颜色角色跨容器复用；正文保留清晰的阅读节奏。",
+      "detail": "容器窄时自动改为单栏。2027 为前瞻方向，参考资料仅说明容器查询技术。",
+      "source": "containers",
+      "when": "响应式产品页、内容组件、主题切换、无障碍",
+      "assetId": "WEB-018",
+      "summary": "2027 前瞻 · 跟着容器改变",
+      "overlay": "保留局部标题、物件或标签，按原片留白做透明叠加。",
+      "tokens": {
+        "layout": "responsive-website",
+        "theme": "adaptive",
+        "breakpointPx": 380,
+        "regions": [
+          "navigation",
+          "hero",
+          "guide",
+          "faq",
+          "footer"
+        ]
+      },
+      "website": {
+        "tag": "2027 前瞻",
+        "theme": "adaptive",
+        "brand": "同宽工作室",
+        "kicker": "适配式网页实验",
+        "headline": "换一块屏幕，重点还在。",
+        "intro": "同一套内容可以放进完整网页、手机窗口和紧凑的工作台预览。",
+        "action": "看适配原则",
+        "guide": "跟着容器改变",
+        "features": [
+          [
+            "容器决定排版",
+            "组件按自己可用的宽度调整，放进侧栏也能读。"
+          ],
+          [
+            "保留核心动作",
+            "页面变窄时先保留标题、正文和主按钮。"
+          ],
+          [
+            "配色看角色",
+            "组件根据背景和文字角色协同换色。"
+          ]
+        ],
+        "questions": [
+          [
+            "这是已经确定的 2027 趋势吗？",
+            "这是素材册提出的前瞻方向，示例使用已有的容器查询。"
+          ],
+          [
+            "手机模式怎么看？",
+            "切到手机宽度，就能看到组件从并排改为上下排列。"
+          ]
+        ],
+        "palette": "artdeco",
+        "picture": "laptop",
+        "colors": {
+          "surface": "#112D29",
+          "text": "#F5EBD3",
+          "object": "#BD9B67",
+          "accent": "#EFC677"
+        }
+      }
     }
   ],
   "palettes": [
@@ -581,6 +1079,96 @@
         "textOnSurfaceContrast": 13.0
       },
       "assetId": "PAL-014"
+    },
+    {
+      "id": "morandi",
+      "name": "莫兰迪色系",
+      "uses": "书店、家居、手作、人文访谈",
+      "colors": {
+        "surface": "#F3EDE6",
+        "text": "#323238",
+        "object": "#A69B98",
+        "accent": "#56675C"
+      },
+      "rule": "用低饱和暖灰统一画面，灰绿给关键状态。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 10.96
+      },
+      "assetId": "PAL-015"
+    },
+    {
+      "id": "nordic",
+      "name": "北欧自然色系",
+      "uses": "户外、生活方法、家居、可持续",
+      "colors": {
+        "surface": "#F7F6EF",
+        "text": "#263532",
+        "object": "#A8BEAC",
+        "accent": "#455D76"
+      },
+      "rule": "羊毛白、苔绿和峡湾蓝搭配，阴影带少量冷色。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 11.84
+      },
+      "assetId": "PAL-016"
+    },
+    {
+      "id": "terracotta",
+      "name": "地中海泥陶色系",
+      "uses": "美食、旅行、香氛、器物",
+      "colors": {
+        "surface": "#FFF0DC",
+        "text": "#39241F",
+        "object": "#C97D64",
+        "accent": "#28635F"
+      },
+      "rule": "石灰白铺底，陶土色做主要材质，青绿提亮交互。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 12.97
+      },
+      "assetId": "PAL-017"
+    },
+    {
+      "id": "artdeco",
+      "name": "装饰艺术 · 墨绿与金",
+      "uses": "珠宝、舞台、文化、复古品牌",
+      "colors": {
+        "surface": "#112D29",
+        "text": "#F5EBD3",
+        "object": "#BD9B67",
+        "accent": "#EFC677"
+      },
+      "rule": "以墨绿构成暗底，用香槟金做细线和重点，正文用暖白。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 12.37
+      },
+      "assetId": "PAL-018"
+    },
+    {
+      "id": "monitor",
+      "name": "夜间荧光色系",
+      "uses": "科技、运动、数码、数据对比",
+      "colors": {
+        "surface": "#191B2B",
+        "text": "#EFF1FE",
+        "object": "#767BDA",
+        "accent": "#CDEB5C"
+      },
+      "rule": "深蓝紫压低背景，紫蓝分区域，荧光黄绿只提示最关键操作。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 15.15
+      },
+      "assetId": "PAL-019"
     }
   ],
   "objects": [
@@ -670,6 +1258,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/pot.glb",
           "preview": "3D/lavenderink/pot.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/pot.glb",
+          "preview": "3D/morandi/pot.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/pot.glb",
+          "preview": "3D/nordic/pot.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/pot.glb",
+          "preview": "3D/terracotta/pot.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/pot.glb",
+          "preview": "3D/artdeco/pot.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/pot.glb",
+          "preview": "3D/monitor/pot.png"
         }
       },
       "assetId": "OBJ-001"
@@ -760,6 +1368,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/camera.glb",
           "preview": "3D/lavenderink/camera.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/camera.glb",
+          "preview": "3D/morandi/camera.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/camera.glb",
+          "preview": "3D/nordic/camera.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/camera.glb",
+          "preview": "3D/terracotta/camera.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/camera.glb",
+          "preview": "3D/artdeco/camera.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/camera.glb",
+          "preview": "3D/monitor/camera.png"
         }
       },
       "assetId": "OBJ-002"
@@ -850,6 +1478,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/lamp.glb",
           "preview": "3D/lavenderink/lamp.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/lamp.glb",
+          "preview": "3D/morandi/lamp.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/lamp.glb",
+          "preview": "3D/nordic/lamp.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/lamp.glb",
+          "preview": "3D/terracotta/lamp.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/lamp.glb",
+          "preview": "3D/artdeco/lamp.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/lamp.glb",
+          "preview": "3D/monitor/lamp.png"
         }
       },
       "assetId": "OBJ-003"
@@ -940,6 +1588,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/box.glb",
           "preview": "3D/lavenderink/box.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/box.glb",
+          "preview": "3D/morandi/box.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/box.glb",
+          "preview": "3D/nordic/box.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/box.glb",
+          "preview": "3D/terracotta/box.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/box.glb",
+          "preview": "3D/artdeco/box.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/box.glb",
+          "preview": "3D/monitor/box.png"
         }
       },
       "assetId": "OBJ-004"
@@ -1036,6 +1704,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/jug.glb",
           "preview": "3D/lavenderink/jug.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/jug.glb",
+          "preview": "3D/morandi/jug.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/jug.glb",
+          "preview": "3D/nordic/jug.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/jug.glb",
+          "preview": "3D/terracotta/jug.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/jug.glb",
+          "preview": "3D/artdeco/jug.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/jug.glb",
+          "preview": "3D/monitor/jug.png"
         }
       },
       "assetId": "OBJ-005"
@@ -1136,6 +1824,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/scale.glb",
           "preview": "3D/lavenderink/scale.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/scale.glb",
+          "preview": "3D/morandi/scale.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/scale.glb",
+          "preview": "3D/nordic/scale.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/scale.glb",
+          "preview": "3D/terracotta/scale.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/scale.glb",
+          "preview": "3D/artdeco/scale.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/scale.glb",
+          "preview": "3D/monitor/scale.png"
         }
       },
       "assetId": "OBJ-006"
@@ -1232,6 +1940,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/binder.glb",
           "preview": "3D/lavenderink/binder.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/binder.glb",
+          "preview": "3D/morandi/binder.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/binder.glb",
+          "preview": "3D/nordic/binder.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/binder.glb",
+          "preview": "3D/terracotta/binder.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/binder.glb",
+          "preview": "3D/artdeco/binder.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/binder.glb",
+          "preview": "3D/monitor/binder.png"
         }
       },
       "assetId": "OBJ-007"
@@ -1328,6 +2056,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/backpack.glb",
           "preview": "3D/lavenderink/backpack.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/backpack.glb",
+          "preview": "3D/morandi/backpack.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/backpack.glb",
+          "preview": "3D/nordic/backpack.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/backpack.glb",
+          "preview": "3D/terracotta/backpack.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/backpack.glb",
+          "preview": "3D/artdeco/backpack.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/backpack.glb",
+          "preview": "3D/monitor/backpack.png"
         }
       },
       "assetId": "OBJ-008"
@@ -1424,6 +2172,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/timer.glb",
           "preview": "3D/lavenderink/timer.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/timer.glb",
+          "preview": "3D/morandi/timer.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/timer.glb",
+          "preview": "3D/nordic/timer.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/timer.glb",
+          "preview": "3D/terracotta/timer.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/timer.glb",
+          "preview": "3D/artdeco/timer.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/timer.glb",
+          "preview": "3D/monitor/timer.png"
         }
       },
       "assetId": "OBJ-009"
@@ -1520,6 +2288,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/phone.glb",
           "preview": "3D/lavenderink/phone.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/phone.glb",
+          "preview": "3D/morandi/phone.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/phone.glb",
+          "preview": "3D/nordic/phone.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/phone.glb",
+          "preview": "3D/terracotta/phone.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/phone.glb",
+          "preview": "3D/artdeco/phone.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/phone.glb",
+          "preview": "3D/monitor/phone.png"
         }
       },
       "assetId": "OBJ-010"
@@ -1616,6 +2404,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/usbc.glb",
           "preview": "3D/lavenderink/usbc.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/usbc.glb",
+          "preview": "3D/morandi/usbc.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/usbc.glb",
+          "preview": "3D/nordic/usbc.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/usbc.glb",
+          "preview": "3D/terracotta/usbc.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/usbc.glb",
+          "preview": "3D/artdeco/usbc.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/usbc.glb",
+          "preview": "3D/monitor/usbc.png"
         }
       },
       "assetId": "OBJ-011"
@@ -1712,6 +2520,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/suitcase.glb",
           "preview": "3D/lavenderink/suitcase.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/suitcase.glb",
+          "preview": "3D/morandi/suitcase.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/suitcase.glb",
+          "preview": "3D/nordic/suitcase.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/suitcase.glb",
+          "preview": "3D/terracotta/suitcase.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/suitcase.glb",
+          "preview": "3D/artdeco/suitcase.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/suitcase.glb",
+          "preview": "3D/monitor/suitcase.png"
         }
       },
       "assetId": "OBJ-012"
@@ -1808,6 +2636,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/bottle.glb",
           "preview": "3D/lavenderink/bottle.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/bottle.glb",
+          "preview": "3D/morandi/bottle.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/bottle.glb",
+          "preview": "3D/nordic/bottle.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/bottle.glb",
+          "preview": "3D/terracotta/bottle.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/bottle.glb",
+          "preview": "3D/artdeco/bottle.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/bottle.glb",
+          "preview": "3D/monitor/bottle.png"
         }
       },
       "assetId": "OBJ-013"
@@ -1904,6 +2752,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/remote.glb",
           "preview": "3D/lavenderink/remote.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/remote.glb",
+          "preview": "3D/morandi/remote.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/remote.glb",
+          "preview": "3D/nordic/remote.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/remote.glb",
+          "preview": "3D/terracotta/remote.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/remote.glb",
+          "preview": "3D/artdeco/remote.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/remote.glb",
+          "preview": "3D/monitor/remote.png"
         }
       },
       "assetId": "OBJ-014"
@@ -2000,6 +2868,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/drawer.glb",
           "preview": "3D/lavenderink/drawer.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/drawer.glb",
+          "preview": "3D/morandi/drawer.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/drawer.glb",
+          "preview": "3D/nordic/drawer.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/drawer.glb",
+          "preview": "3D/terracotta/drawer.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/drawer.glb",
+          "preview": "3D/artdeco/drawer.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/drawer.glb",
+          "preview": "3D/monitor/drawer.png"
         }
       },
       "assetId": "OBJ-015"
@@ -2096,6 +2984,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/pump.glb",
           "preview": "3D/lavenderink/pump.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/pump.glb",
+          "preview": "3D/morandi/pump.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/pump.glb",
+          "preview": "3D/nordic/pump.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/pump.glb",
+          "preview": "3D/terracotta/pump.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/pump.glb",
+          "preview": "3D/artdeco/pump.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/pump.glb",
+          "preview": "3D/monitor/pump.png"
         }
       },
       "assetId": "OBJ-016"
@@ -2193,6 +3101,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/mic.glb",
           "preview": "3D/lavenderink/mic.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/mic.glb",
+          "preview": "3D/morandi/mic.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/mic.glb",
+          "preview": "3D/nordic/mic.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/mic.glb",
+          "preview": "3D/terracotta/mic.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/mic.glb",
+          "preview": "3D/artdeco/mic.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/mic.glb",
+          "preview": "3D/monitor/mic.png"
         }
       }
     },
@@ -2289,6 +3217,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/headphones.glb",
           "preview": "3D/lavenderink/headphones.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/headphones.glb",
+          "preview": "3D/morandi/headphones.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/headphones.glb",
+          "preview": "3D/nordic/headphones.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/headphones.glb",
+          "preview": "3D/terracotta/headphones.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/headphones.glb",
+          "preview": "3D/artdeco/headphones.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/headphones.glb",
+          "preview": "3D/monitor/headphones.png"
         }
       }
     },
@@ -2385,6 +3333,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/laptop.glb",
           "preview": "3D/lavenderink/laptop.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/laptop.glb",
+          "preview": "3D/morandi/laptop.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/laptop.glb",
+          "preview": "3D/nordic/laptop.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/laptop.glb",
+          "preview": "3D/terracotta/laptop.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/laptop.glb",
+          "preview": "3D/artdeco/laptop.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/laptop.glb",
+          "preview": "3D/monitor/laptop.png"
         }
       }
     },
@@ -2481,6 +3449,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/deskcalendar.glb",
           "preview": "3D/lavenderink/deskcalendar.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/deskcalendar.glb",
+          "preview": "3D/morandi/deskcalendar.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/deskcalendar.glb",
+          "preview": "3D/nordic/deskcalendar.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/deskcalendar.glb",
+          "preview": "3D/terracotta/deskcalendar.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/deskcalendar.glb",
+          "preview": "3D/artdeco/deskcalendar.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/deskcalendar.glb",
+          "preview": "3D/monitor/deskcalendar.png"
         }
       }
     },
@@ -2577,6 +3565,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/dripper.glb",
           "preview": "3D/lavenderink/dripper.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/dripper.glb",
+          "preview": "3D/morandi/dripper.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/dripper.glb",
+          "preview": "3D/nordic/dripper.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/dripper.glb",
+          "preview": "3D/terracotta/dripper.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/dripper.glb",
+          "preview": "3D/artdeco/dripper.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/dripper.glb",
+          "preview": "3D/monitor/dripper.png"
         }
       }
     },
@@ -2673,6 +3681,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/books.glb",
           "preview": "3D/lavenderink/books.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/books.glb",
+          "preview": "3D/morandi/books.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/books.glb",
+          "preview": "3D/nordic/books.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/books.glb",
+          "preview": "3D/terracotta/books.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/books.glb",
+          "preview": "3D/artdeco/books.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/books.glb",
+          "preview": "3D/monitor/books.png"
         }
       }
     },
@@ -2769,6 +3797,26 @@
         "lavenderink": {
           "model": "3D/lavenderink/key.glb",
           "preview": "3D/lavenderink/key.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/key.glb",
+          "preview": "3D/morandi/key.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/key.glb",
+          "preview": "3D/nordic/key.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/key.glb",
+          "preview": "3D/terracotta/key.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/key.glb",
+          "preview": "3D/artdeco/key.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/key.glb",
+          "preview": "3D/monitor/key.png"
         }
       }
     },
@@ -2865,6 +3913,606 @@
         "lavenderink": {
           "model": "3D/lavenderink/flashlight.glb",
           "preview": "3D/lavenderink/flashlight.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/flashlight.glb",
+          "preview": "3D/morandi/flashlight.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/flashlight.glb",
+          "preview": "3D/nordic/flashlight.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/flashlight.glb",
+          "preview": "3D/terracotta/flashlight.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/flashlight.glb",
+          "preview": "3D/artdeco/flashlight.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/flashlight.glb",
+          "preview": "3D/monitor/flashlight.png"
+        }
+      }
+    },
+    {
+      "id": "powerbank",
+      "name": "充电宝",
+      "parts": "外壳、双接口、电量指示灯与电源键",
+      "uses": "给手机补电、说明接口、出门检查、续航",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "充电接口": [
+            0.442,
+            0.278
+          ]
+        }
+      },
+      "assetId": "OBJ-025",
+      "files": {
+        "model": "3D/powerbank.glb",
+        "preview": "3D/powerbank.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/powerbank.glb",
+          "preview": "3D/atelier/powerbank.png"
+        },
+        "herb": {
+          "model": "3D/herb/powerbank.glb",
+          "preview": "3D/herb/powerbank.png"
+        },
+        "night": {
+          "model": "3D/night/powerbank.glb",
+          "preview": "3D/night/powerbank.png"
+        },
+        "ink": {
+          "model": "3D/ink/powerbank.glb",
+          "preview": "3D/ink/powerbank.png"
+        },
+        "coast": {
+          "model": "3D/coast/powerbank.glb",
+          "preview": "3D/coast/powerbank.png"
+        },
+        "plum": {
+          "model": "3D/plum/powerbank.glb",
+          "preview": "3D/plum/powerbank.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/powerbank.glb",
+          "preview": "3D/cobalt/powerbank.png"
+        },
+        "slate": {
+          "model": "3D/slate/powerbank.glb",
+          "preview": "3D/slate/powerbank.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/powerbank.glb",
+          "preview": "3D/porcelain/powerbank.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/powerbank.glb",
+          "preview": "3D/sandpine/powerbank.png"
+        },
+        "violet": {
+          "model": "3D/violet/powerbank.glb",
+          "preview": "3D/violet/powerbank.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/powerbank.glb",
+          "preview": "3D/teaamber/powerbank.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/powerbank.glb",
+          "preview": "3D/tidal/powerbank.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/powerbank.glb",
+          "preview": "3D/lavenderink/powerbank.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/powerbank.glb",
+          "preview": "3D/morandi/powerbank.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/powerbank.glb",
+          "preview": "3D/nordic/powerbank.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/powerbank.glb",
+          "preview": "3D/terracotta/powerbank.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/powerbank.glb",
+          "preview": "3D/artdeco/powerbank.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/powerbank.glb",
+          "preview": "3D/monitor/powerbank.png"
+        }
+      }
+    },
+    {
+      "id": "nailer",
+      "name": "订书机",
+      "parts": "压柄、转轴、钉仓与底座",
+      "uses": "装订、分类、办公文件、手工制作",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "压柄": [
+            0.498,
+            0.372
+          ]
+        }
+      },
+      "assetId": "OBJ-026",
+      "files": {
+        "model": "3D/nailer.glb",
+        "preview": "3D/nailer.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/nailer.glb",
+          "preview": "3D/atelier/nailer.png"
+        },
+        "herb": {
+          "model": "3D/herb/nailer.glb",
+          "preview": "3D/herb/nailer.png"
+        },
+        "night": {
+          "model": "3D/night/nailer.glb",
+          "preview": "3D/night/nailer.png"
+        },
+        "ink": {
+          "model": "3D/ink/nailer.glb",
+          "preview": "3D/ink/nailer.png"
+        },
+        "coast": {
+          "model": "3D/coast/nailer.glb",
+          "preview": "3D/coast/nailer.png"
+        },
+        "plum": {
+          "model": "3D/plum/nailer.glb",
+          "preview": "3D/plum/nailer.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/nailer.glb",
+          "preview": "3D/cobalt/nailer.png"
+        },
+        "slate": {
+          "model": "3D/slate/nailer.glb",
+          "preview": "3D/slate/nailer.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/nailer.glb",
+          "preview": "3D/porcelain/nailer.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/nailer.glb",
+          "preview": "3D/sandpine/nailer.png"
+        },
+        "violet": {
+          "model": "3D/violet/nailer.glb",
+          "preview": "3D/violet/nailer.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/nailer.glb",
+          "preview": "3D/teaamber/nailer.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/nailer.glb",
+          "preview": "3D/tidal/nailer.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/nailer.glb",
+          "preview": "3D/lavenderink/nailer.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/nailer.glb",
+          "preview": "3D/morandi/nailer.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/nailer.glb",
+          "preview": "3D/nordic/nailer.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/nailer.glb",
+          "preview": "3D/terracotta/nailer.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/nailer.glb",
+          "preview": "3D/artdeco/nailer.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/nailer.glb",
+          "preview": "3D/monitor/nailer.png"
+        }
+      }
+    },
+    {
+      "id": "lensbottle",
+      "name": "喷雾瓶",
+      "parts": "喷嘴、扳机、旋盖与瓶身",
+      "uses": "清洁、护理、园艺、喷洒",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "喷嘴": [
+            0.327,
+            0.168
+          ]
+        }
+      },
+      "assetId": "OBJ-027",
+      "files": {
+        "model": "3D/lensbottle.glb",
+        "preview": "3D/lensbottle.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/lensbottle.glb",
+          "preview": "3D/atelier/lensbottle.png"
+        },
+        "herb": {
+          "model": "3D/herb/lensbottle.glb",
+          "preview": "3D/herb/lensbottle.png"
+        },
+        "night": {
+          "model": "3D/night/lensbottle.glb",
+          "preview": "3D/night/lensbottle.png"
+        },
+        "ink": {
+          "model": "3D/ink/lensbottle.glb",
+          "preview": "3D/ink/lensbottle.png"
+        },
+        "coast": {
+          "model": "3D/coast/lensbottle.glb",
+          "preview": "3D/coast/lensbottle.png"
+        },
+        "plum": {
+          "model": "3D/plum/lensbottle.glb",
+          "preview": "3D/plum/lensbottle.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/lensbottle.glb",
+          "preview": "3D/cobalt/lensbottle.png"
+        },
+        "slate": {
+          "model": "3D/slate/lensbottle.glb",
+          "preview": "3D/slate/lensbottle.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/lensbottle.glb",
+          "preview": "3D/porcelain/lensbottle.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/lensbottle.glb",
+          "preview": "3D/sandpine/lensbottle.png"
+        },
+        "violet": {
+          "model": "3D/violet/lensbottle.glb",
+          "preview": "3D/violet/lensbottle.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/lensbottle.glb",
+          "preview": "3D/teaamber/lensbottle.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/lensbottle.glb",
+          "preview": "3D/tidal/lensbottle.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/lensbottle.glb",
+          "preview": "3D/lavenderink/lensbottle.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/lensbottle.glb",
+          "preview": "3D/morandi/lensbottle.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/lensbottle.glb",
+          "preview": "3D/nordic/lensbottle.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/lensbottle.glb",
+          "preview": "3D/terracotta/lensbottle.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/lensbottle.glb",
+          "preview": "3D/artdeco/lensbottle.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/lensbottle.glb",
+          "preview": "3D/monitor/lensbottle.png"
+        }
+      }
+    },
+    {
+      "id": "taperule",
+      "name": "卷尺",
+      "parts": "卷尺壳、锁止键、尺带与挂钩",
+      "uses": "测量距离、家具尺寸、装修、空间规划",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "尺带": [
+            0.686,
+            0.735
+          ]
+        }
+      },
+      "assetId": "OBJ-028",
+      "files": {
+        "model": "3D/taperule.glb",
+        "preview": "3D/taperule.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/taperule.glb",
+          "preview": "3D/atelier/taperule.png"
+        },
+        "herb": {
+          "model": "3D/herb/taperule.glb",
+          "preview": "3D/herb/taperule.png"
+        },
+        "night": {
+          "model": "3D/night/taperule.glb",
+          "preview": "3D/night/taperule.png"
+        },
+        "ink": {
+          "model": "3D/ink/taperule.glb",
+          "preview": "3D/ink/taperule.png"
+        },
+        "coast": {
+          "model": "3D/coast/taperule.glb",
+          "preview": "3D/coast/taperule.png"
+        },
+        "plum": {
+          "model": "3D/plum/taperule.glb",
+          "preview": "3D/plum/taperule.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/taperule.glb",
+          "preview": "3D/cobalt/taperule.png"
+        },
+        "slate": {
+          "model": "3D/slate/taperule.glb",
+          "preview": "3D/slate/taperule.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/taperule.glb",
+          "preview": "3D/porcelain/taperule.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/taperule.glb",
+          "preview": "3D/sandpine/taperule.png"
+        },
+        "violet": {
+          "model": "3D/violet/taperule.glb",
+          "preview": "3D/violet/taperule.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/taperule.glb",
+          "preview": "3D/teaamber/taperule.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/taperule.glb",
+          "preview": "3D/tidal/taperule.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/taperule.glb",
+          "preview": "3D/lavenderink/taperule.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/taperule.glb",
+          "preview": "3D/morandi/taperule.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/taperule.glb",
+          "preview": "3D/nordic/taperule.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/taperule.glb",
+          "preview": "3D/terracotta/taperule.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/taperule.glb",
+          "preview": "3D/artdeco/taperule.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/taperule.glb",
+          "preview": "3D/monitor/taperule.png"
+        }
+      }
+    },
+    {
+      "id": "firstaid",
+      "name": "急救箱",
+      "parts": "提手、双搭扣、箱盖与十字标记",
+      "uses": "旅行准备、应急物品、运动装备、家庭储备",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "十字标记": [
+            0.41,
+            0.55
+          ]
+        }
+      },
+      "assetId": "OBJ-029",
+      "files": {
+        "model": "3D/firstaid.glb",
+        "preview": "3D/firstaid.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/firstaid.glb",
+          "preview": "3D/atelier/firstaid.png"
+        },
+        "herb": {
+          "model": "3D/herb/firstaid.glb",
+          "preview": "3D/herb/firstaid.png"
+        },
+        "night": {
+          "model": "3D/night/firstaid.glb",
+          "preview": "3D/night/firstaid.png"
+        },
+        "ink": {
+          "model": "3D/ink/firstaid.glb",
+          "preview": "3D/ink/firstaid.png"
+        },
+        "coast": {
+          "model": "3D/coast/firstaid.glb",
+          "preview": "3D/coast/firstaid.png"
+        },
+        "plum": {
+          "model": "3D/plum/firstaid.glb",
+          "preview": "3D/plum/firstaid.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/firstaid.glb",
+          "preview": "3D/cobalt/firstaid.png"
+        },
+        "slate": {
+          "model": "3D/slate/firstaid.glb",
+          "preview": "3D/slate/firstaid.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/firstaid.glb",
+          "preview": "3D/porcelain/firstaid.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/firstaid.glb",
+          "preview": "3D/sandpine/firstaid.png"
+        },
+        "violet": {
+          "model": "3D/violet/firstaid.glb",
+          "preview": "3D/violet/firstaid.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/firstaid.glb",
+          "preview": "3D/teaamber/firstaid.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/firstaid.glb",
+          "preview": "3D/tidal/firstaid.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/firstaid.glb",
+          "preview": "3D/lavenderink/firstaid.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/firstaid.glb",
+          "preview": "3D/morandi/firstaid.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/firstaid.glb",
+          "preview": "3D/nordic/firstaid.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/firstaid.glb",
+          "preview": "3D/terracotta/firstaid.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/firstaid.glb",
+          "preview": "3D/artdeco/firstaid.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/firstaid.glb",
+          "preview": "3D/monitor/firstaid.png"
         }
       }
     }
@@ -2949,6 +4597,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/arrow.svg",
           "preview": "贴纸/lavenderink/arrow.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/arrow.svg",
+          "preview": "贴纸/morandi/arrow.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/arrow.svg",
+          "preview": "贴纸/nordic/arrow.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/arrow.svg",
+          "preview": "贴纸/terracotta/arrow.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/arrow.svg",
+          "preview": "贴纸/artdeco/arrow.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/arrow.svg",
+          "preview": "贴纸/monitor/arrow.png"
         }
       },
       "assetId": "STK-001"
@@ -3032,6 +4700,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/ring.svg",
           "preview": "贴纸/lavenderink/ring.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/ring.svg",
+          "preview": "贴纸/morandi/ring.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/ring.svg",
+          "preview": "贴纸/nordic/ring.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/ring.svg",
+          "preview": "贴纸/terracotta/ring.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/ring.svg",
+          "preview": "贴纸/artdeco/ring.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/ring.svg",
+          "preview": "贴纸/monitor/ring.png"
         }
       },
       "assetId": "STK-002"
@@ -3115,6 +4803,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/check.svg",
           "preview": "贴纸/lavenderink/check.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/check.svg",
+          "preview": "贴纸/morandi/check.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/check.svg",
+          "preview": "贴纸/nordic/check.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/check.svg",
+          "preview": "贴纸/terracotta/check.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/check.svg",
+          "preview": "贴纸/artdeco/check.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/check.svg",
+          "preview": "贴纸/monitor/check.png"
         }
       },
       "assetId": "STK-003"
@@ -3198,6 +4906,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/tab.svg",
           "preview": "贴纸/lavenderink/tab.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/tab.svg",
+          "preview": "贴纸/morandi/tab.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/tab.svg",
+          "preview": "贴纸/nordic/tab.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/tab.svg",
+          "preview": "贴纸/terracotta/tab.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/tab.svg",
+          "preview": "贴纸/artdeco/tab.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/tab.svg",
+          "preview": "贴纸/monitor/tab.png"
         }
       },
       "assetId": "STK-004"
@@ -3281,6 +5009,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/bubble.svg",
           "preview": "贴纸/lavenderink/bubble.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/bubble.svg",
+          "preview": "贴纸/morandi/bubble.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/bubble.svg",
+          "preview": "贴纸/nordic/bubble.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/bubble.svg",
+          "preview": "贴纸/terracotta/bubble.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/bubble.svg",
+          "preview": "贴纸/artdeco/bubble.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/bubble.svg",
+          "preview": "贴纸/monitor/bubble.png"
         }
       },
       "assetId": "STK-005"
@@ -3364,6 +5112,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/spark.svg",
           "preview": "贴纸/lavenderink/spark.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/spark.svg",
+          "preview": "贴纸/morandi/spark.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/spark.svg",
+          "preview": "贴纸/nordic/spark.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/spark.svg",
+          "preview": "贴纸/terracotta/spark.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/spark.svg",
+          "preview": "贴纸/artdeco/spark.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/spark.svg",
+          "preview": "贴纸/monitor/spark.png"
         }
       },
       "assetId": "STK-006"
@@ -3447,6 +5215,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/bracket.svg",
           "preview": "贴纸/lavenderink/bracket.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/bracket.svg",
+          "preview": "贴纸/morandi/bracket.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/bracket.svg",
+          "preview": "贴纸/nordic/bracket.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/bracket.svg",
+          "preview": "贴纸/terracotta/bracket.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/bracket.svg",
+          "preview": "贴纸/artdeco/bracket.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/bracket.svg",
+          "preview": "贴纸/monitor/bracket.png"
         }
       },
       "assetId": "STK-007"
@@ -3530,6 +5318,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/tape.svg",
           "preview": "贴纸/lavenderink/tape.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/tape.svg",
+          "preview": "贴纸/morandi/tape.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/tape.svg",
+          "preview": "贴纸/nordic/tape.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/tape.svg",
+          "preview": "贴纸/terracotta/tape.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/tape.svg",
+          "preview": "贴纸/artdeco/tape.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/tape.svg",
+          "preview": "贴纸/monitor/tape.png"
         }
       },
       "assetId": "STK-008"
@@ -3617,6 +5425,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/pin.svg",
           "preview": "贴纸/lavenderink/pin.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/pin.svg",
+          "preview": "贴纸/morandi/pin.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/pin.svg",
+          "preview": "贴纸/nordic/pin.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/pin.svg",
+          "preview": "贴纸/terracotta/pin.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/pin.svg",
+          "preview": "贴纸/artdeco/pin.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/pin.svg",
+          "preview": "贴纸/monitor/pin.png"
         }
       },
       "assetId": "STK-009"
@@ -3704,6 +5532,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/loupe.svg",
           "preview": "贴纸/lavenderink/loupe.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/loupe.svg",
+          "preview": "贴纸/morandi/loupe.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/loupe.svg",
+          "preview": "贴纸/nordic/loupe.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/loupe.svg",
+          "preview": "贴纸/terracotta/loupe.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/loupe.svg",
+          "preview": "贴纸/artdeco/loupe.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/loupe.svg",
+          "preview": "贴纸/monitor/loupe.png"
         }
       },
       "assetId": "STK-010"
@@ -3791,6 +5639,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/focus.svg",
           "preview": "贴纸/lavenderink/focus.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/focus.svg",
+          "preview": "贴纸/morandi/focus.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/focus.svg",
+          "preview": "贴纸/nordic/focus.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/focus.svg",
+          "preview": "贴纸/terracotta/focus.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/focus.svg",
+          "preview": "贴纸/artdeco/focus.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/focus.svg",
+          "preview": "贴纸/monitor/focus.png"
         }
       },
       "assetId": "STK-011"
@@ -3878,6 +5746,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/leader.svg",
           "preview": "贴纸/lavenderink/leader.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/leader.svg",
+          "preview": "贴纸/morandi/leader.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/leader.svg",
+          "preview": "贴纸/nordic/leader.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/leader.svg",
+          "preview": "贴纸/terracotta/leader.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/leader.svg",
+          "preview": "贴纸/artdeco/leader.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/leader.svg",
+          "preview": "贴纸/monitor/leader.png"
         }
       },
       "assetId": "STK-012"
@@ -3965,6 +5853,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/tap.svg",
           "preview": "贴纸/lavenderink/tap.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/tap.svg",
+          "preview": "贴纸/morandi/tap.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/tap.svg",
+          "preview": "贴纸/nordic/tap.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/tap.svg",
+          "preview": "贴纸/terracotta/tap.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/tap.svg",
+          "preview": "贴纸/artdeco/tap.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/tap.svg",
+          "preview": "贴纸/monitor/tap.png"
         }
       },
       "assetId": "STK-013"
@@ -4052,6 +5960,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/dragtrail.svg",
           "preview": "贴纸/lavenderink/dragtrail.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/dragtrail.svg",
+          "preview": "贴纸/morandi/dragtrail.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/dragtrail.svg",
+          "preview": "贴纸/nordic/dragtrail.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/dragtrail.svg",
+          "preview": "贴纸/terracotta/dragtrail.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/dragtrail.svg",
+          "preview": "贴纸/artdeco/dragtrail.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/dragtrail.svg",
+          "preview": "贴纸/monitor/dragtrail.png"
         }
       },
       "assetId": "STK-014"
@@ -4139,6 +6067,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/rotatearc.svg",
           "preview": "贴纸/lavenderink/rotatearc.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/rotatearc.svg",
+          "preview": "贴纸/morandi/rotatearc.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/rotatearc.svg",
+          "preview": "贴纸/nordic/rotatearc.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/rotatearc.svg",
+          "preview": "贴纸/terracotta/rotatearc.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/rotatearc.svg",
+          "preview": "贴纸/artdeco/rotatearc.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/rotatearc.svg",
+          "preview": "贴纸/monitor/rotatearc.png"
         }
       },
       "assetId": "STK-015"
@@ -4226,6 +6174,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/stepnum.svg",
           "preview": "贴纸/lavenderink/stepnum.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/stepnum.svg",
+          "preview": "贴纸/morandi/stepnum.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/stepnum.svg",
+          "preview": "贴纸/nordic/stepnum.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/stepnum.svg",
+          "preview": "贴纸/terracotta/stepnum.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/stepnum.svg",
+          "preview": "贴纸/artdeco/stepnum.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/stepnum.svg",
+          "preview": "贴纸/monitor/stepnum.png"
         }
       },
       "assetId": "STK-016"
@@ -4313,6 +6281,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/dimension.svg",
           "preview": "贴纸/lavenderink/dimension.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/dimension.svg",
+          "preview": "贴纸/morandi/dimension.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/dimension.svg",
+          "preview": "贴纸/nordic/dimension.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/dimension.svg",
+          "preview": "贴纸/terracotta/dimension.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/dimension.svg",
+          "preview": "贴纸/artdeco/dimension.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/dimension.svg",
+          "preview": "贴纸/monitor/dimension.png"
         }
       },
       "assetId": "STK-017"
@@ -4400,6 +6388,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/level.svg",
           "preview": "贴纸/lavenderink/level.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/level.svg",
+          "preview": "贴纸/morandi/level.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/level.svg",
+          "preview": "贴纸/nordic/level.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/level.svg",
+          "preview": "贴纸/terracotta/level.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/level.svg",
+          "preview": "贴纸/artdeco/level.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/level.svg",
+          "preview": "贴纸/monitor/level.png"
         }
       },
       "assetId": "STK-018"
@@ -4487,6 +6495,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/beforeafter.svg",
           "preview": "贴纸/lavenderink/beforeafter.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/beforeafter.svg",
+          "preview": "贴纸/morandi/beforeafter.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/beforeafter.svg",
+          "preview": "贴纸/nordic/beforeafter.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/beforeafter.svg",
+          "preview": "贴纸/terracotta/beforeafter.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/beforeafter.svg",
+          "preview": "贴纸/artdeco/beforeafter.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/beforeafter.svg",
+          "preview": "贴纸/monitor/beforeafter.png"
         }
       },
       "assetId": "STK-019"
@@ -4574,6 +6602,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/diffband.svg",
           "preview": "贴纸/lavenderink/diffband.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/diffband.svg",
+          "preview": "贴纸/morandi/diffband.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/diffband.svg",
+          "preview": "贴纸/nordic/diffband.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/diffband.svg",
+          "preview": "贴纸/terracotta/diffband.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/diffband.svg",
+          "preview": "贴纸/artdeco/diffband.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/diffband.svg",
+          "preview": "贴纸/monitor/diffband.png"
         }
       },
       "assetId": "STK-020"
@@ -4661,6 +6709,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/caution.svg",
           "preview": "贴纸/lavenderink/caution.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/caution.svg",
+          "preview": "贴纸/morandi/caution.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/caution.svg",
+          "preview": "贴纸/nordic/caution.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/caution.svg",
+          "preview": "贴纸/terracotta/caution.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/caution.svg",
+          "preview": "贴纸/artdeco/caution.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/caution.svg",
+          "preview": "贴纸/monitor/caution.png"
         }
       },
       "assetId": "STK-021"
@@ -4748,6 +6816,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/wrong.svg",
           "preview": "贴纸/lavenderink/wrong.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/wrong.svg",
+          "preview": "贴纸/morandi/wrong.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/wrong.svg",
+          "preview": "贴纸/nordic/wrong.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/wrong.svg",
+          "preview": "贴纸/terracotta/wrong.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/wrong.svg",
+          "preview": "贴纸/artdeco/wrong.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/wrong.svg",
+          "preview": "贴纸/monitor/wrong.png"
         }
       },
       "assetId": "STK-022"
@@ -4835,6 +6923,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/mute.svg",
           "preview": "贴纸/lavenderink/mute.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/mute.svg",
+          "preview": "贴纸/morandi/mute.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/mute.svg",
+          "preview": "贴纸/nordic/mute.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/mute.svg",
+          "preview": "贴纸/terracotta/mute.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/mute.svg",
+          "preview": "贴纸/artdeco/mute.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/mute.svg",
+          "preview": "贴纸/monitor/mute.png"
         }
       },
       "assetId": "STK-023"
@@ -4922,6 +7030,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/notetag.svg",
           "preview": "贴纸/lavenderink/notetag.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/notetag.svg",
+          "preview": "贴纸/morandi/notetag.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/notetag.svg",
+          "preview": "贴纸/nordic/notetag.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/notetag.svg",
+          "preview": "贴纸/terracotta/notetag.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/notetag.svg",
+          "preview": "贴纸/artdeco/notetag.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/notetag.svg",
+          "preview": "贴纸/monitor/notetag.png"
         }
       },
       "assetId": "STK-024"
@@ -5007,6 +7135,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/headsetmark.svg",
           "preview": "贴纸/lavenderink/headsetmark.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/headsetmark.svg",
+          "preview": "贴纸/morandi/headsetmark.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/headsetmark.svg",
+          "preview": "贴纸/nordic/headsetmark.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/headsetmark.svg",
+          "preview": "贴纸/terracotta/headsetmark.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/headsetmark.svg",
+          "preview": "贴纸/artdeco/headsetmark.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/headsetmark.svg",
+          "preview": "贴纸/monitor/headsetmark.png"
         }
       }
     },
@@ -5091,6 +7239,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/voicewave.svg",
           "preview": "贴纸/lavenderink/voicewave.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/voicewave.svg",
+          "preview": "贴纸/morandi/voicewave.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/voicewave.svg",
+          "preview": "贴纸/nordic/voicewave.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/voicewave.svg",
+          "preview": "贴纸/terracotta/voicewave.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/voicewave.svg",
+          "preview": "贴纸/artdeco/voicewave.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/voicewave.svg",
+          "preview": "贴纸/monitor/voicewave.png"
         }
       }
     },
@@ -5175,6 +7343,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/bookmarkflag.svg",
           "preview": "贴纸/lavenderink/bookmarkflag.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/bookmarkflag.svg",
+          "preview": "贴纸/morandi/bookmarkflag.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/bookmarkflag.svg",
+          "preview": "贴纸/nordic/bookmarkflag.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/bookmarkflag.svg",
+          "preview": "贴纸/terracotta/bookmarkflag.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/bookmarkflag.svg",
+          "preview": "贴纸/artdeco/bookmarkflag.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/bookmarkflag.svg",
+          "preview": "贴纸/monitor/bookmarkflag.png"
         }
       }
     },
@@ -5259,6 +7447,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/calendarpin.svg",
           "preview": "贴纸/lavenderink/calendarpin.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/calendarpin.svg",
+          "preview": "贴纸/morandi/calendarpin.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/calendarpin.svg",
+          "preview": "贴纸/nordic/calendarpin.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/calendarpin.svg",
+          "preview": "贴纸/terracotta/calendarpin.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/calendarpin.svg",
+          "preview": "贴纸/artdeco/calendarpin.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/calendarpin.svg",
+          "preview": "贴纸/monitor/calendarpin.png"
         }
       }
     },
@@ -5343,6 +7551,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/warmsteam.svg",
           "preview": "贴纸/lavenderink/warmsteam.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/warmsteam.svg",
+          "preview": "贴纸/morandi/warmsteam.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/warmsteam.svg",
+          "preview": "贴纸/nordic/warmsteam.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/warmsteam.svg",
+          "preview": "贴纸/terracotta/warmsteam.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/warmsteam.svg",
+          "preview": "贴纸/artdeco/warmsteam.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/warmsteam.svg",
+          "preview": "贴纸/monitor/warmsteam.png"
         }
       }
     },
@@ -5427,6 +7655,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/droplet.svg",
           "preview": "贴纸/lavenderink/droplet.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/droplet.svg",
+          "preview": "贴纸/morandi/droplet.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/droplet.svg",
+          "preview": "贴纸/nordic/droplet.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/droplet.svg",
+          "preview": "贴纸/terracotta/droplet.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/droplet.svg",
+          "preview": "贴纸/artdeco/droplet.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/droplet.svg",
+          "preview": "贴纸/monitor/droplet.png"
         }
       }
     },
@@ -5511,6 +7759,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/batterybars.svg",
           "preview": "贴纸/lavenderink/batterybars.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/batterybars.svg",
+          "preview": "贴纸/morandi/batterybars.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/batterybars.svg",
+          "preview": "贴纸/nordic/batterybars.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/batterybars.svg",
+          "preview": "贴纸/terracotta/batterybars.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/batterybars.svg",
+          "preview": "贴纸/artdeco/batterybars.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/batterybars.svg",
+          "preview": "贴纸/monitor/batterybars.png"
         }
       }
     },
@@ -5595,6 +7863,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/soundoff.svg",
           "preview": "贴纸/lavenderink/soundoff.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/soundoff.svg",
+          "preview": "贴纸/morandi/soundoff.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/soundoff.svg",
+          "preview": "贴纸/nordic/soundoff.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/soundoff.svg",
+          "preview": "贴纸/terracotta/soundoff.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/soundoff.svg",
+          "preview": "贴纸/artdeco/soundoff.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/soundoff.svg",
+          "preview": "贴纸/monitor/soundoff.png"
         }
       }
     },
@@ -5679,6 +7967,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/layersheets.svg",
           "preview": "贴纸/lavenderink/layersheets.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/layersheets.svg",
+          "preview": "贴纸/morandi/layersheets.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/layersheets.svg",
+          "preview": "贴纸/nordic/layersheets.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/layersheets.svg",
+          "preview": "贴纸/terracotta/layersheets.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/layersheets.svg",
+          "preview": "贴纸/artdeco/layersheets.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/layersheets.svg",
+          "preview": "贴纸/monitor/layersheets.png"
         }
       }
     },
@@ -5763,6 +8071,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/returnarrow.svg",
           "preview": "贴纸/lavenderink/returnarrow.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/returnarrow.svg",
+          "preview": "贴纸/morandi/returnarrow.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/returnarrow.svg",
+          "preview": "贴纸/nordic/returnarrow.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/returnarrow.svg",
+          "preview": "贴纸/terracotta/returnarrow.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/returnarrow.svg",
+          "preview": "贴纸/artdeco/returnarrow.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/returnarrow.svg",
+          "preview": "贴纸/monitor/returnarrow.png"
         }
       }
     },
@@ -5847,6 +8175,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/timerbell.svg",
           "preview": "贴纸/lavenderink/timerbell.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/timerbell.svg",
+          "preview": "贴纸/morandi/timerbell.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/timerbell.svg",
+          "preview": "贴纸/nordic/timerbell.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/timerbell.svg",
+          "preview": "贴纸/terracotta/timerbell.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/timerbell.svg",
+          "preview": "贴纸/artdeco/timerbell.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/timerbell.svg",
+          "preview": "贴纸/monitor/timerbell.png"
         }
       }
     },
@@ -5931,6 +8279,26 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/alignguide.svg",
           "preview": "贴纸/lavenderink/alignguide.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/alignguide.svg",
+          "preview": "贴纸/morandi/alignguide.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/alignguide.svg",
+          "preview": "贴纸/nordic/alignguide.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/alignguide.svg",
+          "preview": "贴纸/terracotta/alignguide.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/alignguide.svg",
+          "preview": "贴纸/artdeco/alignguide.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/alignguide.svg",
+          "preview": "贴纸/monitor/alignguide.png"
         }
       }
     },
@@ -6015,6 +8383,1066 @@
         "lavenderink": {
           "vector": "贴纸/lavenderink/optionfork.svg",
           "preview": "贴纸/lavenderink/optionfork.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/optionfork.svg",
+          "preview": "贴纸/morandi/optionfork.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/optionfork.svg",
+          "preview": "贴纸/nordic/optionfork.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/optionfork.svg",
+          "preview": "贴纸/terracotta/optionfork.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/optionfork.svg",
+          "preview": "贴纸/artdeco/optionfork.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/optionfork.svg",
+          "preview": "贴纸/monitor/optionfork.png"
+        }
+      }
+    },
+    {
+      "id": "checklist",
+      "name": "三项清单",
+      "uses": "代办、准备、盘点、检查、打勾",
+      "shape": "三根清单横线，第一项带勾。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-038",
+      "files": {
+        "vector": "贴纸/checklist.svg",
+        "preview": "贴纸/checklist.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/checklist.svg",
+          "preview": "贴纸/atelier/checklist.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/checklist.svg",
+          "preview": "贴纸/herb/checklist.png"
+        },
+        "night": {
+          "vector": "贴纸/night/checklist.svg",
+          "preview": "贴纸/night/checklist.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/checklist.svg",
+          "preview": "贴纸/ink/checklist.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/checklist.svg",
+          "preview": "贴纸/coast/checklist.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/checklist.svg",
+          "preview": "贴纸/plum/checklist.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/checklist.svg",
+          "preview": "贴纸/cobalt/checklist.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/checklist.svg",
+          "preview": "贴纸/slate/checklist.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/checklist.svg",
+          "preview": "贴纸/porcelain/checklist.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/checklist.svg",
+          "preview": "贴纸/sandpine/checklist.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/checklist.svg",
+          "preview": "贴纸/violet/checklist.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/checklist.svg",
+          "preview": "贴纸/teaamber/checklist.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/checklist.svg",
+          "preview": "贴纸/tidal/checklist.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/checklist.svg",
+          "preview": "贴纸/lavenderink/checklist.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/checklist.svg",
+          "preview": "贴纸/morandi/checklist.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/checklist.svg",
+          "preview": "贴纸/nordic/checklist.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/checklist.svg",
+          "preview": "贴纸/terracotta/checklist.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/checklist.svg",
+          "preview": "贴纸/artdeco/checklist.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/checklist.svg",
+          "preview": "贴纸/monitor/checklist.png"
+        }
+      }
+    },
+    {
+      "id": "alertbadge",
+      "name": "注意这里",
+      "uses": "提醒、错误、限制、注意事项",
+      "shape": "圆角三角和短叹号，轮廓留白。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-039",
+      "files": {
+        "vector": "贴纸/alertbadge.svg",
+        "preview": "贴纸/alertbadge.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/alertbadge.svg",
+          "preview": "贴纸/atelier/alertbadge.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/alertbadge.svg",
+          "preview": "贴纸/herb/alertbadge.png"
+        },
+        "night": {
+          "vector": "贴纸/night/alertbadge.svg",
+          "preview": "贴纸/night/alertbadge.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/alertbadge.svg",
+          "preview": "贴纸/ink/alertbadge.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/alertbadge.svg",
+          "preview": "贴纸/coast/alertbadge.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/alertbadge.svg",
+          "preview": "贴纸/plum/alertbadge.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/alertbadge.svg",
+          "preview": "贴纸/cobalt/alertbadge.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/alertbadge.svg",
+          "preview": "贴纸/slate/alertbadge.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/alertbadge.svg",
+          "preview": "贴纸/porcelain/alertbadge.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/alertbadge.svg",
+          "preview": "贴纸/sandpine/alertbadge.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/alertbadge.svg",
+          "preview": "贴纸/violet/alertbadge.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/alertbadge.svg",
+          "preview": "贴纸/teaamber/alertbadge.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/alertbadge.svg",
+          "preview": "贴纸/tidal/alertbadge.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/alertbadge.svg",
+          "preview": "贴纸/lavenderink/alertbadge.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/alertbadge.svg",
+          "preview": "贴纸/morandi/alertbadge.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/alertbadge.svg",
+          "preview": "贴纸/nordic/alertbadge.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/alertbadge.svg",
+          "preview": "贴纸/terracotta/alertbadge.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/alertbadge.svg",
+          "preview": "贴纸/artdeco/alertbadge.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/alertbadge.svg",
+          "preview": "贴纸/monitor/alertbadge.png"
+        }
+      }
+    },
+    {
+      "id": "maproute",
+      "name": "定位和路线",
+      "uses": "导航、路线、目的地、攻略、旅行",
+      "shape": "弯曲虚线连接起点与地图定位针。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-040",
+      "files": {
+        "vector": "贴纸/maproute.svg",
+        "preview": "贴纸/maproute.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/maproute.svg",
+          "preview": "贴纸/atelier/maproute.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/maproute.svg",
+          "preview": "贴纸/herb/maproute.png"
+        },
+        "night": {
+          "vector": "贴纸/night/maproute.svg",
+          "preview": "贴纸/night/maproute.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/maproute.svg",
+          "preview": "贴纸/ink/maproute.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/maproute.svg",
+          "preview": "贴纸/coast/maproute.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/maproute.svg",
+          "preview": "贴纸/plum/maproute.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/maproute.svg",
+          "preview": "贴纸/cobalt/maproute.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/maproute.svg",
+          "preview": "贴纸/slate/maproute.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/maproute.svg",
+          "preview": "贴纸/porcelain/maproute.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/maproute.svg",
+          "preview": "贴纸/sandpine/maproute.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/maproute.svg",
+          "preview": "贴纸/violet/maproute.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/maproute.svg",
+          "preview": "贴纸/teaamber/maproute.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/maproute.svg",
+          "preview": "贴纸/tidal/maproute.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/maproute.svg",
+          "preview": "贴纸/lavenderink/maproute.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/maproute.svg",
+          "preview": "贴纸/morandi/maproute.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/maproute.svg",
+          "preview": "贴纸/nordic/maproute.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/maproute.svg",
+          "preview": "贴纸/terracotta/maproute.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/maproute.svg",
+          "preview": "贴纸/artdeco/maproute.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/maproute.svg",
+          "preview": "贴纸/monitor/maproute.png"
+        }
+      }
+    },
+    {
+      "id": "pricecompare",
+      "name": "吊牌价格",
+      "uses": "价格、折扣、比价、预算、购物",
+      "shape": "叠挂双吊牌，主牌以图形标记优惠。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-041",
+      "files": {
+        "vector": "贴纸/pricecompare.svg",
+        "preview": "贴纸/pricecompare.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/pricecompare.svg",
+          "preview": "贴纸/atelier/pricecompare.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/pricecompare.svg",
+          "preview": "贴纸/herb/pricecompare.png"
+        },
+        "night": {
+          "vector": "贴纸/night/pricecompare.svg",
+          "preview": "贴纸/night/pricecompare.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/pricecompare.svg",
+          "preview": "贴纸/ink/pricecompare.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/pricecompare.svg",
+          "preview": "贴纸/coast/pricecompare.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/pricecompare.svg",
+          "preview": "贴纸/plum/pricecompare.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/pricecompare.svg",
+          "preview": "贴纸/cobalt/pricecompare.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/pricecompare.svg",
+          "preview": "贴纸/slate/pricecompare.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/pricecompare.svg",
+          "preview": "贴纸/porcelain/pricecompare.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/pricecompare.svg",
+          "preview": "贴纸/sandpine/pricecompare.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/pricecompare.svg",
+          "preview": "贴纸/violet/pricecompare.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/pricecompare.svg",
+          "preview": "贴纸/teaamber/pricecompare.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/pricecompare.svg",
+          "preview": "贴纸/tidal/pricecompare.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/pricecompare.svg",
+          "preview": "贴纸/lavenderink/pricecompare.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/pricecompare.svg",
+          "preview": "贴纸/morandi/pricecompare.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/pricecompare.svg",
+          "preview": "贴纸/nordic/pricecompare.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/pricecompare.svg",
+          "preview": "贴纸/terracotta/pricecompare.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/pricecompare.svg",
+          "preview": "贴纸/artdeco/pricecompare.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/pricecompare.svg",
+          "preview": "贴纸/monitor/pricecompare.png"
+        }
+      }
+    },
+    {
+      "id": "unboxing",
+      "name": "打开包装",
+      "uses": "开箱、收到、包裹、课程交付",
+      "shape": "开口纸箱和跳出的高光符号。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-042",
+      "files": {
+        "vector": "贴纸/unboxing.svg",
+        "preview": "贴纸/unboxing.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/unboxing.svg",
+          "preview": "贴纸/atelier/unboxing.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/unboxing.svg",
+          "preview": "贴纸/herb/unboxing.png"
+        },
+        "night": {
+          "vector": "贴纸/night/unboxing.svg",
+          "preview": "贴纸/night/unboxing.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/unboxing.svg",
+          "preview": "贴纸/ink/unboxing.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/unboxing.svg",
+          "preview": "贴纸/coast/unboxing.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/unboxing.svg",
+          "preview": "贴纸/plum/unboxing.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/unboxing.svg",
+          "preview": "贴纸/cobalt/unboxing.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/unboxing.svg",
+          "preview": "贴纸/slate/unboxing.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/unboxing.svg",
+          "preview": "贴纸/porcelain/unboxing.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/unboxing.svg",
+          "preview": "贴纸/sandpine/unboxing.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/unboxing.svg",
+          "preview": "贴纸/violet/unboxing.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/unboxing.svg",
+          "preview": "贴纸/teaamber/unboxing.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/unboxing.svg",
+          "preview": "贴纸/tidal/unboxing.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/unboxing.svg",
+          "preview": "贴纸/lavenderink/unboxing.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/unboxing.svg",
+          "preview": "贴纸/morandi/unboxing.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/unboxing.svg",
+          "preview": "贴纸/nordic/unboxing.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/unboxing.svg",
+          "preview": "贴纸/terracotta/unboxing.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/unboxing.svg",
+          "preview": "贴纸/artdeco/unboxing.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/unboxing.svg",
+          "preview": "贴纸/monitor/unboxing.png"
+        }
+      }
+    },
+    {
+      "id": "privacyshield",
+      "name": "隐私保护",
+      "uses": "安全、保护、权限、隐私",
+      "shape": "盾牌包住小锁，支持低透明底板。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-043",
+      "files": {
+        "vector": "贴纸/privacyshield.svg",
+        "preview": "贴纸/privacyshield.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/privacyshield.svg",
+          "preview": "贴纸/atelier/privacyshield.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/privacyshield.svg",
+          "preview": "贴纸/herb/privacyshield.png"
+        },
+        "night": {
+          "vector": "贴纸/night/privacyshield.svg",
+          "preview": "贴纸/night/privacyshield.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/privacyshield.svg",
+          "preview": "贴纸/ink/privacyshield.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/privacyshield.svg",
+          "preview": "贴纸/coast/privacyshield.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/privacyshield.svg",
+          "preview": "贴纸/plum/privacyshield.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/privacyshield.svg",
+          "preview": "贴纸/cobalt/privacyshield.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/privacyshield.svg",
+          "preview": "贴纸/slate/privacyshield.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/privacyshield.svg",
+          "preview": "贴纸/porcelain/privacyshield.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/privacyshield.svg",
+          "preview": "贴纸/sandpine/privacyshield.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/privacyshield.svg",
+          "preview": "贴纸/violet/privacyshield.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/privacyshield.svg",
+          "preview": "贴纸/teaamber/privacyshield.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/privacyshield.svg",
+          "preview": "贴纸/tidal/privacyshield.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/privacyshield.svg",
+          "preview": "贴纸/lavenderink/privacyshield.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/privacyshield.svg",
+          "preview": "贴纸/morandi/privacyshield.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/privacyshield.svg",
+          "preview": "贴纸/nordic/privacyshield.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/privacyshield.svg",
+          "preview": "贴纸/terracotta/privacyshield.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/privacyshield.svg",
+          "preview": "贴纸/artdeco/privacyshield.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/privacyshield.svg",
+          "preview": "贴纸/monitor/privacyshield.png"
+        }
+      }
+    },
+    {
+      "id": "splitreveal",
+      "name": "前后对照滑杆",
+      "uses": "前后变化、对照、改造、修图、整理",
+      "shape": "双画面由滑杆分开，圆钮上有左右箭头。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-044",
+      "files": {
+        "vector": "贴纸/splitreveal.svg",
+        "preview": "贴纸/splitreveal.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/splitreveal.svg",
+          "preview": "贴纸/atelier/splitreveal.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/splitreveal.svg",
+          "preview": "贴纸/herb/splitreveal.png"
+        },
+        "night": {
+          "vector": "贴纸/night/splitreveal.svg",
+          "preview": "贴纸/night/splitreveal.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/splitreveal.svg",
+          "preview": "贴纸/ink/splitreveal.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/splitreveal.svg",
+          "preview": "贴纸/coast/splitreveal.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/splitreveal.svg",
+          "preview": "贴纸/plum/splitreveal.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/splitreveal.svg",
+          "preview": "贴纸/cobalt/splitreveal.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/splitreveal.svg",
+          "preview": "贴纸/slate/splitreveal.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/splitreveal.svg",
+          "preview": "贴纸/porcelain/splitreveal.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/splitreveal.svg",
+          "preview": "贴纸/sandpine/splitreveal.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/splitreveal.svg",
+          "preview": "贴纸/violet/splitreveal.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/splitreveal.svg",
+          "preview": "贴纸/teaamber/splitreveal.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/splitreveal.svg",
+          "preview": "贴纸/tidal/splitreveal.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/splitreveal.svg",
+          "preview": "贴纸/lavenderink/splitreveal.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/splitreveal.svg",
+          "preview": "贴纸/morandi/splitreveal.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/splitreveal.svg",
+          "preview": "贴纸/nordic/splitreveal.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/splitreveal.svg",
+          "preview": "贴纸/terracotta/splitreveal.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/splitreveal.svg",
+          "preview": "贴纸/artdeco/splitreveal.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/splitreveal.svg",
+          "preview": "贴纸/monitor/splitreveal.png"
+        }
+      }
+    },
+    {
+      "id": "infoquestion",
+      "name": "先问一个问题",
+      "uses": "提问、疑问、互动、评论、答疑",
+      "shape": "对话气泡内放大问号。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-045",
+      "files": {
+        "vector": "贴纸/infoquestion.svg",
+        "preview": "贴纸/infoquestion.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/infoquestion.svg",
+          "preview": "贴纸/atelier/infoquestion.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/infoquestion.svg",
+          "preview": "贴纸/herb/infoquestion.png"
+        },
+        "night": {
+          "vector": "贴纸/night/infoquestion.svg",
+          "preview": "贴纸/night/infoquestion.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/infoquestion.svg",
+          "preview": "贴纸/ink/infoquestion.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/infoquestion.svg",
+          "preview": "贴纸/coast/infoquestion.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/infoquestion.svg",
+          "preview": "贴纸/plum/infoquestion.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/infoquestion.svg",
+          "preview": "贴纸/cobalt/infoquestion.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/infoquestion.svg",
+          "preview": "贴纸/slate/infoquestion.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/infoquestion.svg",
+          "preview": "贴纸/porcelain/infoquestion.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/infoquestion.svg",
+          "preview": "贴纸/sandpine/infoquestion.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/infoquestion.svg",
+          "preview": "贴纸/violet/infoquestion.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/infoquestion.svg",
+          "preview": "贴纸/teaamber/infoquestion.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/infoquestion.svg",
+          "preview": "贴纸/tidal/infoquestion.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/infoquestion.svg",
+          "preview": "贴纸/lavenderink/infoquestion.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/infoquestion.svg",
+          "preview": "贴纸/morandi/infoquestion.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/infoquestion.svg",
+          "preview": "贴纸/nordic/infoquestion.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/infoquestion.svg",
+          "preview": "贴纸/terracotta/infoquestion.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/infoquestion.svg",
+          "preview": "贴纸/artdeco/infoquestion.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/infoquestion.svg",
+          "preview": "贴纸/monitor/infoquestion.png"
+        }
+      }
+    },
+    {
+      "id": "magfocus",
+      "name": "放大镜标记",
+      "uses": "细节、查看、观察、搜索、核对",
+      "shape": "透明圆形镜面和粗手柄。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-046",
+      "files": {
+        "vector": "贴纸/magfocus.svg",
+        "preview": "贴纸/magfocus.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/magfocus.svg",
+          "preview": "贴纸/atelier/magfocus.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/magfocus.svg",
+          "preview": "贴纸/herb/magfocus.png"
+        },
+        "night": {
+          "vector": "贴纸/night/magfocus.svg",
+          "preview": "贴纸/night/magfocus.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/magfocus.svg",
+          "preview": "贴纸/ink/magfocus.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/magfocus.svg",
+          "preview": "贴纸/coast/magfocus.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/magfocus.svg",
+          "preview": "贴纸/plum/magfocus.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/magfocus.svg",
+          "preview": "贴纸/cobalt/magfocus.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/magfocus.svg",
+          "preview": "贴纸/slate/magfocus.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/magfocus.svg",
+          "preview": "贴纸/porcelain/magfocus.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/magfocus.svg",
+          "preview": "贴纸/sandpine/magfocus.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/magfocus.svg",
+          "preview": "贴纸/violet/magfocus.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/magfocus.svg",
+          "preview": "贴纸/teaamber/magfocus.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/magfocus.svg",
+          "preview": "贴纸/tidal/magfocus.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/magfocus.svg",
+          "preview": "贴纸/lavenderink/magfocus.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/magfocus.svg",
+          "preview": "贴纸/morandi/magfocus.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/magfocus.svg",
+          "preview": "贴纸/nordic/magfocus.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/magfocus.svg",
+          "preview": "贴纸/terracotta/magfocus.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/magfocus.svg",
+          "preview": "贴纸/artdeco/magfocus.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/magfocus.svg",
+          "preview": "贴纸/monitor/magfocus.png"
+        }
+      }
+    },
+    {
+      "id": "uploadcloud",
+      "name": "云端上传",
+      "uses": "上传、同步、交付、备份文件",
+      "shape": "云朵下沿托住向上箭头。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-047",
+      "files": {
+        "vector": "贴纸/uploadcloud.svg",
+        "preview": "贴纸/uploadcloud.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/uploadcloud.svg",
+          "preview": "贴纸/atelier/uploadcloud.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/uploadcloud.svg",
+          "preview": "贴纸/herb/uploadcloud.png"
+        },
+        "night": {
+          "vector": "贴纸/night/uploadcloud.svg",
+          "preview": "贴纸/night/uploadcloud.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/uploadcloud.svg",
+          "preview": "贴纸/ink/uploadcloud.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/uploadcloud.svg",
+          "preview": "贴纸/coast/uploadcloud.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/uploadcloud.svg",
+          "preview": "贴纸/plum/uploadcloud.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/uploadcloud.svg",
+          "preview": "贴纸/cobalt/uploadcloud.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/uploadcloud.svg",
+          "preview": "贴纸/slate/uploadcloud.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/uploadcloud.svg",
+          "preview": "贴纸/porcelain/uploadcloud.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/uploadcloud.svg",
+          "preview": "贴纸/sandpine/uploadcloud.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/uploadcloud.svg",
+          "preview": "贴纸/violet/uploadcloud.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/uploadcloud.svg",
+          "preview": "贴纸/teaamber/uploadcloud.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/uploadcloud.svg",
+          "preview": "贴纸/tidal/uploadcloud.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/uploadcloud.svg",
+          "preview": "贴纸/lavenderink/uploadcloud.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/uploadcloud.svg",
+          "preview": "贴纸/morandi/uploadcloud.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/uploadcloud.svg",
+          "preview": "贴纸/nordic/uploadcloud.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/uploadcloud.svg",
+          "preview": "贴纸/terracotta/uploadcloud.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/uploadcloud.svg",
+          "preview": "贴纸/artdeco/uploadcloud.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/uploadcloud.svg",
+          "preview": "贴纸/monitor/uploadcloud.png"
         }
       }
     }
@@ -6039,35 +9467,64 @@
     "pictograms": [
       "IBM · 图形的描边与转角",
       "https://www.ibm.com/design/language/iconography/pictograms/design/"
+    ],
+    "apple": [
+      "Apple · 官网的产品层级与导航",
+      "https://www.apple.com/"
+    ],
+    "webflow26": [
+      "Webflow · 2026 网页设计趋势（编辑观察）",
+      "https://webflow.com/blog/web-design-trends-2026"
+    ],
+    "gleam26": [
+      "Gleam Studio · 2026 网页设计的实践观察",
+      "https://www.gleamstudio.design/blog-post/website-design-trends-2026"
+    ],
+    "carbon": [
+      "IBM Carbon · 响应式网格",
+      "https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/overview"
+    ],
+    "containers": [
+      "MDN · CSS 容器查询",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries"
     ]
   },
   "origin": "本批版式、配色、几何模型与贴纸为此素材册原创。链接为制作规范参考。",
   "recent": {
     "styles": [
-      "contactsheet",
-      "recipeleaf",
-      "signalcard"
+      "siteproduct",
+      "sitetype",
+      "siteeditorial",
+      "sitebento",
+      "siteworkshop",
+      "siteadaptive"
     ],
     "palettes": [
-      "teaamber",
-      "tidal",
-      "lavenderink"
+      "morandi",
+      "nordic",
+      "terracotta",
+      "artdeco",
+      "monitor"
     ],
     "objects": [
-      "mic",
-      "headphones",
-      "laptop",
-      "deskcalendar",
-      "dripper",
-      "books",
-      "key",
-      "flashlight"
+      "powerbank",
+      "nailer",
+      "lensbottle",
+      "taperule",
+      "firstaid"
     ],
     "stickers": [
-      "timerbell",
-      "alignguide",
-      "optionfork"
+      "checklist",
+      "alertbadge",
+      "maproute",
+      "pricecompare",
+      "unboxing",
+      "privacyshield",
+      "splitreveal",
+      "infoquestion",
+      "magfocus",
+      "uploadcloud"
     ]
   }
 }
-</script><script src="layout.js"></script><script src="素材册.js"></script></html>
+</script><script src="layout.js"></script><script src="website.js"></script><script src="palette-lab.js"></script><script src="素材册.js"></script></html>

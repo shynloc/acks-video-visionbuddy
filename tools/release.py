@@ -45,7 +45,7 @@ def manifest():
         for path in sorted((ROOT / "site").rglob("*")) if path.is_file()
     }
     return {
-        "schemaVersion": 1, "rendererVersion": 1, "libraryRelease": VERSION,
+        "schemaVersion": 1, "rendererVersion": 2, "libraryRelease": VERSION,
         "baseline": BASELINE, "assets": entries(), "files": files,
     }
 

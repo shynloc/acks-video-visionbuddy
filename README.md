@@ -1,8 +1,16 @@
 # VisionBuddy 视频素材库
 
-VisionBuddy 收录 108 个动效、9 个部位演示、24 个 3D 物件、37 款贴纸、12 种网页风格和 14 套配色。选好后可直接试看，点「复制到稿件」生成带素材编号的画面标注。
+VisionBuddy 1.2.0 收录 108 个动效、9 个部位演示、29 个 3D 物件、47 款贴纸、18 种网页设计和口播画面版式，以及 19 套配色。选好后可直接试看，点「复制到稿件」生成带素材编号的画面标注。
 
 [GitHub Releases](https://github.com/shynloc/acks-video-visionbuddy/releases)
+
+## 网页风格与配色
+
+在「风格与素材册」点「网页风格」→「整站设计」。预览可以滚动、点击站内导航、展开问答，也能切换桌面和手机宽度。详情卡说明排版、字体和交互原则，并附参考链接。可在「下载这个搭配的素材」保存独立 HTML。
+
+「配色」内可以直接选莫兰迪、北欧、泥陶等色系，或自己选一到两个主题色。选互补、邻近等搭配方式后，可把带用途与 CSS 的色值复制给助手，也可以先套到网页预览，连同网页一起保存。现成 GLB 和贴纸的颜色版本由库内色系决定。
+
+工作台 V3.19.0 起支持 1.2.0 素材库。采用时锁定的旧版本继续可用。
 
 ## 离线使用
 
@@ -14,7 +22,7 @@ VisionBuddy 收录 108 个动效、9 个部位演示、24 个 3D 物件、37 款
 
 ## 构建
 
-在代码目录运行 `python tools/release.py --output dist`。输出包括离线 ZIP、版本清单和 SHA-256。验证下载的 ZIP 可运行 `python tools/release.py --verify dist/visionbuddy-v1.1.0.zip`。
+在代码目录运行 `python tools/release.py --output dist`。输出包括离线 ZIP、版本清单和 SHA-256。验证下载的 ZIP 可运行 `python tools/release.py --verify dist/visionbuddy-v1.2.0.zip`。
 
 运行 `python serve.py --port 8772` 可以在本机打开网站。静态文件与组合 PNG 通过同一端口提供服务，`/latest.json` 指出当前发布版本。发布基线与文件校验值记录在清单中。
 面向口播创作者的视频素材库，提供动效、贴纸、3D 物件、网页风格与配色。
