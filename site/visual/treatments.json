@@ -175,5 +175,90 @@
     ],
     "part": "pocket",
     "assetId": "DEMO-009"
+  },
+  {
+    "id": "lesson-seal",
+    "kind": "lesson",
+    "scene": "seal",
+    "assetId": "DEMO-010",
+    "label": "拆出密封圈",
+    "description": "把盖子与环形部件分开，让拆卸顺序可见。",
+    "object": "sealjar",
+    "labels": [
+      "打开盖子",
+      "取下密封圈"
+    ],
+    "uses": "讲步骤"
+  },
+  {
+    "id": "lesson-wave",
+    "kind": "lesson",
+    "scene": "wave",
+    "assetId": "DEMO-011",
+    "label": "前后两段波形",
+    "description": "同尺度展示前后两段声音。可使用本机音频。",
+    "object": "mic",
+    "labels": [
+      "降噪前",
+      "降噪后"
+    ],
+    "uses": "做对比"
+  },
+  {
+    "id": "lesson-status",
+    "kind": "lesson",
+    "scene": "status",
+    "assetId": "DEMO-012",
+    "label": "上传进度变成确认",
+    "description": "一起看文件进度和右上角完成状态。",
+    "object": "laptop",
+    "labels": [
+      "正在上传",
+      "上传完成"
+    ],
+    "uses": "演示操作"
+  },
+  {
+    "id": "lesson-route",
+    "kind": "lesson",
+    "scene": "route",
+    "assetId": "DEMO-013",
+    "label": "标出三个途经点",
+    "description": "沿路径标记各步骤或位置，最后停在终点。",
+    "object": "suitcase",
+    "labels": [
+      "出发",
+      "经过",
+      "到达"
+    ],
+    "uses": "讲步骤"
+  },
+  {
+    "id": "lesson-number",
+    "kind": "lesson",
+    "scene": "number",
+    "assetId": "DEMO-014",
+    "label": "显示数值变化",
+    "description": "用两个用户提供的数值展示变化。",
+    "object": "scale",
+    "labels": [
+      "80",
+      "120",
+      "%"
+    ],
+    "uses": "做对比"
+  },
+  {
+    "id": "lesson-focus",
+    "kind": "lesson",
+    "scene": "focus",
+    "assetId": "DEMO-015",
+    "label": "圈出一个部位",
+    "description": "在物件透明图上定位关键部位，带可改文字。",
+    "object": "sealjar",
+    "labels": [
+      "这里是密封圈"
+    ],
+    "uses": "指出重点"
   }
 ]

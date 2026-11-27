@@ -24,6 +24,8 @@ def entries(root=ROOT):
         "effects": read("catalog.json")["terms"],
         **{kind: visual[kind] for kind in ("objects", "stickers", "styles", "palettes")},
         "demos": read("visual/treatments.json"),
+        "components": visual.get("components", []),
+        "practice": visual.get("practice", []),
     }
     aliases = {}
     for kind, rows in groups.items():
@@ -45,7 +47,7 @@ def manifest():
         for path in sorted((ROOT / "site").rglob("*")) if path.is_file()
     }
     return {
-        "schemaVersion": 1, "rendererVersion": 2, "libraryRelease": VERSION,
+        "schemaVersion": 1, "rendererVersion": 3, "libraryRelease": VERSION,
         "baseline": BASELINE, "assets": entries(), "files": files,
     }
 

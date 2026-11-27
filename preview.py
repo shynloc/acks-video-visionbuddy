@@ -211,6 +211,19 @@ def scene_data(context):
 
 def demo_html(code):
     entry = resolve_treatment(code)
+    if entry.get("kind") == "lesson":
+        visual = catalog()
+        colors = next(row["colors"] for row in visual["palettes"] if row["id"] == "atelier")
+        data = dict(scene=entry["scene"], heading=entry["label"], labels=entry["labels"],
+            colors=colors, seconds=3, frames=75, play=True)
+        if entry["scene"] == "wave":
+            kit = next(row for row in visual["practice"] if row["id"] == "compare-wave")
+            data["waveBefore"], data["waveAfter"] = kit["originalWave"]
+        if entry["scene"] == "focus":
+            obj = next(row for row in visual["objects"] if row["id"] == entry["object"])
+            data["picture"] = "/visual/" + obj["files"]["preview"]
+        template = (LIBRARY / "lesson-demo.html").read_text(encoding="utf8")
+        return template.replace("__SCENE__", json.dumps(data, ensure_ascii=False).replace("<", "\\u003c"))
     quote = {"scale": "称重 180 克", "jug": "倒到第 3 条刻度"}.get(entry["object"], entry["label"])
     data, _ = scene_data(dict(
         treatment=entry["id"], visual={"objects": entry["object"], "palettes": "atelier"},

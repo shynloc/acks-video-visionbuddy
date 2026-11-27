@@ -1,6 +1,6 @@
 {
   "schema": "visual-library/1",
-  "revision": 4,
+  "revision": 5,
   "styles": [
     {
       "id": "field",
@@ -647,6 +647,237 @@
           "accent": "#EFC677"
         }
       }
+    },
+    {
+      "id": "sitearchive",
+      "assetId": "WEB-019",
+      "name": "数字档案展 · 2027 前瞻",
+      "summary": "拟物档案与编辑式网格",
+      "uses": "生活档案",
+      "when": "生活档案",
+      "layout": "用分类筛选、档案卡与单项详情组织展览，再从页脚回到馆藏。",
+      "type": "衬线标题、短导语和窄列详情。",
+      "detail": "保留完整导航、筛选与详情，适配桌面或窄屏。可在示例中完成一次任务。",
+      "overlay": "做口播可抽出一个局部结果、说明或方向提示。",
+      "source": "canva27",
+      "tokens": {
+        "layout": "interactive-website",
+        "experience": "archives"
+      },
+      "website": {
+        "theme": "editorial",
+        "palette": "archival",
+        "brand": "收录室",
+        "kicker": "城市生活记录",
+        "headline": "让旧物讲出故事。",
+        "intro": "从物件与当时的照片里，读到日常生活的细节。",
+        "action": "浏览馆藏",
+        "guide": "生活档案",
+        "features": [
+          [
+            "袖珍相机",
+            "用小相机记录城市散步。看镜头与按键怎么安排。"
+          ],
+          [
+            "折叠雨伞",
+            "雨天随身带的折叠伞，从伞骨到握把各有用处。"
+          ],
+          [
+            "夹页札记",
+            "抄下路程与天气，照片能找回当时的地方。"
+          ]
+        ],
+        "experience": "archives",
+        "entries": [
+          [
+            "袖珍相机",
+            "影像",
+            "用小相机记录城市散步。看镜头与按键怎么安排。"
+          ],
+          [
+            "折叠雨伞",
+            "物件",
+            "雨天随身带的折叠伞，从伞骨到握把各有用处。"
+          ],
+          [
+            "夹页札记",
+            "影像",
+            "抄下路程与天气，照片能找回当时的地方。"
+          ]
+        ],
+        "picture": "camera",
+        "colors": {
+          "surface": "#F6EADA",
+          "text": "#292128",
+          "object": "#C6AA8D",
+          "accent": "#8B3436"
+        },
+        "tag": "2027 前瞻",
+        "questions": [
+          [
+            "哪里能找到对应内容？",
+            "从首屏进入列表，选择分类或搜索，再打开所需条目。"
+          ],
+          [
+            "手机上怎么浏览？",
+            "同样保留搜索或分类入口，详情会在窄屏中自动收成单列。"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sitecraft",
+      "assetId": "WEB-020",
+      "name": "手作品牌站",
+      "summary": "工艺故事与实拍展示",
+      "uses": "器物怎么做",
+      "when": "器物怎么做",
+      "layout": "首页给出产品与做法，展示系列，再沿制作步骤深入读结构细节。",
+      "type": "短句、纤细说明和照片形成自然节奏。",
+      "detail": "保留完整导航、筛选与详情，适配桌面或窄屏。可在示例中完成一次任务。",
+      "overlay": "做口播可抽出一个局部结果、说明或方向提示。",
+      "source": "envato27",
+      "tokens": {
+        "layout": "interactive-website",
+        "experience": "craft"
+      },
+      "website": {
+        "theme": "product",
+        "palette": "morandi",
+        "brand": "慢作器具",
+        "kicker": "日常器物 · 密封系列",
+        "headline": "一件器物，几个细节。",
+        "intro": "从盖子到密封圈，看看精细的结构怎样照顾日常清洁和收纳。",
+        "action": "看制作过程",
+        "guide": "器物怎么做",
+        "features": [
+          [
+            "设计罐身",
+            "保留圆角，便于操作和清洗。"
+          ],
+          [
+            "装入密封圈",
+            "将可拆密封圈置于环形槽，减少日常护理的障碍。"
+          ],
+          [
+            "完成与养护",
+            "使用后分离盖子与密封圈，自然晾干。"
+          ]
+        ],
+        "experience": "craft",
+        "entries": [
+          [
+            "设计罐身",
+            "器物",
+            "保留圆角，便于操作和清洗。"
+          ],
+          [
+            "装入密封圈",
+            "步骤",
+            "将可拆密封圈置于环形槽，减少日常护理的障碍。"
+          ],
+          [
+            "完成与养护",
+            "步骤",
+            "使用后分离盖子与密封圈，自然晾干。"
+          ]
+        ],
+        "picture": "sealjar",
+        "colors": {
+          "surface": "#F3EDE6",
+          "text": "#323238",
+          "object": "#A69B98",
+          "accent": "#56675C"
+        },
+        "tag": "整站设计",
+        "questions": [
+          [
+            "哪里能找到对应内容？",
+            "从首屏进入列表，选择分类或搜索，再打开所需条目。"
+          ],
+          [
+            "手机上怎么浏览？",
+            "同样保留搜索或分类入口，详情会在窄屏中自动收成单列。"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "siteservice",
+      "assetId": "WEB-021",
+      "name": "服务指南站",
+      "summary": "按任务查找与办理",
+      "uses": "常用事项",
+      "when": "常用事项",
+      "layout": "首屏提供任务入口，后续搜索核验、事项详情与返回形成完整流程。",
+      "type": "无衬线、强对比标题、可读的搜索与提示。",
+      "detail": "保留完整导航、筛选与详情，适配桌面或窄屏。可在示例中完成一次任务。",
+      "overlay": "做口播可抽出一个局部结果、说明或方向提示。",
+      "source": "govguide",
+      "tokens": {
+        "layout": "interactive-website",
+        "experience": "services"
+      },
+      "website": {
+        "theme": "workshop",
+        "palette": "clearpop",
+        "brand": "社区办事指南",
+        "kicker": "居住 / 出行 / 社区",
+        "headline": "今天要办什么？",
+        "intro": "按事项搜索，阅读所需资料和步骤。此页为演示用虚构指南。",
+        "action": "查找服务",
+        "guide": "常用事项",
+        "features": [
+          [
+            "登记社区活动",
+            "读活动要求，选场次，再确认报名。"
+          ],
+          [
+            "借用共享工具",
+            "选工具，阅读借用要求，找时间领取。"
+          ],
+          [
+            "查询社区交通",
+            "查路线，确认站点，从对应入口看最新消息。"
+          ]
+        ],
+        "experience": "services",
+        "entries": [
+          [
+            "登记社区活动",
+            "活动",
+            "读活动要求，选场次，再确认报名。"
+          ],
+          [
+            "借用共享工具",
+            "借用",
+            "选工具，阅读借用要求，找时间领取。"
+          ],
+          [
+            "查询社区交通",
+            "交通",
+            "查路线，确认站点，从对应入口看最新消息。"
+          ]
+        ],
+        "picture": "deskcalendar",
+        "colors": {
+          "surface": "#F5F2FF",
+          "text": "#26213A",
+          "object": "#A3C4E4",
+          "accent": "#923678"
+        },
+        "tag": "整站设计",
+        "questions": [
+          [
+            "哪里能找到对应内容？",
+            "从首屏进入列表，选择分类或搜索，再打开所需条目。"
+          ],
+          [
+            "手机上怎么浏览？",
+            "同样保留搜索或分类入口，详情会在窄屏中自动收成单列。"
+          ]
+        ]
+      }
     }
   ],
   "palettes": [
@@ -1057,6 +1288,60 @@
         "textOnSurfaceContrast": 15.15
       },
       "assetId": "PAL-019"
+    },
+    {
+      "id": "archival",
+      "name": "档案纸墨",
+      "uses": "档案、读书、展览、手作",
+      "colors": {
+        "surface": "#F6EADA",
+        "text": "#292128",
+        "object": "#C6AA8D",
+        "accent": "#8B3436"
+      },
+      "rule": "用书页暖白和深墨承载内容，印章红提示重点。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 13.18
+      },
+      "assetId": "PAL-020"
+    },
+    {
+      "id": "retrobyte",
+      "name": "复古数码",
+      "uses": "科技、游戏、键盘、工具教程",
+      "colors": {
+        "surface": "#172624",
+        "text": "#DDEBCF",
+        "object": "#547B70",
+        "accent": "#D4FC7D"
+      },
+      "rule": "暗绿灰配像素荧光，适合终端和状态提示。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 12.59
+      },
+      "assetId": "PAL-021"
+    },
+    {
+      "id": "clearpop",
+      "name": "清透糖果",
+      "uses": "学习、旅行、日常记录、创作者",
+      "colors": {
+        "surface": "#F5F2FF",
+        "text": "#26213A",
+        "object": "#A3C4E4",
+        "accent": "#923678"
+      },
+      "rule": "淡紫留白配粉蓝主体，用莓紫标出主操作。",
+      "distribution": "网页与物件预览按角色着色。给正文留足对比，强调色少量使用。",
+      "source": "roles",
+      "tokens": {
+        "textOnSurfaceContrast": 13.98
+      },
+      "assetId": "PAL-022"
     }
   ],
   "objects": [
@@ -1166,6 +1451,18 @@
         "monitor": {
           "model": "3D/monitor/pot.glb",
           "preview": "3D/monitor/pot.png"
+        },
+        "archival": {
+          "model": "3D/archival/pot.glb",
+          "preview": "3D/archival/pot.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/pot.glb",
+          "preview": "3D/retrobyte/pot.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/pot.glb",
+          "preview": "3D/clearpop/pot.png"
         }
       },
       "assetId": "OBJ-001"
@@ -1276,6 +1573,18 @@
         "monitor": {
           "model": "3D/monitor/camera.glb",
           "preview": "3D/monitor/camera.png"
+        },
+        "archival": {
+          "model": "3D/archival/camera.glb",
+          "preview": "3D/archival/camera.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/camera.glb",
+          "preview": "3D/retrobyte/camera.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/camera.glb",
+          "preview": "3D/clearpop/camera.png"
         }
       },
       "assetId": "OBJ-002"
@@ -1386,6 +1695,18 @@
         "monitor": {
           "model": "3D/monitor/lamp.glb",
           "preview": "3D/monitor/lamp.png"
+        },
+        "archival": {
+          "model": "3D/archival/lamp.glb",
+          "preview": "3D/archival/lamp.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/lamp.glb",
+          "preview": "3D/retrobyte/lamp.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/lamp.glb",
+          "preview": "3D/clearpop/lamp.png"
         }
       },
       "assetId": "OBJ-003"
@@ -1496,6 +1817,18 @@
         "monitor": {
           "model": "3D/monitor/box.glb",
           "preview": "3D/monitor/box.png"
+        },
+        "archival": {
+          "model": "3D/archival/box.glb",
+          "preview": "3D/archival/box.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/box.glb",
+          "preview": "3D/retrobyte/box.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/box.glb",
+          "preview": "3D/clearpop/box.png"
         }
       },
       "assetId": "OBJ-004"
@@ -1612,6 +1945,18 @@
         "monitor": {
           "model": "3D/monitor/jug.glb",
           "preview": "3D/monitor/jug.png"
+        },
+        "archival": {
+          "model": "3D/archival/jug.glb",
+          "preview": "3D/archival/jug.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/jug.glb",
+          "preview": "3D/retrobyte/jug.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/jug.glb",
+          "preview": "3D/clearpop/jug.png"
         }
       },
       "assetId": "OBJ-005"
@@ -1732,6 +2077,18 @@
         "monitor": {
           "model": "3D/monitor/scale.glb",
           "preview": "3D/monitor/scale.png"
+        },
+        "archival": {
+          "model": "3D/archival/scale.glb",
+          "preview": "3D/archival/scale.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/scale.glb",
+          "preview": "3D/retrobyte/scale.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/scale.glb",
+          "preview": "3D/clearpop/scale.png"
         }
       },
       "assetId": "OBJ-006"
@@ -1848,6 +2205,18 @@
         "monitor": {
           "model": "3D/monitor/binder.glb",
           "preview": "3D/monitor/binder.png"
+        },
+        "archival": {
+          "model": "3D/archival/binder.glb",
+          "preview": "3D/archival/binder.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/binder.glb",
+          "preview": "3D/retrobyte/binder.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/binder.glb",
+          "preview": "3D/clearpop/binder.png"
         }
       },
       "assetId": "OBJ-007"
@@ -1964,6 +2333,18 @@
         "monitor": {
           "model": "3D/monitor/backpack.glb",
           "preview": "3D/monitor/backpack.png"
+        },
+        "archival": {
+          "model": "3D/archival/backpack.glb",
+          "preview": "3D/archival/backpack.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/backpack.glb",
+          "preview": "3D/retrobyte/backpack.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/backpack.glb",
+          "preview": "3D/clearpop/backpack.png"
         }
       },
       "assetId": "OBJ-008"
@@ -2080,6 +2461,18 @@
         "monitor": {
           "model": "3D/monitor/timer.glb",
           "preview": "3D/monitor/timer.png"
+        },
+        "archival": {
+          "model": "3D/archival/timer.glb",
+          "preview": "3D/archival/timer.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/timer.glb",
+          "preview": "3D/retrobyte/timer.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/timer.glb",
+          "preview": "3D/clearpop/timer.png"
         }
       },
       "assetId": "OBJ-009"
@@ -2196,6 +2589,18 @@
         "monitor": {
           "model": "3D/monitor/phone.glb",
           "preview": "3D/monitor/phone.png"
+        },
+        "archival": {
+          "model": "3D/archival/phone.glb",
+          "preview": "3D/archival/phone.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/phone.glb",
+          "preview": "3D/retrobyte/phone.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/phone.glb",
+          "preview": "3D/clearpop/phone.png"
         }
       },
       "assetId": "OBJ-010"
@@ -2312,6 +2717,18 @@
         "monitor": {
           "model": "3D/monitor/usbc.glb",
           "preview": "3D/monitor/usbc.png"
+        },
+        "archival": {
+          "model": "3D/archival/usbc.glb",
+          "preview": "3D/archival/usbc.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/usbc.glb",
+          "preview": "3D/retrobyte/usbc.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/usbc.glb",
+          "preview": "3D/clearpop/usbc.png"
         }
       },
       "assetId": "OBJ-011"
@@ -2428,6 +2845,18 @@
         "monitor": {
           "model": "3D/monitor/suitcase.glb",
           "preview": "3D/monitor/suitcase.png"
+        },
+        "archival": {
+          "model": "3D/archival/suitcase.glb",
+          "preview": "3D/archival/suitcase.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/suitcase.glb",
+          "preview": "3D/retrobyte/suitcase.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/suitcase.glb",
+          "preview": "3D/clearpop/suitcase.png"
         }
       },
       "assetId": "OBJ-012"
@@ -2544,6 +2973,18 @@
         "monitor": {
           "model": "3D/monitor/bottle.glb",
           "preview": "3D/monitor/bottle.png"
+        },
+        "archival": {
+          "model": "3D/archival/bottle.glb",
+          "preview": "3D/archival/bottle.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/bottle.glb",
+          "preview": "3D/retrobyte/bottle.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/bottle.glb",
+          "preview": "3D/clearpop/bottle.png"
         }
       },
       "assetId": "OBJ-013"
@@ -2660,6 +3101,18 @@
         "monitor": {
           "model": "3D/monitor/remote.glb",
           "preview": "3D/monitor/remote.png"
+        },
+        "archival": {
+          "model": "3D/archival/remote.glb",
+          "preview": "3D/archival/remote.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/remote.glb",
+          "preview": "3D/retrobyte/remote.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/remote.glb",
+          "preview": "3D/clearpop/remote.png"
         }
       },
       "assetId": "OBJ-014"
@@ -2776,6 +3229,18 @@
         "monitor": {
           "model": "3D/monitor/drawer.glb",
           "preview": "3D/monitor/drawer.png"
+        },
+        "archival": {
+          "model": "3D/archival/drawer.glb",
+          "preview": "3D/archival/drawer.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/drawer.glb",
+          "preview": "3D/retrobyte/drawer.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/drawer.glb",
+          "preview": "3D/clearpop/drawer.png"
         }
       },
       "assetId": "OBJ-015"
@@ -2892,6 +3357,18 @@
         "monitor": {
           "model": "3D/monitor/pump.glb",
           "preview": "3D/monitor/pump.png"
+        },
+        "archival": {
+          "model": "3D/archival/pump.glb",
+          "preview": "3D/archival/pump.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/pump.glb",
+          "preview": "3D/retrobyte/pump.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/pump.glb",
+          "preview": "3D/clearpop/pump.png"
         }
       },
       "assetId": "OBJ-016"
@@ -3009,6 +3486,18 @@
         "monitor": {
           "model": "3D/monitor/mic.glb",
           "preview": "3D/monitor/mic.png"
+        },
+        "archival": {
+          "model": "3D/archival/mic.glb",
+          "preview": "3D/archival/mic.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/mic.glb",
+          "preview": "3D/retrobyte/mic.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/mic.glb",
+          "preview": "3D/clearpop/mic.png"
         }
       }
     },
@@ -3125,6 +3614,18 @@
         "monitor": {
           "model": "3D/monitor/headphones.glb",
           "preview": "3D/monitor/headphones.png"
+        },
+        "archival": {
+          "model": "3D/archival/headphones.glb",
+          "preview": "3D/archival/headphones.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/headphones.glb",
+          "preview": "3D/retrobyte/headphones.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/headphones.glb",
+          "preview": "3D/clearpop/headphones.png"
         }
       }
     },
@@ -3241,6 +3742,18 @@
         "monitor": {
           "model": "3D/monitor/laptop.glb",
           "preview": "3D/monitor/laptop.png"
+        },
+        "archival": {
+          "model": "3D/archival/laptop.glb",
+          "preview": "3D/archival/laptop.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/laptop.glb",
+          "preview": "3D/retrobyte/laptop.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/laptop.glb",
+          "preview": "3D/clearpop/laptop.png"
         }
       }
     },
@@ -3357,6 +3870,18 @@
         "monitor": {
           "model": "3D/monitor/deskcalendar.glb",
           "preview": "3D/monitor/deskcalendar.png"
+        },
+        "archival": {
+          "model": "3D/archival/deskcalendar.glb",
+          "preview": "3D/archival/deskcalendar.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/deskcalendar.glb",
+          "preview": "3D/retrobyte/deskcalendar.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/deskcalendar.glb",
+          "preview": "3D/clearpop/deskcalendar.png"
         }
       }
     },
@@ -3473,6 +3998,18 @@
         "monitor": {
           "model": "3D/monitor/dripper.glb",
           "preview": "3D/monitor/dripper.png"
+        },
+        "archival": {
+          "model": "3D/archival/dripper.glb",
+          "preview": "3D/archival/dripper.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/dripper.glb",
+          "preview": "3D/retrobyte/dripper.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/dripper.glb",
+          "preview": "3D/clearpop/dripper.png"
         }
       }
     },
@@ -3589,6 +4126,18 @@
         "monitor": {
           "model": "3D/monitor/books.glb",
           "preview": "3D/monitor/books.png"
+        },
+        "archival": {
+          "model": "3D/archival/books.glb",
+          "preview": "3D/archival/books.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/books.glb",
+          "preview": "3D/retrobyte/books.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/books.glb",
+          "preview": "3D/clearpop/books.png"
         }
       }
     },
@@ -3705,6 +4254,18 @@
         "monitor": {
           "model": "3D/monitor/key.glb",
           "preview": "3D/monitor/key.png"
+        },
+        "archival": {
+          "model": "3D/archival/key.glb",
+          "preview": "3D/archival/key.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/key.glb",
+          "preview": "3D/retrobyte/key.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/key.glb",
+          "preview": "3D/clearpop/key.png"
         }
       }
     },
@@ -3821,6 +4382,18 @@
         "monitor": {
           "model": "3D/monitor/flashlight.glb",
           "preview": "3D/monitor/flashlight.png"
+        },
+        "archival": {
+          "model": "3D/archival/flashlight.glb",
+          "preview": "3D/archival/flashlight.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/flashlight.glb",
+          "preview": "3D/retrobyte/flashlight.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/flashlight.glb",
+          "preview": "3D/clearpop/flashlight.png"
         }
       }
     },
@@ -3937,6 +4510,18 @@
         "monitor": {
           "model": "3D/monitor/powerbank.glb",
           "preview": "3D/monitor/powerbank.png"
+        },
+        "archival": {
+          "model": "3D/archival/powerbank.glb",
+          "preview": "3D/archival/powerbank.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/powerbank.glb",
+          "preview": "3D/retrobyte/powerbank.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/powerbank.glb",
+          "preview": "3D/clearpop/powerbank.png"
         }
       }
     },
@@ -4053,6 +4638,18 @@
         "monitor": {
           "model": "3D/monitor/nailer.glb",
           "preview": "3D/monitor/nailer.png"
+        },
+        "archival": {
+          "model": "3D/archival/nailer.glb",
+          "preview": "3D/archival/nailer.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/nailer.glb",
+          "preview": "3D/retrobyte/nailer.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/nailer.glb",
+          "preview": "3D/clearpop/nailer.png"
         }
       }
     },
@@ -4169,6 +4766,18 @@
         "monitor": {
           "model": "3D/monitor/lensbottle.glb",
           "preview": "3D/monitor/lensbottle.png"
+        },
+        "archival": {
+          "model": "3D/archival/lensbottle.glb",
+          "preview": "3D/archival/lensbottle.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/lensbottle.glb",
+          "preview": "3D/retrobyte/lensbottle.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/lensbottle.glb",
+          "preview": "3D/clearpop/lensbottle.png"
         }
       }
     },
@@ -4285,6 +4894,18 @@
         "monitor": {
           "model": "3D/monitor/taperule.glb",
           "preview": "3D/monitor/taperule.png"
+        },
+        "archival": {
+          "model": "3D/archival/taperule.glb",
+          "preview": "3D/archival/taperule.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/taperule.glb",
+          "preview": "3D/retrobyte/taperule.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/taperule.glb",
+          "preview": "3D/clearpop/taperule.png"
         }
       }
     },
@@ -4401,6 +5022,786 @@
         "monitor": {
           "model": "3D/monitor/firstaid.glb",
           "preview": "3D/monitor/firstaid.png"
+        },
+        "archival": {
+          "model": "3D/archival/firstaid.glb",
+          "preview": "3D/archival/firstaid.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/firstaid.glb",
+          "preview": "3D/retrobyte/firstaid.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/firstaid.glb",
+          "preview": "3D/clearpop/firstaid.png"
+        }
+      }
+    },
+    {
+      "id": "powerstrip",
+      "name": "插排",
+      "parts": "外壳、插座孔、电源开关与指示灯",
+      "uses": "插电、通断、桌面用电",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "开关": [
+            0.736,
+            0.576
+          ]
+        }
+      },
+      "assetId": "OBJ-030",
+      "files": {
+        "model": "3D/powerstrip.glb",
+        "preview": "3D/powerstrip.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/powerstrip.glb",
+          "preview": "3D/atelier/powerstrip.png"
+        },
+        "herb": {
+          "model": "3D/herb/powerstrip.glb",
+          "preview": "3D/herb/powerstrip.png"
+        },
+        "night": {
+          "model": "3D/night/powerstrip.glb",
+          "preview": "3D/night/powerstrip.png"
+        },
+        "ink": {
+          "model": "3D/ink/powerstrip.glb",
+          "preview": "3D/ink/powerstrip.png"
+        },
+        "coast": {
+          "model": "3D/coast/powerstrip.glb",
+          "preview": "3D/coast/powerstrip.png"
+        },
+        "plum": {
+          "model": "3D/plum/powerstrip.glb",
+          "preview": "3D/plum/powerstrip.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/powerstrip.glb",
+          "preview": "3D/cobalt/powerstrip.png"
+        },
+        "slate": {
+          "model": "3D/slate/powerstrip.glb",
+          "preview": "3D/slate/powerstrip.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/powerstrip.glb",
+          "preview": "3D/porcelain/powerstrip.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/powerstrip.glb",
+          "preview": "3D/sandpine/powerstrip.png"
+        },
+        "violet": {
+          "model": "3D/violet/powerstrip.glb",
+          "preview": "3D/violet/powerstrip.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/powerstrip.glb",
+          "preview": "3D/teaamber/powerstrip.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/powerstrip.glb",
+          "preview": "3D/tidal/powerstrip.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/powerstrip.glb",
+          "preview": "3D/lavenderink/powerstrip.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/powerstrip.glb",
+          "preview": "3D/morandi/powerstrip.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/powerstrip.glb",
+          "preview": "3D/nordic/powerstrip.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/powerstrip.glb",
+          "preview": "3D/terracotta/powerstrip.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/powerstrip.glb",
+          "preview": "3D/artdeco/powerstrip.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/powerstrip.glb",
+          "preview": "3D/monitor/powerstrip.png"
+        },
+        "archival": {
+          "model": "3D/archival/powerstrip.glb",
+          "preview": "3D/archival/powerstrip.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/powerstrip.glb",
+          "preview": "3D/retrobyte/powerstrip.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/powerstrip.glb",
+          "preview": "3D/clearpop/powerstrip.png"
+        }
+      }
+    },
+    {
+      "id": "adapterhub",
+      "name": "多口转接器",
+      "parts": "金属外壳、视频口、数据口与短线",
+      "uses": "拓展接口、投屏、办公",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "接口": [
+            0.342,
+            0.534
+          ]
+        }
+      },
+      "assetId": "OBJ-031",
+      "files": {
+        "model": "3D/adapterhub.glb",
+        "preview": "3D/adapterhub.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/adapterhub.glb",
+          "preview": "3D/atelier/adapterhub.png"
+        },
+        "herb": {
+          "model": "3D/herb/adapterhub.glb",
+          "preview": "3D/herb/adapterhub.png"
+        },
+        "night": {
+          "model": "3D/night/adapterhub.glb",
+          "preview": "3D/night/adapterhub.png"
+        },
+        "ink": {
+          "model": "3D/ink/adapterhub.glb",
+          "preview": "3D/ink/adapterhub.png"
+        },
+        "coast": {
+          "model": "3D/coast/adapterhub.glb",
+          "preview": "3D/coast/adapterhub.png"
+        },
+        "plum": {
+          "model": "3D/plum/adapterhub.glb",
+          "preview": "3D/plum/adapterhub.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/adapterhub.glb",
+          "preview": "3D/cobalt/adapterhub.png"
+        },
+        "slate": {
+          "model": "3D/slate/adapterhub.glb",
+          "preview": "3D/slate/adapterhub.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/adapterhub.glb",
+          "preview": "3D/porcelain/adapterhub.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/adapterhub.glb",
+          "preview": "3D/sandpine/adapterhub.png"
+        },
+        "violet": {
+          "model": "3D/violet/adapterhub.glb",
+          "preview": "3D/violet/adapterhub.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/adapterhub.glb",
+          "preview": "3D/teaamber/adapterhub.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/adapterhub.glb",
+          "preview": "3D/tidal/adapterhub.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/adapterhub.glb",
+          "preview": "3D/lavenderink/adapterhub.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/adapterhub.glb",
+          "preview": "3D/morandi/adapterhub.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/adapterhub.glb",
+          "preview": "3D/nordic/adapterhub.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/adapterhub.glb",
+          "preview": "3D/terracotta/adapterhub.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/adapterhub.glb",
+          "preview": "3D/artdeco/adapterhub.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/adapterhub.glb",
+          "preview": "3D/monitor/adapterhub.png"
+        },
+        "archival": {
+          "model": "3D/archival/adapterhub.glb",
+          "preview": "3D/archival/adapterhub.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/adapterhub.glb",
+          "preview": "3D/retrobyte/adapterhub.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/adapterhub.glb",
+          "preview": "3D/clearpop/adapterhub.png"
+        }
+      }
+    },
+    {
+      "id": "hingeplate",
+      "name": "金属铰链",
+      "parts": "轴心、左右叶片和固定孔",
+      "uses": "开合结构、小五金、柜门",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "轴心": [
+            0.482,
+            0.497
+          ]
+        }
+      },
+      "assetId": "OBJ-032",
+      "files": {
+        "model": "3D/hingeplate.glb",
+        "preview": "3D/hingeplate.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/hingeplate.glb",
+          "preview": "3D/atelier/hingeplate.png"
+        },
+        "herb": {
+          "model": "3D/herb/hingeplate.glb",
+          "preview": "3D/herb/hingeplate.png"
+        },
+        "night": {
+          "model": "3D/night/hingeplate.glb",
+          "preview": "3D/night/hingeplate.png"
+        },
+        "ink": {
+          "model": "3D/ink/hingeplate.glb",
+          "preview": "3D/ink/hingeplate.png"
+        },
+        "coast": {
+          "model": "3D/coast/hingeplate.glb",
+          "preview": "3D/coast/hingeplate.png"
+        },
+        "plum": {
+          "model": "3D/plum/hingeplate.glb",
+          "preview": "3D/plum/hingeplate.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/hingeplate.glb",
+          "preview": "3D/cobalt/hingeplate.png"
+        },
+        "slate": {
+          "model": "3D/slate/hingeplate.glb",
+          "preview": "3D/slate/hingeplate.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/hingeplate.glb",
+          "preview": "3D/porcelain/hingeplate.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/hingeplate.glb",
+          "preview": "3D/sandpine/hingeplate.png"
+        },
+        "violet": {
+          "model": "3D/violet/hingeplate.glb",
+          "preview": "3D/violet/hingeplate.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/hingeplate.glb",
+          "preview": "3D/teaamber/hingeplate.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/hingeplate.glb",
+          "preview": "3D/tidal/hingeplate.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/hingeplate.glb",
+          "preview": "3D/lavenderink/hingeplate.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/hingeplate.glb",
+          "preview": "3D/morandi/hingeplate.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/hingeplate.glb",
+          "preview": "3D/nordic/hingeplate.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/hingeplate.glb",
+          "preview": "3D/terracotta/hingeplate.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/hingeplate.glb",
+          "preview": "3D/artdeco/hingeplate.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/hingeplate.glb",
+          "preview": "3D/monitor/hingeplate.png"
+        },
+        "archival": {
+          "model": "3D/archival/hingeplate.glb",
+          "preview": "3D/archival/hingeplate.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/hingeplate.glb",
+          "preview": "3D/retrobyte/hingeplate.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/hingeplate.glb",
+          "preview": "3D/clearpop/hingeplate.png"
+        }
+      }
+    },
+    {
+      "id": "sealjar",
+      "name": "密封罐",
+      "parts": "罐身、盖子、凹槽与密封圈",
+      "uses": "拆下密封圈、清洗、收纳",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "密封圈": [
+            0.501,
+            0.31
+          ]
+        }
+      },
+      "assetId": "OBJ-033",
+      "files": {
+        "model": "3D/sealjar.glb",
+        "preview": "3D/sealjar.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/sealjar.glb",
+          "preview": "3D/atelier/sealjar.png"
+        },
+        "herb": {
+          "model": "3D/herb/sealjar.glb",
+          "preview": "3D/herb/sealjar.png"
+        },
+        "night": {
+          "model": "3D/night/sealjar.glb",
+          "preview": "3D/night/sealjar.png"
+        },
+        "ink": {
+          "model": "3D/ink/sealjar.glb",
+          "preview": "3D/ink/sealjar.png"
+        },
+        "coast": {
+          "model": "3D/coast/sealjar.glb",
+          "preview": "3D/coast/sealjar.png"
+        },
+        "plum": {
+          "model": "3D/plum/sealjar.glb",
+          "preview": "3D/plum/sealjar.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/sealjar.glb",
+          "preview": "3D/cobalt/sealjar.png"
+        },
+        "slate": {
+          "model": "3D/slate/sealjar.glb",
+          "preview": "3D/slate/sealjar.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/sealjar.glb",
+          "preview": "3D/porcelain/sealjar.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/sealjar.glb",
+          "preview": "3D/sandpine/sealjar.png"
+        },
+        "violet": {
+          "model": "3D/violet/sealjar.glb",
+          "preview": "3D/violet/sealjar.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/sealjar.glb",
+          "preview": "3D/teaamber/sealjar.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/sealjar.glb",
+          "preview": "3D/tidal/sealjar.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/sealjar.glb",
+          "preview": "3D/lavenderink/sealjar.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/sealjar.glb",
+          "preview": "3D/morandi/sealjar.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/sealjar.glb",
+          "preview": "3D/nordic/sealjar.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/sealjar.glb",
+          "preview": "3D/terracotta/sealjar.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/sealjar.glb",
+          "preview": "3D/artdeco/sealjar.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/sealjar.glb",
+          "preview": "3D/monitor/sealjar.png"
+        },
+        "archival": {
+          "model": "3D/archival/sealjar.glb",
+          "preview": "3D/archival/sealjar.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/sealjar.glb",
+          "preview": "3D/retrobyte/sealjar.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/sealjar.glb",
+          "preview": "3D/clearpop/sealjar.png"
+        }
+      }
+    },
+    {
+      "id": "foldumbrella",
+      "name": "折叠伞",
+      "parts": "伞骨、伞面、中棒与握把",
+      "uses": "出门、收伞、天气、防雨",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "中棒": [
+            0.5,
+            0.498
+          ]
+        }
+      },
+      "assetId": "OBJ-034",
+      "files": {
+        "model": "3D/foldumbrella.glb",
+        "preview": "3D/foldumbrella.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/foldumbrella.glb",
+          "preview": "3D/atelier/foldumbrella.png"
+        },
+        "herb": {
+          "model": "3D/herb/foldumbrella.glb",
+          "preview": "3D/herb/foldumbrella.png"
+        },
+        "night": {
+          "model": "3D/night/foldumbrella.glb",
+          "preview": "3D/night/foldumbrella.png"
+        },
+        "ink": {
+          "model": "3D/ink/foldumbrella.glb",
+          "preview": "3D/ink/foldumbrella.png"
+        },
+        "coast": {
+          "model": "3D/coast/foldumbrella.glb",
+          "preview": "3D/coast/foldumbrella.png"
+        },
+        "plum": {
+          "model": "3D/plum/foldumbrella.glb",
+          "preview": "3D/plum/foldumbrella.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/foldumbrella.glb",
+          "preview": "3D/cobalt/foldumbrella.png"
+        },
+        "slate": {
+          "model": "3D/slate/foldumbrella.glb",
+          "preview": "3D/slate/foldumbrella.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/foldumbrella.glb",
+          "preview": "3D/porcelain/foldumbrella.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/foldumbrella.glb",
+          "preview": "3D/sandpine/foldumbrella.png"
+        },
+        "violet": {
+          "model": "3D/violet/foldumbrella.glb",
+          "preview": "3D/violet/foldumbrella.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/foldumbrella.glb",
+          "preview": "3D/teaamber/foldumbrella.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/foldumbrella.glb",
+          "preview": "3D/tidal/foldumbrella.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/foldumbrella.glb",
+          "preview": "3D/lavenderink/foldumbrella.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/foldumbrella.glb",
+          "preview": "3D/morandi/foldumbrella.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/foldumbrella.glb",
+          "preview": "3D/nordic/foldumbrella.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/foldumbrella.glb",
+          "preview": "3D/terracotta/foldumbrella.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/foldumbrella.glb",
+          "preview": "3D/artdeco/foldumbrella.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/foldumbrella.glb",
+          "preview": "3D/monitor/foldumbrella.png"
+        },
+        "archival": {
+          "model": "3D/archival/foldumbrella.glb",
+          "preview": "3D/archival/foldumbrella.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/foldumbrella.glb",
+          "preview": "3D/retrobyte/foldumbrella.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/foldumbrella.glb",
+          "preview": "3D/clearpop/foldumbrella.png"
+        }
+      }
+    },
+    {
+      "id": "faucet",
+      "name": "水龙头",
+      "parts": "底座、调节柄、出水口与弯管",
+      "uses": "流水、台面、控水、清洁",
+      "projection": "前右方正交预览，下载 GLB 可转到其他角度。",
+      "appearance": "外壳、说明底板和强调点随色卡换色，金属和暗部保留材质。",
+      "framing": "画布边缘透明，主体约占长边 82%。",
+      "source": "glb",
+      "tokens": {
+        "upAxis": "+Y",
+        "viewFrom": [
+          2.6,
+          1.7,
+          4.5
+        ],
+        "keyLightFrom": [
+          -0.55,
+          0.85,
+          0.7
+        ],
+        "frameUtilization": 0.82,
+        "previewWidthPx": 512,
+        "materialSource": "GLB materials[].pbrMetallicRoughness",
+        "alphaOutside": 0,
+        "anchors": {
+          "出水口": [
+            0.835,
+            0.415
+          ]
+        }
+      },
+      "assetId": "OBJ-035",
+      "files": {
+        "model": "3D/faucet.glb",
+        "preview": "3D/faucet.png"
+      },
+      "variants": {
+        "atelier": {
+          "model": "3D/atelier/faucet.glb",
+          "preview": "3D/atelier/faucet.png"
+        },
+        "herb": {
+          "model": "3D/herb/faucet.glb",
+          "preview": "3D/herb/faucet.png"
+        },
+        "night": {
+          "model": "3D/night/faucet.glb",
+          "preview": "3D/night/faucet.png"
+        },
+        "ink": {
+          "model": "3D/ink/faucet.glb",
+          "preview": "3D/ink/faucet.png"
+        },
+        "coast": {
+          "model": "3D/coast/faucet.glb",
+          "preview": "3D/coast/faucet.png"
+        },
+        "plum": {
+          "model": "3D/plum/faucet.glb",
+          "preview": "3D/plum/faucet.png"
+        },
+        "cobalt": {
+          "model": "3D/cobalt/faucet.glb",
+          "preview": "3D/cobalt/faucet.png"
+        },
+        "slate": {
+          "model": "3D/slate/faucet.glb",
+          "preview": "3D/slate/faucet.png"
+        },
+        "porcelain": {
+          "model": "3D/porcelain/faucet.glb",
+          "preview": "3D/porcelain/faucet.png"
+        },
+        "sandpine": {
+          "model": "3D/sandpine/faucet.glb",
+          "preview": "3D/sandpine/faucet.png"
+        },
+        "violet": {
+          "model": "3D/violet/faucet.glb",
+          "preview": "3D/violet/faucet.png"
+        },
+        "teaamber": {
+          "model": "3D/teaamber/faucet.glb",
+          "preview": "3D/teaamber/faucet.png"
+        },
+        "tidal": {
+          "model": "3D/tidal/faucet.glb",
+          "preview": "3D/tidal/faucet.png"
+        },
+        "lavenderink": {
+          "model": "3D/lavenderink/faucet.glb",
+          "preview": "3D/lavenderink/faucet.png"
+        },
+        "morandi": {
+          "model": "3D/morandi/faucet.glb",
+          "preview": "3D/morandi/faucet.png"
+        },
+        "nordic": {
+          "model": "3D/nordic/faucet.glb",
+          "preview": "3D/nordic/faucet.png"
+        },
+        "terracotta": {
+          "model": "3D/terracotta/faucet.glb",
+          "preview": "3D/terracotta/faucet.png"
+        },
+        "artdeco": {
+          "model": "3D/artdeco/faucet.glb",
+          "preview": "3D/artdeco/faucet.png"
+        },
+        "monitor": {
+          "model": "3D/monitor/faucet.glb",
+          "preview": "3D/monitor/faucet.png"
+        },
+        "archival": {
+          "model": "3D/archival/faucet.glb",
+          "preview": "3D/archival/faucet.png"
+        },
+        "retrobyte": {
+          "model": "3D/retrobyte/faucet.glb",
+          "preview": "3D/retrobyte/faucet.png"
+        },
+        "clearpop": {
+          "model": "3D/clearpop/faucet.glb",
+          "preview": "3D/clearpop/faucet.png"
         }
       }
     }
@@ -4505,6 +5906,18 @@
         "monitor": {
           "vector": "贴纸/monitor/arrow.svg",
           "preview": "贴纸/monitor/arrow.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/arrow.svg",
+          "preview": "贴纸/archival/arrow.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/arrow.svg",
+          "preview": "贴纸/retrobyte/arrow.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/arrow.svg",
+          "preview": "贴纸/clearpop/arrow.png"
         }
       },
       "assetId": "STK-001"
@@ -4608,6 +6021,18 @@
         "monitor": {
           "vector": "贴纸/monitor/ring.svg",
           "preview": "贴纸/monitor/ring.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/ring.svg",
+          "preview": "贴纸/archival/ring.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/ring.svg",
+          "preview": "贴纸/retrobyte/ring.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/ring.svg",
+          "preview": "贴纸/clearpop/ring.png"
         }
       },
       "assetId": "STK-002"
@@ -4711,6 +6136,18 @@
         "monitor": {
           "vector": "贴纸/monitor/check.svg",
           "preview": "贴纸/monitor/check.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/check.svg",
+          "preview": "贴纸/archival/check.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/check.svg",
+          "preview": "贴纸/retrobyte/check.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/check.svg",
+          "preview": "贴纸/clearpop/check.png"
         }
       },
       "assetId": "STK-003"
@@ -4814,6 +6251,18 @@
         "monitor": {
           "vector": "贴纸/monitor/tab.svg",
           "preview": "贴纸/monitor/tab.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/tab.svg",
+          "preview": "贴纸/archival/tab.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/tab.svg",
+          "preview": "贴纸/retrobyte/tab.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/tab.svg",
+          "preview": "贴纸/clearpop/tab.png"
         }
       },
       "assetId": "STK-004"
@@ -4917,6 +6366,18 @@
         "monitor": {
           "vector": "贴纸/monitor/bubble.svg",
           "preview": "贴纸/monitor/bubble.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/bubble.svg",
+          "preview": "贴纸/archival/bubble.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/bubble.svg",
+          "preview": "贴纸/retrobyte/bubble.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/bubble.svg",
+          "preview": "贴纸/clearpop/bubble.png"
         }
       },
       "assetId": "STK-005"
@@ -5020,6 +6481,18 @@
         "monitor": {
           "vector": "贴纸/monitor/spark.svg",
           "preview": "贴纸/monitor/spark.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/spark.svg",
+          "preview": "贴纸/archival/spark.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/spark.svg",
+          "preview": "贴纸/retrobyte/spark.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/spark.svg",
+          "preview": "贴纸/clearpop/spark.png"
         }
       },
       "assetId": "STK-006"
@@ -5123,6 +6596,18 @@
         "monitor": {
           "vector": "贴纸/monitor/bracket.svg",
           "preview": "贴纸/monitor/bracket.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/bracket.svg",
+          "preview": "贴纸/archival/bracket.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/bracket.svg",
+          "preview": "贴纸/retrobyte/bracket.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/bracket.svg",
+          "preview": "贴纸/clearpop/bracket.png"
         }
       },
       "assetId": "STK-007"
@@ -5226,6 +6711,18 @@
         "monitor": {
           "vector": "贴纸/monitor/tape.svg",
           "preview": "贴纸/monitor/tape.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/tape.svg",
+          "preview": "贴纸/archival/tape.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/tape.svg",
+          "preview": "贴纸/retrobyte/tape.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/tape.svg",
+          "preview": "贴纸/clearpop/tape.png"
         }
       },
       "assetId": "STK-008"
@@ -5333,6 +6830,18 @@
         "monitor": {
           "vector": "贴纸/monitor/pin.svg",
           "preview": "贴纸/monitor/pin.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/pin.svg",
+          "preview": "贴纸/archival/pin.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/pin.svg",
+          "preview": "贴纸/retrobyte/pin.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/pin.svg",
+          "preview": "贴纸/clearpop/pin.png"
         }
       },
       "assetId": "STK-009"
@@ -5440,6 +6949,18 @@
         "monitor": {
           "vector": "贴纸/monitor/loupe.svg",
           "preview": "贴纸/monitor/loupe.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/loupe.svg",
+          "preview": "贴纸/archival/loupe.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/loupe.svg",
+          "preview": "贴纸/retrobyte/loupe.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/loupe.svg",
+          "preview": "贴纸/clearpop/loupe.png"
         }
       },
       "assetId": "STK-010"
@@ -5547,6 +7068,18 @@
         "monitor": {
           "vector": "贴纸/monitor/focus.svg",
           "preview": "贴纸/monitor/focus.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/focus.svg",
+          "preview": "贴纸/archival/focus.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/focus.svg",
+          "preview": "贴纸/retrobyte/focus.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/focus.svg",
+          "preview": "贴纸/clearpop/focus.png"
         }
       },
       "assetId": "STK-011"
@@ -5654,6 +7187,18 @@
         "monitor": {
           "vector": "贴纸/monitor/leader.svg",
           "preview": "贴纸/monitor/leader.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/leader.svg",
+          "preview": "贴纸/archival/leader.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/leader.svg",
+          "preview": "贴纸/retrobyte/leader.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/leader.svg",
+          "preview": "贴纸/clearpop/leader.png"
         }
       },
       "assetId": "STK-012"
@@ -5761,6 +7306,18 @@
         "monitor": {
           "vector": "贴纸/monitor/tap.svg",
           "preview": "贴纸/monitor/tap.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/tap.svg",
+          "preview": "贴纸/archival/tap.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/tap.svg",
+          "preview": "贴纸/retrobyte/tap.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/tap.svg",
+          "preview": "贴纸/clearpop/tap.png"
         }
       },
       "assetId": "STK-013"
@@ -5868,6 +7425,18 @@
         "monitor": {
           "vector": "贴纸/monitor/dragtrail.svg",
           "preview": "贴纸/monitor/dragtrail.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/dragtrail.svg",
+          "preview": "贴纸/archival/dragtrail.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/dragtrail.svg",
+          "preview": "贴纸/retrobyte/dragtrail.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/dragtrail.svg",
+          "preview": "贴纸/clearpop/dragtrail.png"
         }
       },
       "assetId": "STK-014"
@@ -5975,6 +7544,18 @@
         "monitor": {
           "vector": "贴纸/monitor/rotatearc.svg",
           "preview": "贴纸/monitor/rotatearc.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/rotatearc.svg",
+          "preview": "贴纸/archival/rotatearc.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/rotatearc.svg",
+          "preview": "贴纸/retrobyte/rotatearc.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/rotatearc.svg",
+          "preview": "贴纸/clearpop/rotatearc.png"
         }
       },
       "assetId": "STK-015"
@@ -6082,6 +7663,18 @@
         "monitor": {
           "vector": "贴纸/monitor/stepnum.svg",
           "preview": "贴纸/monitor/stepnum.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/stepnum.svg",
+          "preview": "贴纸/archival/stepnum.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/stepnum.svg",
+          "preview": "贴纸/retrobyte/stepnum.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/stepnum.svg",
+          "preview": "贴纸/clearpop/stepnum.png"
         }
       },
       "assetId": "STK-016"
@@ -6189,6 +7782,18 @@
         "monitor": {
           "vector": "贴纸/monitor/dimension.svg",
           "preview": "贴纸/monitor/dimension.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/dimension.svg",
+          "preview": "贴纸/archival/dimension.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/dimension.svg",
+          "preview": "贴纸/retrobyte/dimension.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/dimension.svg",
+          "preview": "贴纸/clearpop/dimension.png"
         }
       },
       "assetId": "STK-017"
@@ -6296,6 +7901,18 @@
         "monitor": {
           "vector": "贴纸/monitor/level.svg",
           "preview": "贴纸/monitor/level.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/level.svg",
+          "preview": "贴纸/archival/level.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/level.svg",
+          "preview": "贴纸/retrobyte/level.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/level.svg",
+          "preview": "贴纸/clearpop/level.png"
         }
       },
       "assetId": "STK-018"
@@ -6403,6 +8020,18 @@
         "monitor": {
           "vector": "贴纸/monitor/beforeafter.svg",
           "preview": "贴纸/monitor/beforeafter.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/beforeafter.svg",
+          "preview": "贴纸/archival/beforeafter.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/beforeafter.svg",
+          "preview": "贴纸/retrobyte/beforeafter.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/beforeafter.svg",
+          "preview": "贴纸/clearpop/beforeafter.png"
         }
       },
       "assetId": "STK-019"
@@ -6510,6 +8139,18 @@
         "monitor": {
           "vector": "贴纸/monitor/diffband.svg",
           "preview": "贴纸/monitor/diffband.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/diffband.svg",
+          "preview": "贴纸/archival/diffband.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/diffband.svg",
+          "preview": "贴纸/retrobyte/diffband.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/diffband.svg",
+          "preview": "贴纸/clearpop/diffband.png"
         }
       },
       "assetId": "STK-020"
@@ -6617,6 +8258,18 @@
         "monitor": {
           "vector": "贴纸/monitor/caution.svg",
           "preview": "贴纸/monitor/caution.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/caution.svg",
+          "preview": "贴纸/archival/caution.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/caution.svg",
+          "preview": "贴纸/retrobyte/caution.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/caution.svg",
+          "preview": "贴纸/clearpop/caution.png"
         }
       },
       "assetId": "STK-021"
@@ -6724,6 +8377,18 @@
         "monitor": {
           "vector": "贴纸/monitor/wrong.svg",
           "preview": "贴纸/monitor/wrong.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/wrong.svg",
+          "preview": "贴纸/archival/wrong.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/wrong.svg",
+          "preview": "贴纸/retrobyte/wrong.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/wrong.svg",
+          "preview": "贴纸/clearpop/wrong.png"
         }
       },
       "assetId": "STK-022"
@@ -6831,6 +8496,18 @@
         "monitor": {
           "vector": "贴纸/monitor/mute.svg",
           "preview": "贴纸/monitor/mute.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/mute.svg",
+          "preview": "贴纸/archival/mute.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/mute.svg",
+          "preview": "贴纸/retrobyte/mute.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/mute.svg",
+          "preview": "贴纸/clearpop/mute.png"
         }
       },
       "assetId": "STK-023"
@@ -6938,6 +8615,18 @@
         "monitor": {
           "vector": "贴纸/monitor/notetag.svg",
           "preview": "贴纸/monitor/notetag.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/notetag.svg",
+          "preview": "贴纸/archival/notetag.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/notetag.svg",
+          "preview": "贴纸/retrobyte/notetag.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/notetag.svg",
+          "preview": "贴纸/clearpop/notetag.png"
         }
       },
       "assetId": "STK-024"
@@ -7043,6 +8732,18 @@
         "monitor": {
           "vector": "贴纸/monitor/headsetmark.svg",
           "preview": "贴纸/monitor/headsetmark.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/headsetmark.svg",
+          "preview": "贴纸/archival/headsetmark.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/headsetmark.svg",
+          "preview": "贴纸/retrobyte/headsetmark.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/headsetmark.svg",
+          "preview": "贴纸/clearpop/headsetmark.png"
         }
       }
     },
@@ -7147,6 +8848,18 @@
         "monitor": {
           "vector": "贴纸/monitor/voicewave.svg",
           "preview": "贴纸/monitor/voicewave.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/voicewave.svg",
+          "preview": "贴纸/archival/voicewave.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/voicewave.svg",
+          "preview": "贴纸/retrobyte/voicewave.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/voicewave.svg",
+          "preview": "贴纸/clearpop/voicewave.png"
         }
       }
     },
@@ -7251,6 +8964,18 @@
         "monitor": {
           "vector": "贴纸/monitor/bookmarkflag.svg",
           "preview": "贴纸/monitor/bookmarkflag.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/bookmarkflag.svg",
+          "preview": "贴纸/archival/bookmarkflag.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/bookmarkflag.svg",
+          "preview": "贴纸/retrobyte/bookmarkflag.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/bookmarkflag.svg",
+          "preview": "贴纸/clearpop/bookmarkflag.png"
         }
       }
     },
@@ -7355,6 +9080,18 @@
         "monitor": {
           "vector": "贴纸/monitor/calendarpin.svg",
           "preview": "贴纸/monitor/calendarpin.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/calendarpin.svg",
+          "preview": "贴纸/archival/calendarpin.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/calendarpin.svg",
+          "preview": "贴纸/retrobyte/calendarpin.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/calendarpin.svg",
+          "preview": "贴纸/clearpop/calendarpin.png"
         }
       }
     },
@@ -7459,6 +9196,18 @@
         "monitor": {
           "vector": "贴纸/monitor/warmsteam.svg",
           "preview": "贴纸/monitor/warmsteam.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/warmsteam.svg",
+          "preview": "贴纸/archival/warmsteam.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/warmsteam.svg",
+          "preview": "贴纸/retrobyte/warmsteam.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/warmsteam.svg",
+          "preview": "贴纸/clearpop/warmsteam.png"
         }
       }
     },
@@ -7563,6 +9312,18 @@
         "monitor": {
           "vector": "贴纸/monitor/droplet.svg",
           "preview": "贴纸/monitor/droplet.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/droplet.svg",
+          "preview": "贴纸/archival/droplet.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/droplet.svg",
+          "preview": "贴纸/retrobyte/droplet.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/droplet.svg",
+          "preview": "贴纸/clearpop/droplet.png"
         }
       }
     },
@@ -7667,6 +9428,18 @@
         "monitor": {
           "vector": "贴纸/monitor/batterybars.svg",
           "preview": "贴纸/monitor/batterybars.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/batterybars.svg",
+          "preview": "贴纸/archival/batterybars.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/batterybars.svg",
+          "preview": "贴纸/retrobyte/batterybars.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/batterybars.svg",
+          "preview": "贴纸/clearpop/batterybars.png"
         }
       }
     },
@@ -7771,6 +9544,18 @@
         "monitor": {
           "vector": "贴纸/monitor/soundoff.svg",
           "preview": "贴纸/monitor/soundoff.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/soundoff.svg",
+          "preview": "贴纸/archival/soundoff.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/soundoff.svg",
+          "preview": "贴纸/retrobyte/soundoff.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/soundoff.svg",
+          "preview": "贴纸/clearpop/soundoff.png"
         }
       }
     },
@@ -7875,6 +9660,18 @@
         "monitor": {
           "vector": "贴纸/monitor/layersheets.svg",
           "preview": "贴纸/monitor/layersheets.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/layersheets.svg",
+          "preview": "贴纸/archival/layersheets.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/layersheets.svg",
+          "preview": "贴纸/retrobyte/layersheets.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/layersheets.svg",
+          "preview": "贴纸/clearpop/layersheets.png"
         }
       }
     },
@@ -7979,6 +9776,18 @@
         "monitor": {
           "vector": "贴纸/monitor/returnarrow.svg",
           "preview": "贴纸/monitor/returnarrow.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/returnarrow.svg",
+          "preview": "贴纸/archival/returnarrow.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/returnarrow.svg",
+          "preview": "贴纸/retrobyte/returnarrow.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/returnarrow.svg",
+          "preview": "贴纸/clearpop/returnarrow.png"
         }
       }
     },
@@ -8083,6 +9892,18 @@
         "monitor": {
           "vector": "贴纸/monitor/timerbell.svg",
           "preview": "贴纸/monitor/timerbell.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/timerbell.svg",
+          "preview": "贴纸/archival/timerbell.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/timerbell.svg",
+          "preview": "贴纸/retrobyte/timerbell.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/timerbell.svg",
+          "preview": "贴纸/clearpop/timerbell.png"
         }
       }
     },
@@ -8187,6 +10008,18 @@
         "monitor": {
           "vector": "贴纸/monitor/alignguide.svg",
           "preview": "贴纸/monitor/alignguide.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/alignguide.svg",
+          "preview": "贴纸/archival/alignguide.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/alignguide.svg",
+          "preview": "贴纸/retrobyte/alignguide.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/alignguide.svg",
+          "preview": "贴纸/clearpop/alignguide.png"
         }
       }
     },
@@ -8291,6 +10124,18 @@
         "monitor": {
           "vector": "贴纸/monitor/optionfork.svg",
           "preview": "贴纸/monitor/optionfork.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/optionfork.svg",
+          "preview": "贴纸/archival/optionfork.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/optionfork.svg",
+          "preview": "贴纸/retrobyte/optionfork.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/optionfork.svg",
+          "preview": "贴纸/clearpop/optionfork.png"
         }
       }
     },
@@ -8395,6 +10240,18 @@
         "monitor": {
           "vector": "贴纸/monitor/checklist.svg",
           "preview": "贴纸/monitor/checklist.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/checklist.svg",
+          "preview": "贴纸/archival/checklist.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/checklist.svg",
+          "preview": "贴纸/retrobyte/checklist.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/checklist.svg",
+          "preview": "贴纸/clearpop/checklist.png"
         }
       }
     },
@@ -8499,6 +10356,18 @@
         "monitor": {
           "vector": "贴纸/monitor/alertbadge.svg",
           "preview": "贴纸/monitor/alertbadge.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/alertbadge.svg",
+          "preview": "贴纸/archival/alertbadge.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/alertbadge.svg",
+          "preview": "贴纸/retrobyte/alertbadge.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/alertbadge.svg",
+          "preview": "贴纸/clearpop/alertbadge.png"
         }
       }
     },
@@ -8603,6 +10472,18 @@
         "monitor": {
           "vector": "贴纸/monitor/maproute.svg",
           "preview": "贴纸/monitor/maproute.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/maproute.svg",
+          "preview": "贴纸/archival/maproute.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/maproute.svg",
+          "preview": "贴纸/retrobyte/maproute.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/maproute.svg",
+          "preview": "贴纸/clearpop/maproute.png"
         }
       }
     },
@@ -8707,6 +10588,18 @@
         "monitor": {
           "vector": "贴纸/monitor/pricecompare.svg",
           "preview": "贴纸/monitor/pricecompare.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/pricecompare.svg",
+          "preview": "贴纸/archival/pricecompare.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/pricecompare.svg",
+          "preview": "贴纸/retrobyte/pricecompare.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/pricecompare.svg",
+          "preview": "贴纸/clearpop/pricecompare.png"
         }
       }
     },
@@ -8811,6 +10704,18 @@
         "monitor": {
           "vector": "贴纸/monitor/unboxing.svg",
           "preview": "贴纸/monitor/unboxing.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/unboxing.svg",
+          "preview": "贴纸/archival/unboxing.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/unboxing.svg",
+          "preview": "贴纸/retrobyte/unboxing.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/unboxing.svg",
+          "preview": "贴纸/clearpop/unboxing.png"
         }
       }
     },
@@ -8915,6 +10820,18 @@
         "monitor": {
           "vector": "贴纸/monitor/privacyshield.svg",
           "preview": "贴纸/monitor/privacyshield.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/privacyshield.svg",
+          "preview": "贴纸/archival/privacyshield.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/privacyshield.svg",
+          "preview": "贴纸/retrobyte/privacyshield.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/privacyshield.svg",
+          "preview": "贴纸/clearpop/privacyshield.png"
         }
       }
     },
@@ -9019,6 +10936,18 @@
         "monitor": {
           "vector": "贴纸/monitor/splitreveal.svg",
           "preview": "贴纸/monitor/splitreveal.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/splitreveal.svg",
+          "preview": "贴纸/archival/splitreveal.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/splitreveal.svg",
+          "preview": "贴纸/retrobyte/splitreveal.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/splitreveal.svg",
+          "preview": "贴纸/clearpop/splitreveal.png"
         }
       }
     },
@@ -9123,6 +11052,18 @@
         "monitor": {
           "vector": "贴纸/monitor/infoquestion.svg",
           "preview": "贴纸/monitor/infoquestion.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/infoquestion.svg",
+          "preview": "贴纸/archival/infoquestion.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/infoquestion.svg",
+          "preview": "贴纸/retrobyte/infoquestion.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/infoquestion.svg",
+          "preview": "贴纸/clearpop/infoquestion.png"
         }
       }
     },
@@ -9227,6 +11168,18 @@
         "monitor": {
           "vector": "贴纸/monitor/magfocus.svg",
           "preview": "贴纸/monitor/magfocus.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/magfocus.svg",
+          "preview": "贴纸/archival/magfocus.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/magfocus.svg",
+          "preview": "贴纸/retrobyte/magfocus.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/magfocus.svg",
+          "preview": "贴纸/clearpop/magfocus.png"
         }
       }
     },
@@ -9331,6 +11284,2678 @@
         "monitor": {
           "vector": "贴纸/monitor/uploadcloud.svg",
           "preview": "贴纸/monitor/uploadcloud.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/uploadcloud.svg",
+          "preview": "贴纸/archival/uploadcloud.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/uploadcloud.svg",
+          "preview": "贴纸/retrobyte/uploadcloud.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/uploadcloud.svg",
+          "preview": "贴纸/clearpop/uploadcloud.png"
+        }
+      }
+    },
+    {
+      "id": "synced",
+      "name": "同步完成",
+      "uses": "上传、进度、同步完成、备份",
+      "shape": "双环与确认勾。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-048",
+      "files": {
+        "vector": "贴纸/synced.svg",
+        "preview": "贴纸/synced.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/synced.svg",
+          "preview": "贴纸/atelier/synced.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/synced.svg",
+          "preview": "贴纸/herb/synced.png"
+        },
+        "night": {
+          "vector": "贴纸/night/synced.svg",
+          "preview": "贴纸/night/synced.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/synced.svg",
+          "preview": "贴纸/ink/synced.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/synced.svg",
+          "preview": "贴纸/coast/synced.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/synced.svg",
+          "preview": "贴纸/plum/synced.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/synced.svg",
+          "preview": "贴纸/cobalt/synced.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/synced.svg",
+          "preview": "贴纸/slate/synced.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/synced.svg",
+          "preview": "贴纸/porcelain/synced.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/synced.svg",
+          "preview": "贴纸/sandpine/synced.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/synced.svg",
+          "preview": "贴纸/violet/synced.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/synced.svg",
+          "preview": "贴纸/teaamber/synced.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/synced.svg",
+          "preview": "贴纸/tidal/synced.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/synced.svg",
+          "preview": "贴纸/lavenderink/synced.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/synced.svg",
+          "preview": "贴纸/morandi/synced.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/synced.svg",
+          "preview": "贴纸/nordic/synced.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/synced.svg",
+          "preview": "贴纸/terracotta/synced.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/synced.svg",
+          "preview": "贴纸/artdeco/synced.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/synced.svg",
+          "preview": "贴纸/monitor/synced.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/synced.svg",
+          "preview": "贴纸/archival/synced.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/synced.svg",
+          "preview": "贴纸/retrobyte/synced.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/synced.svg",
+          "preview": "贴纸/clearpop/synced.png"
+        }
+      }
+    },
+    {
+      "id": "brushunder",
+      "name": "随手划重点",
+      "uses": "批注、强调、重点、手写",
+      "shape": "两笔手绘下划线。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-049",
+      "files": {
+        "vector": "贴纸/brushunder.svg",
+        "preview": "贴纸/brushunder.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/brushunder.svg",
+          "preview": "贴纸/atelier/brushunder.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/brushunder.svg",
+          "preview": "贴纸/herb/brushunder.png"
+        },
+        "night": {
+          "vector": "贴纸/night/brushunder.svg",
+          "preview": "贴纸/night/brushunder.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/brushunder.svg",
+          "preview": "贴纸/ink/brushunder.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/brushunder.svg",
+          "preview": "贴纸/coast/brushunder.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/brushunder.svg",
+          "preview": "贴纸/plum/brushunder.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/brushunder.svg",
+          "preview": "贴纸/cobalt/brushunder.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/brushunder.svg",
+          "preview": "贴纸/slate/brushunder.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/brushunder.svg",
+          "preview": "贴纸/porcelain/brushunder.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/brushunder.svg",
+          "preview": "贴纸/sandpine/brushunder.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/brushunder.svg",
+          "preview": "贴纸/violet/brushunder.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/brushunder.svg",
+          "preview": "贴纸/teaamber/brushunder.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/brushunder.svg",
+          "preview": "贴纸/tidal/brushunder.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/brushunder.svg",
+          "preview": "贴纸/lavenderink/brushunder.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/brushunder.svg",
+          "preview": "贴纸/morandi/brushunder.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/brushunder.svg",
+          "preview": "贴纸/nordic/brushunder.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/brushunder.svg",
+          "preview": "贴纸/terracotta/brushunder.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/brushunder.svg",
+          "preview": "贴纸/artdeco/brushunder.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/brushunder.svg",
+          "preview": "贴纸/monitor/brushunder.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/brushunder.svg",
+          "preview": "贴纸/archival/brushunder.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/brushunder.svg",
+          "preview": "贴纸/retrobyte/brushunder.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/brushunder.svg",
+          "preview": "贴纸/clearpop/brushunder.png"
+        }
+      }
+    },
+    {
+      "id": "papertrail",
+      "name": "纸页批注",
+      "uses": "纸感、备注、提示、记录",
+      "shape": "折页上有手写批注线。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-050",
+      "files": {
+        "vector": "贴纸/papertrail.svg",
+        "preview": "贴纸/papertrail.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/papertrail.svg",
+          "preview": "贴纸/atelier/papertrail.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/papertrail.svg",
+          "preview": "贴纸/herb/papertrail.png"
+        },
+        "night": {
+          "vector": "贴纸/night/papertrail.svg",
+          "preview": "贴纸/night/papertrail.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/papertrail.svg",
+          "preview": "贴纸/ink/papertrail.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/papertrail.svg",
+          "preview": "贴纸/coast/papertrail.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/papertrail.svg",
+          "preview": "贴纸/plum/papertrail.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/papertrail.svg",
+          "preview": "贴纸/cobalt/papertrail.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/papertrail.svg",
+          "preview": "贴纸/slate/papertrail.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/papertrail.svg",
+          "preview": "贴纸/porcelain/papertrail.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/papertrail.svg",
+          "preview": "贴纸/sandpine/papertrail.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/papertrail.svg",
+          "preview": "贴纸/violet/papertrail.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/papertrail.svg",
+          "preview": "贴纸/teaamber/papertrail.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/papertrail.svg",
+          "preview": "贴纸/tidal/papertrail.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/papertrail.svg",
+          "preview": "贴纸/lavenderink/papertrail.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/papertrail.svg",
+          "preview": "贴纸/morandi/papertrail.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/papertrail.svg",
+          "preview": "贴纸/nordic/papertrail.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/papertrail.svg",
+          "preview": "贴纸/terracotta/papertrail.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/papertrail.svg",
+          "preview": "贴纸/artdeco/papertrail.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/papertrail.svg",
+          "preview": "贴纸/monitor/papertrail.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/papertrail.svg",
+          "preview": "贴纸/archival/papertrail.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/papertrail.svg",
+          "preview": "贴纸/retrobyte/papertrail.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/papertrail.svg",
+          "preview": "贴纸/clearpop/papertrail.png"
+        }
+      }
+    },
+    {
+      "id": "chevronsign",
+      "name": "方向指引",
+      "uses": "导航、右转、朝向、流程移动",
+      "shape": "端头朝向一致的双色箭头。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-051",
+      "files": {
+        "vector": "贴纸/chevronsign.svg",
+        "preview": "贴纸/chevronsign.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/chevronsign.svg",
+          "preview": "贴纸/atelier/chevronsign.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/chevronsign.svg",
+          "preview": "贴纸/herb/chevronsign.png"
+        },
+        "night": {
+          "vector": "贴纸/night/chevronsign.svg",
+          "preview": "贴纸/night/chevronsign.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/chevronsign.svg",
+          "preview": "贴纸/ink/chevronsign.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/chevronsign.svg",
+          "preview": "贴纸/coast/chevronsign.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/chevronsign.svg",
+          "preview": "贴纸/plum/chevronsign.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/chevronsign.svg",
+          "preview": "贴纸/cobalt/chevronsign.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/chevronsign.svg",
+          "preview": "贴纸/slate/chevronsign.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/chevronsign.svg",
+          "preview": "贴纸/porcelain/chevronsign.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/chevronsign.svg",
+          "preview": "贴纸/sandpine/chevronsign.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/chevronsign.svg",
+          "preview": "贴纸/violet/chevronsign.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/chevronsign.svg",
+          "preview": "贴纸/teaamber/chevronsign.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/chevronsign.svg",
+          "preview": "贴纸/tidal/chevronsign.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/chevronsign.svg",
+          "preview": "贴纸/lavenderink/chevronsign.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/chevronsign.svg",
+          "preview": "贴纸/morandi/chevronsign.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/chevronsign.svg",
+          "preview": "贴纸/nordic/chevronsign.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/chevronsign.svg",
+          "preview": "贴纸/terracotta/chevronsign.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/chevronsign.svg",
+          "preview": "贴纸/artdeco/chevronsign.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/chevronsign.svg",
+          "preview": "贴纸/monitor/chevronsign.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/chevronsign.svg",
+          "preview": "贴纸/archival/chevronsign.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/chevronsign.svg",
+          "preview": "贴纸/retrobyte/chevronsign.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/chevronsign.svg",
+          "preview": "贴纸/clearpop/chevronsign.png"
+        }
+      }
+    },
+    {
+      "id": "successdot",
+      "name": "确认完成",
+      "uses": "完成、通过、勾选、确认、保存",
+      "shape": "小圆章里的清楚对勾。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-052",
+      "files": {
+        "vector": "贴纸/successdot.svg",
+        "preview": "贴纸/successdot.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/successdot.svg",
+          "preview": "贴纸/atelier/successdot.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/successdot.svg",
+          "preview": "贴纸/herb/successdot.png"
+        },
+        "night": {
+          "vector": "贴纸/night/successdot.svg",
+          "preview": "贴纸/night/successdot.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/successdot.svg",
+          "preview": "贴纸/ink/successdot.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/successdot.svg",
+          "preview": "贴纸/coast/successdot.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/successdot.svg",
+          "preview": "贴纸/plum/successdot.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/successdot.svg",
+          "preview": "贴纸/cobalt/successdot.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/successdot.svg",
+          "preview": "贴纸/slate/successdot.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/successdot.svg",
+          "preview": "贴纸/porcelain/successdot.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/successdot.svg",
+          "preview": "贴纸/sandpine/successdot.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/successdot.svg",
+          "preview": "贴纸/violet/successdot.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/successdot.svg",
+          "preview": "贴纸/teaamber/successdot.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/successdot.svg",
+          "preview": "贴纸/tidal/successdot.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/successdot.svg",
+          "preview": "贴纸/lavenderink/successdot.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/successdot.svg",
+          "preview": "贴纸/morandi/successdot.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/successdot.svg",
+          "preview": "贴纸/nordic/successdot.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/successdot.svg",
+          "preview": "贴纸/terracotta/successdot.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/successdot.svg",
+          "preview": "贴纸/artdeco/successdot.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/successdot.svg",
+          "preview": "贴纸/monitor/successdot.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/successdot.svg",
+          "preview": "贴纸/archival/successdot.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/successdot.svg",
+          "preview": "贴纸/retrobyte/successdot.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/successdot.svg",
+          "preview": "贴纸/clearpop/successdot.png"
+        }
+      }
+    },
+    {
+      "id": "targetfocus",
+      "name": "选中重点",
+      "uses": "选中、聚焦、这个地方、瞄准",
+      "shape": "四角对焦框和实心中心点。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-053",
+      "files": {
+        "vector": "贴纸/targetfocus.svg",
+        "preview": "贴纸/targetfocus.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/targetfocus.svg",
+          "preview": "贴纸/atelier/targetfocus.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/targetfocus.svg",
+          "preview": "贴纸/herb/targetfocus.png"
+        },
+        "night": {
+          "vector": "贴纸/night/targetfocus.svg",
+          "preview": "贴纸/night/targetfocus.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/targetfocus.svg",
+          "preview": "贴纸/ink/targetfocus.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/targetfocus.svg",
+          "preview": "贴纸/coast/targetfocus.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/targetfocus.svg",
+          "preview": "贴纸/plum/targetfocus.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/targetfocus.svg",
+          "preview": "贴纸/cobalt/targetfocus.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/targetfocus.svg",
+          "preview": "贴纸/slate/targetfocus.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/targetfocus.svg",
+          "preview": "贴纸/porcelain/targetfocus.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/targetfocus.svg",
+          "preview": "贴纸/sandpine/targetfocus.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/targetfocus.svg",
+          "preview": "贴纸/violet/targetfocus.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/targetfocus.svg",
+          "preview": "贴纸/teaamber/targetfocus.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/targetfocus.svg",
+          "preview": "贴纸/tidal/targetfocus.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/targetfocus.svg",
+          "preview": "贴纸/lavenderink/targetfocus.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/targetfocus.svg",
+          "preview": "贴纸/morandi/targetfocus.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/targetfocus.svg",
+          "preview": "贴纸/nordic/targetfocus.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/targetfocus.svg",
+          "preview": "贴纸/terracotta/targetfocus.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/targetfocus.svg",
+          "preview": "贴纸/artdeco/targetfocus.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/targetfocus.svg",
+          "preview": "贴纸/monitor/targetfocus.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/targetfocus.svg",
+          "preview": "贴纸/archival/targetfocus.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/targetfocus.svg",
+          "preview": "贴纸/retrobyte/targetfocus.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/targetfocus.svg",
+          "preview": "贴纸/clearpop/targetfocus.png"
+        }
+      }
+    },
+    {
+      "id": "turncorner",
+      "name": "转弯路线",
+      "uses": "转弯、绕过、下个位置、路线导航",
+      "shape": "断续路径与转向箭头。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-054",
+      "files": {
+        "vector": "贴纸/turncorner.svg",
+        "preview": "贴纸/turncorner.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/turncorner.svg",
+          "preview": "贴纸/atelier/turncorner.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/turncorner.svg",
+          "preview": "贴纸/herb/turncorner.png"
+        },
+        "night": {
+          "vector": "贴纸/night/turncorner.svg",
+          "preview": "贴纸/night/turncorner.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/turncorner.svg",
+          "preview": "贴纸/ink/turncorner.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/turncorner.svg",
+          "preview": "贴纸/coast/turncorner.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/turncorner.svg",
+          "preview": "贴纸/plum/turncorner.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/turncorner.svg",
+          "preview": "贴纸/cobalt/turncorner.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/turncorner.svg",
+          "preview": "贴纸/slate/turncorner.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/turncorner.svg",
+          "preview": "贴纸/porcelain/turncorner.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/turncorner.svg",
+          "preview": "贴纸/sandpine/turncorner.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/turncorner.svg",
+          "preview": "贴纸/violet/turncorner.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/turncorner.svg",
+          "preview": "贴纸/teaamber/turncorner.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/turncorner.svg",
+          "preview": "贴纸/tidal/turncorner.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/turncorner.svg",
+          "preview": "贴纸/lavenderink/turncorner.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/turncorner.svg",
+          "preview": "贴纸/morandi/turncorner.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/turncorner.svg",
+          "preview": "贴纸/nordic/turncorner.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/turncorner.svg",
+          "preview": "贴纸/terracotta/turncorner.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/turncorner.svg",
+          "preview": "贴纸/artdeco/turncorner.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/turncorner.svg",
+          "preview": "贴纸/monitor/turncorner.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/turncorner.svg",
+          "preview": "贴纸/archival/turncorner.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/turncorner.svg",
+          "preview": "贴纸/retrobyte/turncorner.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/turncorner.svg",
+          "preview": "贴纸/clearpop/turncorner.png"
+        }
+      }
+    },
+    {
+      "id": "sidebyside",
+      "name": "两种并排",
+      "uses": "突出对照、双画面、并排、两种方案",
+      "shape": "带小圆标的两张错位卡片。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-055",
+      "files": {
+        "vector": "贴纸/sidebyside.svg",
+        "preview": "贴纸/sidebyside.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/sidebyside.svg",
+          "preview": "贴纸/atelier/sidebyside.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/sidebyside.svg",
+          "preview": "贴纸/herb/sidebyside.png"
+        },
+        "night": {
+          "vector": "贴纸/night/sidebyside.svg",
+          "preview": "贴纸/night/sidebyside.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/sidebyside.svg",
+          "preview": "贴纸/ink/sidebyside.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/sidebyside.svg",
+          "preview": "贴纸/coast/sidebyside.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/sidebyside.svg",
+          "preview": "贴纸/plum/sidebyside.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/sidebyside.svg",
+          "preview": "贴纸/cobalt/sidebyside.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/sidebyside.svg",
+          "preview": "贴纸/slate/sidebyside.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/sidebyside.svg",
+          "preview": "贴纸/porcelain/sidebyside.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/sidebyside.svg",
+          "preview": "贴纸/sandpine/sidebyside.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/sidebyside.svg",
+          "preview": "贴纸/violet/sidebyside.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/sidebyside.svg",
+          "preview": "贴纸/teaamber/sidebyside.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/sidebyside.svg",
+          "preview": "贴纸/tidal/sidebyside.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/sidebyside.svg",
+          "preview": "贴纸/lavenderink/sidebyside.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/sidebyside.svg",
+          "preview": "贴纸/morandi/sidebyside.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/sidebyside.svg",
+          "preview": "贴纸/nordic/sidebyside.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/sidebyside.svg",
+          "preview": "贴纸/terracotta/sidebyside.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/sidebyside.svg",
+          "preview": "贴纸/artdeco/sidebyside.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/sidebyside.svg",
+          "preview": "贴纸/monitor/sidebyside.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/sidebyside.svg",
+          "preview": "贴纸/archival/sidebyside.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/sidebyside.svg",
+          "preview": "贴纸/retrobyte/sidebyside.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/sidebyside.svg",
+          "preview": "贴纸/clearpop/sidebyside.png"
+        }
+      }
+    },
+    {
+      "id": "littlewrench",
+      "name": "动手调整",
+      "uses": "工具、改设置、维修、调节",
+      "shape": "带强调色握柄的开口扳手。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-056",
+      "files": {
+        "vector": "贴纸/littlewrench.svg",
+        "preview": "贴纸/littlewrench.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/littlewrench.svg",
+          "preview": "贴纸/atelier/littlewrench.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/littlewrench.svg",
+          "preview": "贴纸/herb/littlewrench.png"
+        },
+        "night": {
+          "vector": "贴纸/night/littlewrench.svg",
+          "preview": "贴纸/night/littlewrench.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/littlewrench.svg",
+          "preview": "贴纸/ink/littlewrench.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/littlewrench.svg",
+          "preview": "贴纸/coast/littlewrench.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/littlewrench.svg",
+          "preview": "贴纸/plum/littlewrench.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/littlewrench.svg",
+          "preview": "贴纸/cobalt/littlewrench.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/littlewrench.svg",
+          "preview": "贴纸/slate/littlewrench.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/littlewrench.svg",
+          "preview": "贴纸/porcelain/littlewrench.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/littlewrench.svg",
+          "preview": "贴纸/sandpine/littlewrench.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/littlewrench.svg",
+          "preview": "贴纸/violet/littlewrench.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/littlewrench.svg",
+          "preview": "贴纸/teaamber/littlewrench.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/littlewrench.svg",
+          "preview": "贴纸/tidal/littlewrench.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/littlewrench.svg",
+          "preview": "贴纸/lavenderink/littlewrench.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/littlewrench.svg",
+          "preview": "贴纸/morandi/littlewrench.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/littlewrench.svg",
+          "preview": "贴纸/nordic/littlewrench.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/littlewrench.svg",
+          "preview": "贴纸/terracotta/littlewrench.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/littlewrench.svg",
+          "preview": "贴纸/artdeco/littlewrench.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/littlewrench.svg",
+          "preview": "贴纸/monitor/littlewrench.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/littlewrench.svg",
+          "preview": "贴纸/archival/littlewrench.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/littlewrench.svg",
+          "preview": "贴纸/retrobyte/littlewrench.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/littlewrench.svg",
+          "preview": "贴纸/clearpop/littlewrench.png"
+        }
+      }
+    },
+    {
+      "id": "shareout",
+      "name": "已交付",
+      "uses": "导出、分享、已发布、拿到文件",
+      "shape": "盒盖上方有一根向外箭头。",
+      "edge": "放在口播人物侧边留白或物件旁。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-057",
+      "files": {
+        "vector": "贴纸/shareout.svg",
+        "preview": "贴纸/shareout.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/shareout.svg",
+          "preview": "贴纸/atelier/shareout.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/shareout.svg",
+          "preview": "贴纸/herb/shareout.png"
+        },
+        "night": {
+          "vector": "贴纸/night/shareout.svg",
+          "preview": "贴纸/night/shareout.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/shareout.svg",
+          "preview": "贴纸/ink/shareout.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/shareout.svg",
+          "preview": "贴纸/coast/shareout.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/shareout.svg",
+          "preview": "贴纸/plum/shareout.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/shareout.svg",
+          "preview": "贴纸/cobalt/shareout.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/shareout.svg",
+          "preview": "贴纸/slate/shareout.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/shareout.svg",
+          "preview": "贴纸/porcelain/shareout.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/shareout.svg",
+          "preview": "贴纸/sandpine/shareout.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/shareout.svg",
+          "preview": "贴纸/violet/shareout.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/shareout.svg",
+          "preview": "贴纸/teaamber/shareout.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/shareout.svg",
+          "preview": "贴纸/tidal/shareout.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/shareout.svg",
+          "preview": "贴纸/lavenderink/shareout.png"
+        },
+        "morandi": {
+          "vector": "贴纸/morandi/shareout.svg",
+          "preview": "贴纸/morandi/shareout.png"
+        },
+        "nordic": {
+          "vector": "贴纸/nordic/shareout.svg",
+          "preview": "贴纸/nordic/shareout.png"
+        },
+        "terracotta": {
+          "vector": "贴纸/terracotta/shareout.svg",
+          "preview": "贴纸/terracotta/shareout.png"
+        },
+        "artdeco": {
+          "vector": "贴纸/artdeco/shareout.svg",
+          "preview": "贴纸/artdeco/shareout.png"
+        },
+        "monitor": {
+          "vector": "贴纸/monitor/shareout.svg",
+          "preview": "贴纸/monitor/shareout.png"
+        },
+        "archival": {
+          "vector": "贴纸/archival/shareout.svg",
+          "preview": "贴纸/archival/shareout.png"
+        },
+        "retrobyte": {
+          "vector": "贴纸/retrobyte/shareout.svg",
+          "preview": "贴纸/retrobyte/shareout.png"
+        },
+        "clearpop": {
+          "vector": "贴纸/clearpop/shareout.svg",
+          "preview": "贴纸/clearpop/shareout.png"
+        }
+      }
+    },
+    {
+      "id": "icon_upload",
+      "name": "上传文件",
+      "uses": "上传、同步、文件传输、发送",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-001",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/upload.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_upload.svg",
+        "preview": "图标/icon_upload.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_upload.svg",
+          "preview": "图标/atelier/icon_upload.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_upload.svg",
+          "preview": "图标/herb/icon_upload.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_upload.svg",
+          "preview": "图标/night/icon_upload.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_upload.svg",
+          "preview": "图标/ink/icon_upload.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_upload.svg",
+          "preview": "图标/coast/icon_upload.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_upload.svg",
+          "preview": "图标/plum/icon_upload.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_upload.svg",
+          "preview": "图标/cobalt/icon_upload.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_upload.svg",
+          "preview": "图标/slate/icon_upload.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_upload.svg",
+          "preview": "图标/porcelain/icon_upload.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_upload.svg",
+          "preview": "图标/sandpine/icon_upload.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_upload.svg",
+          "preview": "图标/violet/icon_upload.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_upload.svg",
+          "preview": "图标/teaamber/icon_upload.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_upload.svg",
+          "preview": "图标/tidal/icon_upload.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_upload.svg",
+          "preview": "图标/lavenderink/icon_upload.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_upload.svg",
+          "preview": "图标/morandi/icon_upload.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_upload.svg",
+          "preview": "图标/nordic/icon_upload.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_upload.svg",
+          "preview": "图标/terracotta/icon_upload.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_upload.svg",
+          "preview": "图标/artdeco/icon_upload.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_upload.svg",
+          "preview": "图标/monitor/icon_upload.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_upload.svg",
+          "preview": "图标/archival/icon_upload.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_upload.svg",
+          "preview": "图标/retrobyte/icon_upload.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_upload.svg",
+          "preview": "图标/clearpop/icon_upload.png"
+        }
+      }
+    },
+    {
+      "id": "icon_circle_check",
+      "name": "上传成功图标",
+      "uses": "文件传好了、同步完成、确认、打勾",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-002",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/circle-check.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_circle_check.svg",
+        "preview": "图标/icon_circle_check.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_circle_check.svg",
+          "preview": "图标/atelier/icon_circle_check.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_circle_check.svg",
+          "preview": "图标/herb/icon_circle_check.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_circle_check.svg",
+          "preview": "图标/night/icon_circle_check.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_circle_check.svg",
+          "preview": "图标/ink/icon_circle_check.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_circle_check.svg",
+          "preview": "图标/coast/icon_circle_check.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_circle_check.svg",
+          "preview": "图标/plum/icon_circle_check.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_circle_check.svg",
+          "preview": "图标/cobalt/icon_circle_check.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_circle_check.svg",
+          "preview": "图标/slate/icon_circle_check.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_circle_check.svg",
+          "preview": "图标/porcelain/icon_circle_check.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_circle_check.svg",
+          "preview": "图标/sandpine/icon_circle_check.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_circle_check.svg",
+          "preview": "图标/violet/icon_circle_check.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_circle_check.svg",
+          "preview": "图标/teaamber/icon_circle_check.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_circle_check.svg",
+          "preview": "图标/tidal/icon_circle_check.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_circle_check.svg",
+          "preview": "图标/lavenderink/icon_circle_check.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_circle_check.svg",
+          "preview": "图标/morandi/icon_circle_check.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_circle_check.svg",
+          "preview": "图标/nordic/icon_circle_check.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_circle_check.svg",
+          "preview": "图标/terracotta/icon_circle_check.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_circle_check.svg",
+          "preview": "图标/artdeco/icon_circle_check.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_circle_check.svg",
+          "preview": "图标/monitor/icon_circle_check.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_circle_check.svg",
+          "preview": "图标/archival/icon_circle_check.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_circle_check.svg",
+          "preview": "图标/retrobyte/icon_circle_check.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_circle_check.svg",
+          "preview": "图标/clearpop/icon_circle_check.png"
+        }
+      }
+    },
+    {
+      "id": "icon_wifi",
+      "name": "无线网络",
+      "uses": "Wi-Fi、信号、网络、联网、连接",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-003",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/wifi.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_wifi.svg",
+        "preview": "图标/icon_wifi.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_wifi.svg",
+          "preview": "图标/atelier/icon_wifi.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_wifi.svg",
+          "preview": "图标/herb/icon_wifi.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_wifi.svg",
+          "preview": "图标/night/icon_wifi.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_wifi.svg",
+          "preview": "图标/ink/icon_wifi.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_wifi.svg",
+          "preview": "图标/coast/icon_wifi.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_wifi.svg",
+          "preview": "图标/plum/icon_wifi.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_wifi.svg",
+          "preview": "图标/cobalt/icon_wifi.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_wifi.svg",
+          "preview": "图标/slate/icon_wifi.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_wifi.svg",
+          "preview": "图标/porcelain/icon_wifi.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_wifi.svg",
+          "preview": "图标/sandpine/icon_wifi.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_wifi.svg",
+          "preview": "图标/violet/icon_wifi.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_wifi.svg",
+          "preview": "图标/teaamber/icon_wifi.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_wifi.svg",
+          "preview": "图标/tidal/icon_wifi.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_wifi.svg",
+          "preview": "图标/lavenderink/icon_wifi.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_wifi.svg",
+          "preview": "图标/morandi/icon_wifi.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_wifi.svg",
+          "preview": "图标/nordic/icon_wifi.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_wifi.svg",
+          "preview": "图标/terracotta/icon_wifi.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_wifi.svg",
+          "preview": "图标/artdeco/icon_wifi.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_wifi.svg",
+          "preview": "图标/monitor/icon_wifi.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_wifi.svg",
+          "preview": "图标/archival/icon_wifi.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_wifi.svg",
+          "preview": "图标/retrobyte/icon_wifi.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_wifi.svg",
+          "preview": "图标/clearpop/icon_wifi.png"
+        }
+      }
+    },
+    {
+      "id": "icon_route",
+      "name": "路线图标",
+      "uses": "出行、路线、方向、定位",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-004",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/route.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_route.svg",
+        "preview": "图标/icon_route.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_route.svg",
+          "preview": "图标/atelier/icon_route.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_route.svg",
+          "preview": "图标/herb/icon_route.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_route.svg",
+          "preview": "图标/night/icon_route.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_route.svg",
+          "preview": "图标/ink/icon_route.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_route.svg",
+          "preview": "图标/coast/icon_route.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_route.svg",
+          "preview": "图标/plum/icon_route.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_route.svg",
+          "preview": "图标/cobalt/icon_route.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_route.svg",
+          "preview": "图标/slate/icon_route.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_route.svg",
+          "preview": "图标/porcelain/icon_route.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_route.svg",
+          "preview": "图标/sandpine/icon_route.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_route.svg",
+          "preview": "图标/violet/icon_route.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_route.svg",
+          "preview": "图标/teaamber/icon_route.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_route.svg",
+          "preview": "图标/tidal/icon_route.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_route.svg",
+          "preview": "图标/lavenderink/icon_route.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_route.svg",
+          "preview": "图标/morandi/icon_route.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_route.svg",
+          "preview": "图标/nordic/icon_route.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_route.svg",
+          "preview": "图标/terracotta/icon_route.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_route.svg",
+          "preview": "图标/artdeco/icon_route.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_route.svg",
+          "preview": "图标/monitor/icon_route.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_route.svg",
+          "preview": "图标/archival/icon_route.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_route.svg",
+          "preview": "图标/retrobyte/icon_route.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_route.svg",
+          "preview": "图标/clearpop/icon_route.png"
+        }
+      }
+    },
+    {
+      "id": "icon_briefcase",
+      "name": "通勤手提包",
+      "uses": "办公、上班、会议、外出、通勤",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-005",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/briefcase.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_briefcase.svg",
+        "preview": "图标/icon_briefcase.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_briefcase.svg",
+          "preview": "图标/atelier/icon_briefcase.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_briefcase.svg",
+          "preview": "图标/herb/icon_briefcase.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_briefcase.svg",
+          "preview": "图标/night/icon_briefcase.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_briefcase.svg",
+          "preview": "图标/ink/icon_briefcase.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_briefcase.svg",
+          "preview": "图标/coast/icon_briefcase.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_briefcase.svg",
+          "preview": "图标/plum/icon_briefcase.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_briefcase.svg",
+          "preview": "图标/cobalt/icon_briefcase.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_briefcase.svg",
+          "preview": "图标/slate/icon_briefcase.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_briefcase.svg",
+          "preview": "图标/porcelain/icon_briefcase.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_briefcase.svg",
+          "preview": "图标/sandpine/icon_briefcase.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_briefcase.svg",
+          "preview": "图标/violet/icon_briefcase.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_briefcase.svg",
+          "preview": "图标/teaamber/icon_briefcase.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_briefcase.svg",
+          "preview": "图标/tidal/icon_briefcase.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_briefcase.svg",
+          "preview": "图标/lavenderink/icon_briefcase.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_briefcase.svg",
+          "preview": "图标/morandi/icon_briefcase.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_briefcase.svg",
+          "preview": "图标/nordic/icon_briefcase.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_briefcase.svg",
+          "preview": "图标/terracotta/icon_briefcase.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_briefcase.svg",
+          "preview": "图标/artdeco/icon_briefcase.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_briefcase.svg",
+          "preview": "图标/monitor/icon_briefcase.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_briefcase.svg",
+          "preview": "图标/archival/icon_briefcase.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_briefcase.svg",
+          "preview": "图标/retrobyte/icon_briefcase.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_briefcase.svg",
+          "preview": "图标/clearpop/icon_briefcase.png"
+        }
+      }
+    },
+    {
+      "id": "icon_tools_kitchen_2",
+      "name": "厨房餐具",
+      "uses": "美食、食谱、烹饪、厨房",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-006",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/tools-kitchen-2.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_tools_kitchen_2.svg",
+        "preview": "图标/icon_tools_kitchen_2.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_tools_kitchen_2.svg",
+          "preview": "图标/atelier/icon_tools_kitchen_2.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_tools_kitchen_2.svg",
+          "preview": "图标/herb/icon_tools_kitchen_2.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_tools_kitchen_2.svg",
+          "preview": "图标/night/icon_tools_kitchen_2.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_tools_kitchen_2.svg",
+          "preview": "图标/ink/icon_tools_kitchen_2.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_tools_kitchen_2.svg",
+          "preview": "图标/coast/icon_tools_kitchen_2.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_tools_kitchen_2.svg",
+          "preview": "图标/plum/icon_tools_kitchen_2.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_tools_kitchen_2.svg",
+          "preview": "图标/cobalt/icon_tools_kitchen_2.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_tools_kitchen_2.svg",
+          "preview": "图标/slate/icon_tools_kitchen_2.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_tools_kitchen_2.svg",
+          "preview": "图标/porcelain/icon_tools_kitchen_2.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_tools_kitchen_2.svg",
+          "preview": "图标/sandpine/icon_tools_kitchen_2.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_tools_kitchen_2.svg",
+          "preview": "图标/violet/icon_tools_kitchen_2.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_tools_kitchen_2.svg",
+          "preview": "图标/teaamber/icon_tools_kitchen_2.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_tools_kitchen_2.svg",
+          "preview": "图标/tidal/icon_tools_kitchen_2.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_tools_kitchen_2.svg",
+          "preview": "图标/lavenderink/icon_tools_kitchen_2.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_tools_kitchen_2.svg",
+          "preview": "图标/morandi/icon_tools_kitchen_2.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_tools_kitchen_2.svg",
+          "preview": "图标/nordic/icon_tools_kitchen_2.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_tools_kitchen_2.svg",
+          "preview": "图标/terracotta/icon_tools_kitchen_2.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_tools_kitchen_2.svg",
+          "preview": "图标/artdeco/icon_tools_kitchen_2.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_tools_kitchen_2.svg",
+          "preview": "图标/monitor/icon_tools_kitchen_2.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_tools_kitchen_2.svg",
+          "preview": "图标/archival/icon_tools_kitchen_2.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_tools_kitchen_2.svg",
+          "preview": "图标/retrobyte/icon_tools_kitchen_2.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_tools_kitchen_2.svg",
+          "preview": "图标/clearpop/icon_tools_kitchen_2.png"
+        }
+      }
+    },
+    {
+      "id": "icon_home",
+      "name": "居家图标",
+      "uses": "房屋、家庭、家居、居家",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-007",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/home.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_home.svg",
+        "preview": "图标/icon_home.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_home.svg",
+          "preview": "图标/atelier/icon_home.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_home.svg",
+          "preview": "图标/herb/icon_home.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_home.svg",
+          "preview": "图标/night/icon_home.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_home.svg",
+          "preview": "图标/ink/icon_home.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_home.svg",
+          "preview": "图标/coast/icon_home.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_home.svg",
+          "preview": "图标/plum/icon_home.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_home.svg",
+          "preview": "图标/cobalt/icon_home.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_home.svg",
+          "preview": "图标/slate/icon_home.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_home.svg",
+          "preview": "图标/porcelain/icon_home.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_home.svg",
+          "preview": "图标/sandpine/icon_home.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_home.svg",
+          "preview": "图标/violet/icon_home.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_home.svg",
+          "preview": "图标/teaamber/icon_home.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_home.svg",
+          "preview": "图标/tidal/icon_home.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_home.svg",
+          "preview": "图标/lavenderink/icon_home.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_home.svg",
+          "preview": "图标/morandi/icon_home.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_home.svg",
+          "preview": "图标/nordic/icon_home.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_home.svg",
+          "preview": "图标/terracotta/icon_home.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_home.svg",
+          "preview": "图标/artdeco/icon_home.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_home.svg",
+          "preview": "图标/monitor/icon_home.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_home.svg",
+          "preview": "图标/archival/icon_home.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_home.svg",
+          "preview": "图标/retrobyte/icon_home.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_home.svg",
+          "preview": "图标/clearpop/icon_home.png"
+        }
+      }
+    },
+    {
+      "id": "icon_device_usb",
+      "name": "USB 接口图标",
+      "uses": "接口、USB、设备连接、数码",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-008",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/device-usb.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_device_usb.svg",
+        "preview": "图标/icon_device_usb.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_device_usb.svg",
+          "preview": "图标/atelier/icon_device_usb.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_device_usb.svg",
+          "preview": "图标/herb/icon_device_usb.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_device_usb.svg",
+          "preview": "图标/night/icon_device_usb.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_device_usb.svg",
+          "preview": "图标/ink/icon_device_usb.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_device_usb.svg",
+          "preview": "图标/coast/icon_device_usb.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_device_usb.svg",
+          "preview": "图标/plum/icon_device_usb.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_device_usb.svg",
+          "preview": "图标/cobalt/icon_device_usb.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_device_usb.svg",
+          "preview": "图标/slate/icon_device_usb.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_device_usb.svg",
+          "preview": "图标/porcelain/icon_device_usb.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_device_usb.svg",
+          "preview": "图标/sandpine/icon_device_usb.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_device_usb.svg",
+          "preview": "图标/violet/icon_device_usb.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_device_usb.svg",
+          "preview": "图标/teaamber/icon_device_usb.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_device_usb.svg",
+          "preview": "图标/tidal/icon_device_usb.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_device_usb.svg",
+          "preview": "图标/lavenderink/icon_device_usb.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_device_usb.svg",
+          "preview": "图标/morandi/icon_device_usb.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_device_usb.svg",
+          "preview": "图标/nordic/icon_device_usb.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_device_usb.svg",
+          "preview": "图标/terracotta/icon_device_usb.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_device_usb.svg",
+          "preview": "图标/artdeco/icon_device_usb.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_device_usb.svg",
+          "preview": "图标/monitor/icon_device_usb.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_device_usb.svg",
+          "preview": "图标/archival/icon_device_usb.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_device_usb.svg",
+          "preview": "图标/retrobyte/icon_device_usb.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_device_usb.svg",
+          "preview": "图标/clearpop/icon_device_usb.png"
+        }
+      }
+    },
+    {
+      "id": "icon_map_pin",
+      "name": "地图标记图标",
+      "uses": "位置、途经地点、目的地、出行",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-009",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/map-pin.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_map_pin.svg",
+        "preview": "图标/icon_map_pin.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_map_pin.svg",
+          "preview": "图标/atelier/icon_map_pin.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_map_pin.svg",
+          "preview": "图标/herb/icon_map_pin.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_map_pin.svg",
+          "preview": "图标/night/icon_map_pin.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_map_pin.svg",
+          "preview": "图标/ink/icon_map_pin.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_map_pin.svg",
+          "preview": "图标/coast/icon_map_pin.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_map_pin.svg",
+          "preview": "图标/plum/icon_map_pin.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_map_pin.svg",
+          "preview": "图标/cobalt/icon_map_pin.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_map_pin.svg",
+          "preview": "图标/slate/icon_map_pin.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_map_pin.svg",
+          "preview": "图标/porcelain/icon_map_pin.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_map_pin.svg",
+          "preview": "图标/sandpine/icon_map_pin.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_map_pin.svg",
+          "preview": "图标/violet/icon_map_pin.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_map_pin.svg",
+          "preview": "图标/teaamber/icon_map_pin.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_map_pin.svg",
+          "preview": "图标/tidal/icon_map_pin.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_map_pin.svg",
+          "preview": "图标/lavenderink/icon_map_pin.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_map_pin.svg",
+          "preview": "图标/morandi/icon_map_pin.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_map_pin.svg",
+          "preview": "图标/nordic/icon_map_pin.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_map_pin.svg",
+          "preview": "图标/terracotta/icon_map_pin.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_map_pin.svg",
+          "preview": "图标/artdeco/icon_map_pin.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_map_pin.svg",
+          "preview": "图标/monitor/icon_map_pin.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_map_pin.svg",
+          "preview": "图标/archival/icon_map_pin.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_map_pin.svg",
+          "preview": "图标/retrobyte/icon_map_pin.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_map_pin.svg",
+          "preview": "图标/clearpop/icon_map_pin.png"
+        }
+      }
+    },
+    {
+      "id": "icon_microphone",
+      "name": "收音图标",
+      "uses": "原声、音频、说话、设备、麦克风",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-010",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/microphone.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_microphone.svg",
+        "preview": "图标/icon_microphone.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_microphone.svg",
+          "preview": "图标/atelier/icon_microphone.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_microphone.svg",
+          "preview": "图标/herb/icon_microphone.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_microphone.svg",
+          "preview": "图标/night/icon_microphone.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_microphone.svg",
+          "preview": "图标/ink/icon_microphone.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_microphone.svg",
+          "preview": "图标/coast/icon_microphone.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_microphone.svg",
+          "preview": "图标/plum/icon_microphone.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_microphone.svg",
+          "preview": "图标/cobalt/icon_microphone.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_microphone.svg",
+          "preview": "图标/slate/icon_microphone.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_microphone.svg",
+          "preview": "图标/porcelain/icon_microphone.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_microphone.svg",
+          "preview": "图标/sandpine/icon_microphone.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_microphone.svg",
+          "preview": "图标/violet/icon_microphone.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_microphone.svg",
+          "preview": "图标/teaamber/icon_microphone.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_microphone.svg",
+          "preview": "图标/tidal/icon_microphone.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_microphone.svg",
+          "preview": "图标/lavenderink/icon_microphone.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_microphone.svg",
+          "preview": "图标/morandi/icon_microphone.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_microphone.svg",
+          "preview": "图标/nordic/icon_microphone.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_microphone.svg",
+          "preview": "图标/terracotta/icon_microphone.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_microphone.svg",
+          "preview": "图标/artdeco/icon_microphone.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_microphone.svg",
+          "preview": "图标/monitor/icon_microphone.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_microphone.svg",
+          "preview": "图标/archival/icon_microphone.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_microphone.svg",
+          "preview": "图标/retrobyte/icon_microphone.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_microphone.svg",
+          "preview": "图标/clearpop/icon_microphone.png"
+        }
+      }
+    },
+    {
+      "id": "icon_file_description",
+      "name": "文档说明图标",
+      "uses": "文件、教程、文档、编辑",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-011",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/file-description.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_file_description.svg",
+        "preview": "图标/icon_file_description.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_file_description.svg",
+          "preview": "图标/atelier/icon_file_description.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_file_description.svg",
+          "preview": "图标/herb/icon_file_description.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_file_description.svg",
+          "preview": "图标/night/icon_file_description.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_file_description.svg",
+          "preview": "图标/ink/icon_file_description.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_file_description.svg",
+          "preview": "图标/coast/icon_file_description.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_file_description.svg",
+          "preview": "图标/plum/icon_file_description.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_file_description.svg",
+          "preview": "图标/cobalt/icon_file_description.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_file_description.svg",
+          "preview": "图标/slate/icon_file_description.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_file_description.svg",
+          "preview": "图标/porcelain/icon_file_description.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_file_description.svg",
+          "preview": "图标/sandpine/icon_file_description.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_file_description.svg",
+          "preview": "图标/violet/icon_file_description.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_file_description.svg",
+          "preview": "图标/teaamber/icon_file_description.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_file_description.svg",
+          "preview": "图标/tidal/icon_file_description.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_file_description.svg",
+          "preview": "图标/lavenderink/icon_file_description.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_file_description.svg",
+          "preview": "图标/morandi/icon_file_description.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_file_description.svg",
+          "preview": "图标/nordic/icon_file_description.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_file_description.svg",
+          "preview": "图标/terracotta/icon_file_description.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_file_description.svg",
+          "preview": "图标/artdeco/icon_file_description.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_file_description.svg",
+          "preview": "图标/monitor/icon_file_description.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_file_description.svg",
+          "preview": "图标/archival/icon_file_description.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_file_description.svg",
+          "preview": "图标/retrobyte/icon_file_description.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_file_description.svg",
+          "preview": "图标/clearpop/icon_file_description.png"
+        }
+      }
+    },
+    {
+      "id": "icon_filter",
+      "name": "筛选图标",
+      "uses": "过滤、筛选、缩小结果、分类",
+      "shape": "统一圆角线性图标，适合做局部说明。",
+      "edge": "可搭配口播画面和界面操作示例。",
+      "source": "tabler",
+      "family": "icon",
+      "assetId": "ICO-012",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "rights": {
+        "author": "Paweł Kuna / Tabler",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/icons/outline/filter.svg",
+        "version": "a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192",
+        "notice": "licenses/tabler-icons.txt",
+        "changes": "转为透明预览；居中换色；保留原始形状。"
+      },
+      "files": {
+        "vector": "图标/icon_filter.svg",
+        "preview": "图标/icon_filter.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "图标/atelier/icon_filter.svg",
+          "preview": "图标/atelier/icon_filter.png"
+        },
+        "herb": {
+          "vector": "图标/herb/icon_filter.svg",
+          "preview": "图标/herb/icon_filter.png"
+        },
+        "night": {
+          "vector": "图标/night/icon_filter.svg",
+          "preview": "图标/night/icon_filter.png"
+        },
+        "ink": {
+          "vector": "图标/ink/icon_filter.svg",
+          "preview": "图标/ink/icon_filter.png"
+        },
+        "coast": {
+          "vector": "图标/coast/icon_filter.svg",
+          "preview": "图标/coast/icon_filter.png"
+        },
+        "plum": {
+          "vector": "图标/plum/icon_filter.svg",
+          "preview": "图标/plum/icon_filter.png"
+        },
+        "cobalt": {
+          "vector": "图标/cobalt/icon_filter.svg",
+          "preview": "图标/cobalt/icon_filter.png"
+        },
+        "slate": {
+          "vector": "图标/slate/icon_filter.svg",
+          "preview": "图标/slate/icon_filter.png"
+        },
+        "porcelain": {
+          "vector": "图标/porcelain/icon_filter.svg",
+          "preview": "图标/porcelain/icon_filter.png"
+        },
+        "sandpine": {
+          "vector": "图标/sandpine/icon_filter.svg",
+          "preview": "图标/sandpine/icon_filter.png"
+        },
+        "violet": {
+          "vector": "图标/violet/icon_filter.svg",
+          "preview": "图标/violet/icon_filter.png"
+        },
+        "teaamber": {
+          "vector": "图标/teaamber/icon_filter.svg",
+          "preview": "图标/teaamber/icon_filter.png"
+        },
+        "tidal": {
+          "vector": "图标/tidal/icon_filter.svg",
+          "preview": "图标/tidal/icon_filter.png"
+        },
+        "lavenderink": {
+          "vector": "图标/lavenderink/icon_filter.svg",
+          "preview": "图标/lavenderink/icon_filter.png"
+        },
+        "morandi": {
+          "vector": "图标/morandi/icon_filter.svg",
+          "preview": "图标/morandi/icon_filter.png"
+        },
+        "nordic": {
+          "vector": "图标/nordic/icon_filter.svg",
+          "preview": "图标/nordic/icon_filter.png"
+        },
+        "terracotta": {
+          "vector": "图标/terracotta/icon_filter.svg",
+          "preview": "图标/terracotta/icon_filter.png"
+        },
+        "artdeco": {
+          "vector": "图标/artdeco/icon_filter.svg",
+          "preview": "图标/artdeco/icon_filter.png"
+        },
+        "monitor": {
+          "vector": "图标/monitor/icon_filter.svg",
+          "preview": "图标/monitor/icon_filter.png"
+        },
+        "archival": {
+          "vector": "图标/archival/icon_filter.svg",
+          "preview": "图标/archival/icon_filter.png"
+        },
+        "retrobyte": {
+          "vector": "图标/retrobyte/icon_filter.svg",
+          "preview": "图标/retrobyte/icon_filter.png"
+        },
+        "clearpop": {
+          "vector": "图标/clearpop/icon_filter.svg",
+          "preview": "图标/clearpop/icon_filter.png"
         }
       }
     }
@@ -9375,43 +14000,363 @@
     "containers": [
       "MDN · CSS 容器查询",
       "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries"
+    ],
+    "tabler": [
+      "Tabler Icons · 原始 MIT 授权",
+      "https://github.com/tabler/tabler-icons/blob/a1422751964ae9c7d9acb5c8d9a7a9c1ff0f8192/LICENSE"
+    ],
+    "canva27": [
+      "Canva · 2027 设计前瞻",
+      "https://www.canva.com/newsroom/news/canva-2027-design-trends/"
+    ],
+    "envato27": [
+      "Envato · 2027 设计前瞻",
+      "https://elements.envato.com/learn/graphic-design-trends"
+    ],
+    "govguide": [
+      "GOV.UK · 任务式服务网站",
+      "https://www.gov.uk/"
     ]
   },
   "origin": "本批版式、配色、几何模型与贴纸为此素材册原创。链接为制作规范参考。",
   "recent": {
     "styles": [
-      "siteproduct",
-      "sitetype",
-      "siteeditorial",
-      "sitebento",
-      "siteworkshop",
-      "siteadaptive"
+      "sitearchive",
+      "sitecraft",
+      "siteservice"
     ],
     "palettes": [
-      "morandi",
-      "nordic",
-      "terracotta",
-      "artdeco",
-      "monitor"
+      "archival",
+      "retrobyte",
+      "clearpop"
     ],
     "objects": [
-      "powerbank",
-      "nailer",
-      "lensbottle",
-      "taperule",
-      "firstaid"
+      "powerstrip",
+      "adapterhub",
+      "hingeplate",
+      "sealjar",
+      "foldumbrella",
+      "faucet"
     ],
     "stickers": [
-      "checklist",
-      "alertbadge",
-      "maproute",
-      "pricecompare",
-      "unboxing",
-      "privacyshield",
-      "splitreveal",
-      "infoquestion",
-      "magfocus",
-      "uploadcloud"
+      "synced",
+      "brushunder",
+      "papertrail",
+      "chevronsign",
+      "successdot",
+      "targetfocus",
+      "turncorner",
+      "sidebyside",
+      "littlewrench",
+      "shareout",
+      "icon_upload",
+      "icon_circle_check",
+      "icon_wifi",
+      "icon_route",
+      "icon_briefcase",
+      "icon_tools_kitchen_2",
+      "icon_home",
+      "icon_device_usb",
+      "icon_map_pin",
+      "icon_microphone",
+      "icon_file_description",
+      "icon_filter"
     ]
-  }
+  },
+  "components": [
+    {
+      "id": "nav",
+      "assetId": "UI-001",
+      "name": "响应式导航",
+      "uses": "展开菜单、打开页面、返回",
+      "states": [
+        "展开菜单",
+        "进入栏目",
+        "收起菜单"
+      ]
+    },
+    {
+      "id": "search",
+      "assetId": "UI-002",
+      "name": "搜索与筛选",
+      "uses": "输入关键词、选分类、清除筛选",
+      "states": [
+        "输入关键词",
+        "看结果",
+        "清除筛选"
+      ]
+    },
+    {
+      "id": "upload",
+      "assetId": "UI-003",
+      "name": "上传进度",
+      "uses": "进度、成功、有错误时重试",
+      "states": [
+        "开始上传",
+        "查看进度",
+        "重试或完成"
+      ]
+    },
+    {
+      "id": "compare",
+      "assetId": "UI-004",
+      "name": "前后对照",
+      "uses": "滑动对比两个状态",
+      "states": [
+        "移动滑杆",
+        "看前后差异",
+        "回到原位"
+      ]
+    },
+    {
+      "id": "steps",
+      "assetId": "UI-005",
+      "name": "步骤条",
+      "uses": "查看步骤、继续、返回调整",
+      "states": [
+        "当前步骤",
+        "下一步",
+        "回上一步"
+      ]
+    },
+    {
+      "id": "feedback",
+      "assetId": "UI-006",
+      "name": "确认反馈",
+      "uses": "打开确认框、取消和保存",
+      "states": [
+        "打开确认框",
+        "取消",
+        "确认完成"
+      ]
+    }
+  ],
+  "practice": [
+    {
+      "id": "explain-seal",
+      "assetId": "KIT-001",
+      "name": "讲步骤 · 拆洗密封罐",
+      "kind": "讲步骤",
+      "example": "先打开密封罐，再取下密封圈清洗。",
+      "reason": "让观众看到盖子与密封圈是两个部件，以及先后顺序。",
+      "tags": "步骤 拆开 拆解 部件 清理 密封圈 密封罐 先后 然后 怎么做 清洗 局部",
+      "demos": [
+        "DEMO-010",
+        "DEMO-015",
+        "DEMO-013"
+      ],
+      "objects": [
+        "sealjar",
+        "hingeplate",
+        "powerstrip"
+      ],
+      "stickers": [
+        "targetfocus",
+        "brushunder",
+        "papertrail"
+      ],
+      "palette": "archival",
+      "labels": [
+        "打开盖子",
+        "取下密封圈"
+      ]
+    },
+    {
+      "id": "compare-wave",
+      "assetId": "KIT-002",
+      "name": "做对比 · 两段声音",
+      "kind": "做对比",
+      "example": "开通降噪前后，键盘声差很多。",
+      "reason": "同尺度展示两个状态，便于观众跟上差异。",
+      "tags": "相比 对比 前后 降噪 噪音 音频 声音 键盘 波形 降低 差别 改完 数据",
+      "demos": [
+        "DEMO-011",
+        "DEMO-014"
+      ],
+      "objects": [
+        "mic",
+        "headphones",
+        "laptop"
+      ],
+      "stickers": [
+        "sidebyside",
+        "icon_microphone",
+        "splitreveal"
+      ],
+      "palette": "retrobyte",
+      "labels": [
+        "降噪前",
+        "降噪后"
+      ],
+      "originalWave": [
+        [
+          0.14,
+          0.37,
+          0.58,
+          0.41,
+          0.67,
+          0.74,
+          0.4,
+          0.49,
+          0.62,
+          0.48,
+          0.71,
+          0.44,
+          0.54,
+          0.7,
+          0.59,
+          0.29,
+          0.55,
+          0.7,
+          0.23,
+          0.51,
+          0.31,
+          0.36,
+          0.48,
+          0.21
+        ],
+        [
+          0.07,
+          0.16,
+          0.27,
+          0.17,
+          0.35,
+          0.28,
+          0.2,
+          0.14,
+          0.39,
+          0.3,
+          0.29,
+          0.22,
+          0.25,
+          0.34,
+          0.24,
+          0.18,
+          0.27,
+          0.23,
+          0.13,
+          0.22,
+          0.21,
+          0.13,
+          0.16,
+          0.14
+        ]
+      ]
+    },
+    {
+      "id": "show-upload",
+      "assetId": "KIT-003",
+      "name": "演示操作 · 上传完成",
+      "kind": "演示操作",
+      "example": "上传完成后，右上角会出现一个勾。",
+      "reason": "只展示操作区域和状态变化，说明勾在哪里出现。",
+      "tags": "操作 文件 传好了 上传 上传完成 同步 打勾 进度 完成 点击 右上角 提交 导出",
+      "demos": [
+        "DEMO-012",
+        "DEMO-015"
+      ],
+      "objects": [
+        "laptop",
+        "phone",
+        "adapterhub"
+      ],
+      "stickers": [
+        "icon_circle_check",
+        "synced",
+        "successdot"
+      ],
+      "palette": "clearpop",
+      "labels": [
+        "正在上传",
+        "上传完成"
+      ]
+    }
+  ],
+  "lessonEffects": [
+    {
+      "id": "lesson-seal",
+      "kind": "lesson",
+      "scene": "seal",
+      "assetId": "DEMO-010",
+      "label": "拆出密封圈",
+      "description": "把盖子与环形部件分开，让拆卸顺序可见。",
+      "object": "sealjar",
+      "labels": [
+        "打开盖子",
+        "取下密封圈"
+      ],
+      "uses": "讲步骤"
+    },
+    {
+      "id": "lesson-wave",
+      "kind": "lesson",
+      "scene": "wave",
+      "assetId": "DEMO-011",
+      "label": "前后两段波形",
+      "description": "同尺度展示前后两段声音。可使用本机音频。",
+      "object": "mic",
+      "labels": [
+        "降噪前",
+        "降噪后"
+      ],
+      "uses": "做对比"
+    },
+    {
+      "id": "lesson-status",
+      "kind": "lesson",
+      "scene": "status",
+      "assetId": "DEMO-012",
+      "label": "上传进度变成确认",
+      "description": "一起看文件进度和右上角完成状态。",
+      "object": "laptop",
+      "labels": [
+        "正在上传",
+        "上传完成"
+      ],
+      "uses": "演示操作"
+    },
+    {
+      "id": "lesson-route",
+      "kind": "lesson",
+      "scene": "route",
+      "assetId": "DEMO-013",
+      "label": "标出三个途经点",
+      "description": "沿路径标记各步骤或位置，最后停在终点。",
+      "object": "suitcase",
+      "labels": [
+        "出发",
+        "经过",
+        "到达"
+      ],
+      "uses": "讲步骤"
+    },
+    {
+      "id": "lesson-number",
+      "kind": "lesson",
+      "scene": "number",
+      "assetId": "DEMO-014",
+      "label": "显示数值变化",
+      "description": "用两个用户提供的数值展示变化。",
+      "object": "scale",
+      "labels": [
+        "80",
+        "120",
+        "%"
+      ],
+      "uses": "做对比"
+    },
+    {
+      "id": "lesson-focus",
+      "kind": "lesson",
+      "scene": "focus",
+      "assetId": "DEMO-015",
+      "label": "圈出一个部位",
+      "description": "在物件透明图上定位关键部位，带可改文字。",
+      "object": "sealjar",
+      "labels": [
+        "这里是密封圈"
+      ],
+      "uses": "指出重点"
+    }
+  ]
 }
