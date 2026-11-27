@@ -46,8 +46,9 @@ def manifest():
         path.relative_to(ROOT).as_posix(): {"size": path.stat().st_size, "sha256": sha(path.read_bytes())}
         for path in sorted((ROOT / "site").rglob("*")) if path.is_file()
     }
+    pair = json.loads((ROOT / "compatibility.json").read_bytes())
     return {
-        "schemaVersion": 1, "rendererVersion": 3, "libraryRelease": VERSION,
+        "schemaVersion": 1, **pair, "libraryRelease": VERSION,
         "baseline": BASELINE, "assets": entries(), "files": files,
     }
 
@@ -66,7 +67,7 @@ def build(output):
         bundle.writestr("manifest.json", raw)
         for path in data["files"]:
             bundle.write(ROOT / path, path)
-        for path in ("README.md", "VERSION", "preview.py", "serve.py", "launch.py", "requirements.txt", "启动素材库.cmd", "启动素材库.command"):
+        for path in ("README.md", "VERSION", "compatibility.json", "preview.py", "serve.py", "launch.py", "requirements.txt", "启动素材库.cmd", "启动素材库.command"):
             bundle.write(ROOT / path, path)
     verify(archive)
     (output / "SHA256SUMS.txt").write_text(

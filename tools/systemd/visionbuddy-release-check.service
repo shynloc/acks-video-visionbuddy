@@ -1,0 +1,11 @@
+[Unit]
+Description=Check and promote the verified VisionBuddy release
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/opt/visionbuddy
+ExecStart=/usr/bin/python3 -B /opt/visionbuddy/online_release.py
+TimeoutStartSec=8min
