@@ -7,7 +7,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright, expect
 
 
-def run(base, channel=None):
+def run(base, channel=None, assets=201):
     with sync_playwright() as pw:
         browser = pw.chromium.launch(channel=channel)
         ctx = browser.new_context(viewport={"width": 1400, "height": 900}, reduced_motion="reduce",
@@ -61,7 +61,7 @@ def run(base, channel=None):
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
         latest = ctx.request.get(base+"/latest.json").json()
         manifest = ctx.request.get(base+latest["manifest"]).json()
-        assert len(manifest["assets"]) == 201
+        assert len(manifest["assets"]) == assets
         assert "OBJ-017" in manifest["assets"]
         assert not errors, errors
         browser.close()
@@ -71,6 +71,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("base")
     p.add_argument("--channel", default=None)
+    p.add_argument("--assets", type=int, default=201)
     args = p.parse_args()
-    run(args.base.rstrip("/"), args.channel)
+    run(args.base.rstrip("/"), args.channel, args.assets)
     print("FX, transparent overlay, HTML layout, part demo and copy-to-manuscript verified.")

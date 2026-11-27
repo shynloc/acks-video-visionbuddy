@@ -5749,6 +5749,258 @@
           "preview": "贴纸/lavenderink/returnarrow.png"
         }
       }
+    },
+    {
+      "id": "timerbell",
+      "name": "计时提醒",
+      "uses": "计时、等待、提醒、倒计时",
+      "shape": "圆钟指针和右上角提醒短线。",
+      "edge": "摆在物件或原句旁边的留白处。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-035",
+      "files": {
+        "vector": "贴纸/timerbell.svg",
+        "preview": "贴纸/timerbell.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/timerbell.svg",
+          "preview": "贴纸/atelier/timerbell.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/timerbell.svg",
+          "preview": "贴纸/herb/timerbell.png"
+        },
+        "night": {
+          "vector": "贴纸/night/timerbell.svg",
+          "preview": "贴纸/night/timerbell.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/timerbell.svg",
+          "preview": "贴纸/ink/timerbell.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/timerbell.svg",
+          "preview": "贴纸/coast/timerbell.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/timerbell.svg",
+          "preview": "贴纸/plum/timerbell.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/timerbell.svg",
+          "preview": "贴纸/cobalt/timerbell.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/timerbell.svg",
+          "preview": "贴纸/slate/timerbell.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/timerbell.svg",
+          "preview": "贴纸/porcelain/timerbell.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/timerbell.svg",
+          "preview": "贴纸/sandpine/timerbell.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/timerbell.svg",
+          "preview": "贴纸/violet/timerbell.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/timerbell.svg",
+          "preview": "贴纸/teaamber/timerbell.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/timerbell.svg",
+          "preview": "贴纸/tidal/timerbell.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/timerbell.svg",
+          "preview": "贴纸/lavenderink/timerbell.png"
+        }
+      }
+    },
+    {
+      "id": "alignguide",
+      "name": "对齐参照",
+      "uses": "对齐、间距、排版、摆放位置",
+      "shape": "直角参照线旁的两张等宽卡片。",
+      "edge": "摆在物件或原句旁边的留白处。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-036",
+      "files": {
+        "vector": "贴纸/alignguide.svg",
+        "preview": "贴纸/alignguide.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/alignguide.svg",
+          "preview": "贴纸/atelier/alignguide.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/alignguide.svg",
+          "preview": "贴纸/herb/alignguide.png"
+        },
+        "night": {
+          "vector": "贴纸/night/alignguide.svg",
+          "preview": "贴纸/night/alignguide.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/alignguide.svg",
+          "preview": "贴纸/ink/alignguide.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/alignguide.svg",
+          "preview": "贴纸/coast/alignguide.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/alignguide.svg",
+          "preview": "贴纸/plum/alignguide.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/alignguide.svg",
+          "preview": "贴纸/cobalt/alignguide.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/alignguide.svg",
+          "preview": "贴纸/slate/alignguide.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/alignguide.svg",
+          "preview": "贴纸/porcelain/alignguide.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/alignguide.svg",
+          "preview": "贴纸/sandpine/alignguide.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/alignguide.svg",
+          "preview": "贴纸/violet/alignguide.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/alignguide.svg",
+          "preview": "贴纸/teaamber/alignguide.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/alignguide.svg",
+          "preview": "贴纸/tidal/alignguide.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/alignguide.svg",
+          "preview": "贴纸/lavenderink/alignguide.png"
+        }
+      }
+    },
+    {
+      "id": "optionfork",
+      "name": "分岔选择",
+      "uses": "两种做法、选择方案、分支步骤",
+      "shape": "一个起点分成上下两条箭头。",
+      "edge": "摆在物件或原句旁边的留白处。",
+      "source": "pictograms",
+      "tokens": {
+        "viewBox": [
+          0,
+          0,
+          192,
+          128
+        ],
+        "alphaOutside": 0,
+        "anchor": [
+          96,
+          64
+        ]
+      },
+      "assetId": "STK-037",
+      "files": {
+        "vector": "贴纸/optionfork.svg",
+        "preview": "贴纸/optionfork.png"
+      },
+      "variants": {
+        "atelier": {
+          "vector": "贴纸/atelier/optionfork.svg",
+          "preview": "贴纸/atelier/optionfork.png"
+        },
+        "herb": {
+          "vector": "贴纸/herb/optionfork.svg",
+          "preview": "贴纸/herb/optionfork.png"
+        },
+        "night": {
+          "vector": "贴纸/night/optionfork.svg",
+          "preview": "贴纸/night/optionfork.png"
+        },
+        "ink": {
+          "vector": "贴纸/ink/optionfork.svg",
+          "preview": "贴纸/ink/optionfork.png"
+        },
+        "coast": {
+          "vector": "贴纸/coast/optionfork.svg",
+          "preview": "贴纸/coast/optionfork.png"
+        },
+        "plum": {
+          "vector": "贴纸/plum/optionfork.svg",
+          "preview": "贴纸/plum/optionfork.png"
+        },
+        "cobalt": {
+          "vector": "贴纸/cobalt/optionfork.svg",
+          "preview": "贴纸/cobalt/optionfork.png"
+        },
+        "slate": {
+          "vector": "贴纸/slate/optionfork.svg",
+          "preview": "贴纸/slate/optionfork.png"
+        },
+        "porcelain": {
+          "vector": "贴纸/porcelain/optionfork.svg",
+          "preview": "贴纸/porcelain/optionfork.png"
+        },
+        "sandpine": {
+          "vector": "贴纸/sandpine/optionfork.svg",
+          "preview": "贴纸/sandpine/optionfork.png"
+        },
+        "violet": {
+          "vector": "贴纸/violet/optionfork.svg",
+          "preview": "贴纸/violet/optionfork.png"
+        },
+        "teaamber": {
+          "vector": "贴纸/teaamber/optionfork.svg",
+          "preview": "贴纸/teaamber/optionfork.png"
+        },
+        "tidal": {
+          "vector": "贴纸/tidal/optionfork.svg",
+          "preview": "贴纸/tidal/optionfork.png"
+        },
+        "lavenderink": {
+          "vector": "贴纸/lavenderink/optionfork.svg",
+          "preview": "贴纸/lavenderink/optionfork.png"
+        }
+      }
     }
   ],
   "refs": {
@@ -5796,16 +6048,9 @@
       "flashlight"
     ],
     "stickers": [
-      "headsetmark",
-      "voicewave",
-      "bookmarkflag",
-      "calendarpin",
-      "warmsteam",
-      "droplet",
-      "batterybars",
-      "soundoff",
-      "layersheets",
-      "returnarrow"
+      "timerbell",
+      "alignguide",
+      "optionfork"
     ]
   }
 }
