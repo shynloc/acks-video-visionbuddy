@@ -9,6 +9,10 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = (ROOT / "VERSION").read_text(encoding="utf8").strip()
 BASELINE = "2e76812314ab9fced11f12d826bd42c7353d55b3"
 REPO = "https://github.com/shynloc/acks-video-visionbuddy"
+RUNTIME_FILES = (
+    "README.md", "VERSION", "compatibility.json", "preview.py", "serve.py",
+    "launch.py", "requirements.txt", "启动素材库.cmd", "启动素材库.command",
+)
 
 
 def sha(data):
@@ -67,7 +71,7 @@ def build(output):
         bundle.writestr("manifest.json", raw)
         for path in data["files"]:
             bundle.write(ROOT / path, path)
-        for path in ("README.md", "VERSION", "compatibility.json", "preview.py", "serve.py", "launch.py", "requirements.txt", "启动素材库.cmd", "启动素材库.command"):
+        for path in RUNTIME_FILES:
             bundle.write(ROOT / path, path)
     verify(archive)
     (output / "SHA256SUMS.txt").write_text(

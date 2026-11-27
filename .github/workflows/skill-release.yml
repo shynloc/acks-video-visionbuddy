@@ -1,0 +1,45 @@
+name: Build VisionBuddy Skill release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Draft Skill release tag
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SKILL_TAG: ${{ inputs.tag }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check the draft and run the Skill tests
+        run: |
+          set -euo pipefail
+          test "$SKILL_TAG" = "$(python -c 'from visionbuddy import SKILL_VERSION; print("skill-v" + SKILL_VERSION)')"
+          draft=$(gh release view "$SKILL_TAG" --json isDraft,targetCommitish --jq 'select(.isDraft).targetCommitish')
+          test "$draft" = "$(git rev-parse HEAD)"
+          python -m pip install -r requirements.txt
+          python -X utf8 -m unittest discover -s tests -p 'test_*.py'
+      - name: Build the Skill ZIP against the published library
+        run: |
+          set -euo pipefail
+          archive="dist/visionbuddy-$SKILL_TAG.zip"
+          python -X utf8 tools/skill_release.py --output dist
+          python -X utf8 tools/skill_release.py --verify "$archive"
+          library=$(cat VERSION)
+          curl --fail --silent --show-error --location --retry 3 \
+            "https://github.com/shynloc/acks-video-visionbuddy/releases/download/v$library/manifest.json" \
+            --output dist/library-manifest.json
+          unzip -p "$archive" visionbuddy/manifest.json | cmp - dist/library-manifest.json
+          gh release upload "$SKILL_TAG" "$archive" "$archive.sha256"

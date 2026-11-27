@@ -1,0 +1,43 @@
+.top nav { display:flex; flex-wrap:wrap; align-items:center; gap:15px; }
+main { padding-bottom:30px; }
+.asset-fields { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.asset-fields input { width:100%; min-width:0; border:1px solid #bcad96; padding:8px 9px; color:var(--ink); border-radius:7px; background:#fffdf8; }
+.asset-fields label { min-width:0; }
+.span-row { grid-column:1/-1; }
+.asset-media { margin-top:12px; }
+#file-tip { margin:9px 0; }
+.form-actions { margin-top:10px; }
+#asset-status { font-size:13px; color:var(--muted); }
+.asset-head { align-items:center; }
+#asset-search { background:#fffaf1; color:var(--ink); border:1px solid #bcad96; border-radius:8px; padding:9px 11px; min-width:0; }
+#assets .line { display:grid; grid-template-columns:66px minmax(0,1fr); gap:11px; align-items:center; }
+.asset-thumb { width:66px; height:54px; object-fit:contain; border-radius:5px; background:conic-gradient(#f3e9d9 25%,#fff8ec 0 50%,#f3e9d9 0 75%,#fff8ec 0); background-size:14px 14px; }
+.asset-caption { min-width:0; }
+.asset-caption .line-quote { margin:0 0 3px; }
+.asset-name,.asset-caption,.asset-rights dd { overflow-wrap:anywhere; }
+.own-stage { min-height:110px; }
+.own-stage iframe { width:min(455px,95%,calc(310px * var(--asset-ratio,1.7))); }
+#detail-uses,#detail-status { color:var(--muted); white-space:pre-line; overflow-wrap:anywhere; }
+#detail-status:not(:empty) { padding:0 16px 15px; }
+.asset-rights { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 10px; margin:0; border-top:1px solid var(--rule); padding-top:9px; font-size:13px; }
+.asset-rights dt { color:var(--muted); font-size:12px; }
+.asset-rights dd { margin:0; }
+.version-line { display:flex; gap:8px 12px; align-items:center; flex-wrap:wrap; }
+.version-line select { margin-left:5px; }
+#download-original[href] { cursor:pointer; }
+@media(max-width:680px) {
+  .asset-fields { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .top nav { font-size:13px; gap:9px; }
+}
+@media(max-width:480px) {
+  .asset-fields { grid-template-columns:minmax(0,1fr); }
+  #asset-search { width:44%; }
+  .asset-head h2 { font-size:25px; }
+}
+
+
+.sharing { margin:0 0 12px; }
+.asset-list-row { display:grid; grid-template-columns:35px minmax(0,1fr); align-items:center; border-bottom:1px solid var(--rule); }
+.asset-list-row:last-child { border-bottom:0; }
+.asset-list-row .team-check { justify-self:center; margin:0; }
+.asset-list-row .line { padding-left:5px; }

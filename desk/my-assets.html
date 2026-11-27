@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的素材 · VisionBuddy</title>
+  <link rel="stylesheet" href="/desk/style.css">
+  <link rel="stylesheet" href="/my-assets/style.css">
+  <script src="/my-assets/app.js" defer></script>
+</head>
+<body>
+  <header class="top"><div class="width top-inner">
+    <a class="brand" href="/desk/">VisionBuddy</a>
+    <nav><a href="/desk/">给口播配画面</a><a href="/visual/index.html">公共素材册 ↗</a></nav>
+  </div></header>
+  <main class="width">
+    <div class="title"><h1>我的<span>素材</span></h1><p>给本机原件登记用途。给口播配画面时，个人素材会和公共库一起参与推荐。</p></div>
+    <details class="intake" id="asset-form-card">
+      <summary id="form-label">导入本机素材</summary>
+      <form class="intake-body" id="asset-form">
+        <div class="asset-fields">
+          <label id="file-label">原件 <input type="file" id="asset-file" accept=".png,.svg,.mov,.webm,.mkv,.mp4,.html,.htm"></label>
+          <label>素材名称 <input type="text" id="asset-name" maxlength="96"></label>
+          <label>推荐关键词 <input type="text" id="asset-keywords" maxlength="420" placeholder="例如 封箱、打包、贴封条"></label>
+          <label class="span-row">用途 <textarea id="asset-uses" rows="2" maxlength="640" required placeholder="这款画面适合哪种口播原句？"></textarea></label>
+          <label>作者 <input type="text" id="asset-author" maxlength="160"></label>
+          <label>来源 <input type="text" id="asset-origin" maxlength="300"></label>
+          <label>授权或使用范围 <input type="text" id="asset-license" maxlength="360" placeholder="例如 自制，团队可改作"></label>
+        </div>
+        <div class="asset-fields asset-media" id="media-options" hidden>
+          <label id="start-field">视频起始秒数<input id="asset-start" type="number" min="0" step=".001" value="0"></label>
+          <label>小样时长（秒）<input id="asset-seconds" type="number" min=".04" max="12" step=".001"></label>
+          <label id="canvas-field">HTML 画幅<select id="asset-canvas"><option value="landscape">横版</option><option value="portrait">竖版</option><option value="square">方形</option></select></label>
+        </div>
+        <p class="note" id="file-tip">支持 PNG、SVG、带 Alpha 的视频和可离线打开的单文件 HTML。</p>
+        <div class="actions form-actions"><button type="submit" class="primary" id="save-asset">导入素材</button><button type="button" id="cancel-asset" hidden>取消</button><p id="asset-status" role="status"></p></div>
+      </form>
+    </details>
+    <div class="review-head asset-head"><h2>本机素材库</h2>
+      <input id="asset-search" type="search" aria-label="查找个人素材" placeholder="搜名称、用途或关键词">
+    </div>
+    <div class="actions sharing">
+      <button type="button" id="team-save" disabled>保存已选素材</button>
+      <button type="button" id="team-open">导入素材分享包</button>
+      <input type="file" id="team-file" accept=".zip" hidden>
+      <p class="note" id="team-status" role="status"></p>
+    </div>
+    <section class="review-grid" aria-label="本机素材和预览">
+      <div class="lines" id="assets" aria-label="个人素材列表"><p>正在读取本机素材…</p></div>
+      <article class="proof" aria-label="个人素材试看">
+        <div class="proof-top">
+          <p class="stamp" id="asset-ref"></p>
+          <h3 id="detail-name">选择一款素材</h3>
+          <p id="detail-uses"></p>
+        </div>
+        <div class="stage own-stage" id="own-stage" hidden>
+          <iframe id="personal-proof" title="个人素材试看" sandbox="allow-scripts"></iframe>
+        </div>
+        <div class="proof-content" id="asset-detail" hidden>
+          <div class="version-line">
+            <label>查看版本 <select id="asset-versions"></select></label>
+            <span class="note" id="version-note"></span>
+          </div>
+          <dl class="asset-rights">
+            <div><dt>关键词</dt><dd id="detail-keywords"></dd></div>
+            <div><dt>作者</dt><dd id="detail-author"></dd></div>
+            <div><dt>来源</dt><dd id="detail-origin"></dd></div>
+            <div><dt>授权</dt><dd id="detail-license"></dd></div>
+          </dl>
+          <div class="actions">
+            <button type="button" id="replay-asset">重播</button>
+            <button type="button" class="primary" id="replace-asset">换版</button>
+            <button type="button" id="edit-asset">修改登记</button>
+            <a id="download-original">下载原件</a>
+          </div>
+        </div>
+        <div id="detail-status" class="note" role="status"></div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -133,6 +133,10 @@ class Handler(SimpleHTTPRequestHandler):
             self.dispatch()
         except (ValueError, KeyError):
             self.send_error(404, "Unknown library selection")
+        except ModuleNotFoundError as exc:
+            if exc.name != "PIL":
+                raise
+            self.send_error(503, "Install Pillow for combined object and sticker previews")
         except (BrokenPipeError, ConnectionResetError):
             pass
 

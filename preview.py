@@ -62,13 +62,13 @@ def brief(raw):
 
 
 def overlay_png(spec):
-    from PIL import Image
-
     obj, sticker = spec.get("objects"), spec.get("stickers")
     if not (obj or sticker):
         raise ValueError("请从素材册挑一个物件或贴纸。")
     main = (obj or sticker)["files"]["preview"]
     if obj and sticker:
+        from PIL import Image
+
         with (
             Image.open(main) as im,
             Image.open(sticker["files"]["preview"]) as mark,
