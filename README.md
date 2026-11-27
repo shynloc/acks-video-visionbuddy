@@ -4,6 +4,8 @@ VisionBuddy 1.3.1 收录 108 个动效、15 个演示、35 个 3D 物件、57 �
 
 [在线素材册](https://videobuddy.acks.com.cn/visual/index.html) · [GitHub 离线包](https://github.com/shynloc/acks-video-visionbuddy/releases) · [配套口播导演工作台](https://github.com/shynloc/talking-head-studio/releases)
 
+[在线给口播配画面](https://videobuddy.acks.com.cn/desk/)支持口播稿、SRT 或配套原片试看，可保存审核工程和导出可编辑源件。
+
 ## 网页风格与配色
 
 在「风格与素材册」点「网页风格」→「整站设计」。预览可以滚动、点击站内导航、展开问答，也能切换桌面和手机宽度。详情卡说明排版、字体和交互原则，并附参考链接。可在「下载这个搭配的素材」保存独立 HTML。

@@ -206,7 +206,7 @@ def personal_recipe(item, notes="", quote=""):
     }
 
 
-def bound_recipe(notes, quote, versions):
+def bound_recipe(notes, quote, versions, *, public_only=False):
     joined = " ".join(notes)
     text = WORDS.sub("", joined)
     codes = list(dict.fromkeys(match[0].upper() for match in sorted(
@@ -215,6 +215,8 @@ def bound_recipe(notes, quote, versions):
     if not codes:
         raise ValueError("没找到素材编号，请检查这条画面标注。")
     if any(code.startswith("MY-") for code in codes):
+        if public_only:
+            raise ValueError("个人素材请在本机 VisionBuddy 中使用。")
         if len(codes) != 1:
             raise ValueError("这一句请选择一个个人编号，或一组公共库素材。")
         code = codes[0]
@@ -301,13 +303,17 @@ def thaw_offer(row, frozen):
     return choices
 
 
-def build(source, *, fresh=False):
+def build(source, *, fresh=False, public_only=False):
     original = source
     source, cues = inputs.input_source(source)
     frozen = None if fresh or "reviewSnapshot" not in original else validate_review_snapshot(original["reviewSnapshot"])
+    if public_only and (original.get("personalSnapshot") or any(
+            personal.CODE.fullmatch(code)
+            for row in (frozen or {}).values() for item in row["candidates"] for code in item["codes"])):
+        raise ValueError("带有个人素材的审核工程请在本机 VisionBuddy 中打开。")
     if frozen is not None:
         source["reviewSnapshot"] = frozen
-    entries = personal.snapshot(original, fresh)
+    entries = [] if public_only else personal.snapshot(original, fresh)
     if entries or "personalSnapshot" in original:
         source["personalSnapshot"] = [entry["ref"] for entry in entries]
     versions = {entry["assetId"]: entry for entry in entries}
@@ -341,7 +347,7 @@ def build(source, *, fresh=False):
                 try:
                     if any(not note or note in {"无", "无。"} for note in notes):
                         raise ValueError("画面标注不完整，或同时指定了素材与纯口播。")
-                    recipe = bound_recipe(notes, quote, versions)
+                    recipe = bound_recipe(notes, quote, versions, public_only=public_only)
                     row.update(mode="fixed", reason="沿用稿内指定的素材。", candidates=[recipe])
                 except ValueError as exc:
                     row.update(mode="blocked", reason=str(exc))

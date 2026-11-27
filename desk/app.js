@@ -4,6 +4,7 @@ const $ = id => document.getElementById(id)
 const player = $('player')
 const overlay = $('overlay')
 const stage = $('stage')
+const online = document.body.dataset.online === 'true'
 const draftKey = 'visionbuddy-desk/1'
 const states = { adopted: '已采用', pending: '待选择', skipped: '已跳过', none: '纯口播', blocked: '检查标注', plain: '未推荐' }
 let mode = 'script'
@@ -39,7 +40,7 @@ async function request(path, data, content = 'application/json') {
   const res = await fetch('/api/desk/' + path, { method: 'POST', headers: { 'Content-Type': content }, body })
   if (!res.ok) {
     const failure = await res.json().catch(() => ({}))
-    throw Error(failure.error || '本机请求失败，请重试。')
+    throw Error(failure.error || '请求失败，请重试。')
   }
   return res
 }
@@ -48,7 +49,7 @@ function switchMode(next) {
   mode = next
   for (const button of document.querySelectorAll('[data-mode]')) button.setAttribute('aria-pressed', String(button.dataset.mode === mode))
   for (const panel of document.querySelectorAll('[data-inputs]')) panel.hidden = panel.dataset.inputs !== mode
-  $('speech-options').hidden = Boolean($('video-srt').files[0])
+  $('speech-options').hidden = online || Boolean($('video-srt').files[0])
 }
 
 function saveDraft() {
@@ -393,6 +394,7 @@ async function buildFromInput() {
     if (attach.size > 500000) throw Error('SRT 文件过大，请使用对应的口播段落。')
     return (await request('plan', { fresh:true, source: { kind: 'srt', text: await captionText(attach), duration } })).json()
   }
+  if (online) throw Error('请为视频选择配套 SRT。原片将在浏览器中播放。')
   if (!$('model').value) throw Error('本机没有可用的 Whisper 模型。可以先导入配套 SRT。')
   if ($('video-file').files[0].size > videoSize) throw Error('本机转写最多支持 2 GB。较大的视频可直接配套 SRT 试看。')
   const params = new URLSearchParams({ model: $('model').value, language: $('language').value })
@@ -474,7 +476,7 @@ async function openProject(file) {
     switchMode(Object.hasOwn(modes, project.mode) ? project.mode : modes[project.source.kind])
     loadPlan(result, project.decisions || {}, project.selected || null, project.recording || null)
     message('intake-status')
-    message('export-status', restored ? '已恢复审核工程及引用的个人素材版本。' : '已恢复本机审核选择。')
+    message('export-status', restored && !online ? '已恢复审核工程及引用的个人素材版本。' : '已恢复审核选择。')
   } catch (error) {
     message('intake-status', error.message, true)
   } finally {
@@ -486,7 +488,7 @@ async function exportPack() {
   if (!plan || exporting) return
   exporting = true
   lineList()
-  message('export-status', '正在本机渲染与打包，审核选择已保存…')
+  message('export-status', online ? '正在打包，审核选择已保存…' : '正在本机渲染与打包，审核选择已保存…')
   try {
     const result = await request('export', { ...projectState(), media: $('export-media').value })
     download(await result.blob(), 'VisionBuddy-口播素材包.zip')
@@ -503,7 +505,7 @@ for (const button of document.querySelectorAll('[data-mode]')) button.onclick = 
   switchMode(button.dataset.mode)
   if (selected) selectRow(selected)
 }
-$('video-srt').onchange = () => { $('speech-options').hidden = Boolean($('video-srt').files[0]) }
+$('video-srt').onchange = () => { $('speech-options').hidden = online || Boolean($('video-srt').files[0]) }
 $('video-file').onchange = () => {
   const file = $('video-file').files[0]
   videoReady = attachVideo(file)
@@ -565,7 +567,9 @@ player.addEventListener('seeked', paintVideo)
 player.addEventListener('pause', paintVideo)
 player.addEventListener('timeupdate', paintVideo)
 
-fetch('/api/desk/capabilities').then(res => res.json()).then(data => {
+if (online) {
+  $('speech-options').hidden = true
+} else fetch('/api/desk/capabilities').then(res => res.json()).then(data => {
   const model = $('model')
   model.replaceChildren(...(data.models.length ? data.models.map(name => new Option(name, name)) :
     [new Option('本机暂无模型，请选配套 SRT', '')]))
