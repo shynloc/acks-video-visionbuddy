@@ -150,6 +150,15 @@ def shelf_test(base, result, app):
             expect(button).to_be_visible(timeout=105000)
             button.click()
             expect(button).to_have_attribute("aria-pressed","true")
+        cards.first.get_by_role("button",name="换效果").click()
+        expect(page.locator("#sentence-options [data-choice='lesson-focus']")).to_be_visible()
+        page.locator("#effect-close").click()
+        cards.last.get_by_role("button",name="跳过",exact=True).click()
+        expect(cards).to_have_count(2)
+        page.locator("#undo-skip").click()
+        expect(cards).to_have_count(3)
+        cards.last.locator(".accept").click()
+        expect(cards.last.locator(".accept")).to_have_attribute("aria-pressed","true")
         with page.expect_download(timeout=90000) as download:
             page.locator("#export-choices").click()
         package=(result or scratch)/"三组口播-混合素材包.zip"
