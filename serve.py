@@ -13,6 +13,9 @@ import preview
 ROOT = Path(__file__).resolve().parent
 VERSION = (ROOT / "VERSION").read_text(encoding="utf8").strip()
 REPO = "https://github.com/shynloc/acks-video-visionbuddy"
+LIVE_PAGES = {"/": "index.html", "/index.html": "index.html",
+              "/demos.html": "demos.html", "/visual/index.html": "visual/index.html"}
+LOCAL_INCLUDE = re.compile(r'((?:src|href)=")([\w.-]+\.(?:css|js))(")')
 
 
 @lru_cache(maxsize=256)
@@ -29,6 +32,30 @@ def manifest_at(root):
         from tools.release import manifest_bytes
         raw = manifest_bytes()
     return raw, json.loads(raw)["files"]
+
+
+def live_page(page):
+    path = ROOT / "site" / page
+    source = path.read_text(encoding="utf8")
+    parent = str(Path(page).parent.as_posix())
+    directory = "" if parent == "." else parent + "/"
+    release = f"/releases/{VERSION}/site/{directory}"
+
+    def pin(match):
+        name = match[2]
+        url = f"/bootstrap/{VERSION}.js" if page == "index.html" and name == "boot.js" else release + name
+        return match[1] + url + match[3]
+
+    return LOCAL_INCLUDE.sub(pin, source).encode()
+
+
+def live_bootstrap():
+    source = (ROOT / "site/boot.js").read_text(encoding="utf8")
+    return re.sub(
+        r"'(catalog\.json|renderer\.js|illustrations\.js|gallery\.js)'",
+        lambda match: f"'/releases/{VERSION}/site/{match[1]}'",
+        source,
+    ).encode()
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -64,6 +91,10 @@ class Handler(SimpleHTTPRequestHandler):
                 "archive": f"{REPO}/releases/download/v{VERSION}/visionbuddy-v{VERSION}.zip",
             }
             return self.response(json.dumps(data).encode(), "application/json")
+        if path in LIVE_PAGES:
+            return self.response(live_page(LIVE_PAGES[path]), "text/html; charset=utf-8")
+        if path == f"/bootstrap/{VERSION}.js":
+            return self.response(live_bootstrap(), "text/javascript; charset=utf-8")
         if path.startswith("/releases/"):
             version, sep, name = unquote(path.removeprefix("/releases/")).partition("/")
             if not sep or not re.fullmatch(r"\d+\.\d+\.\d+", version):
