@@ -266,7 +266,7 @@ def default_place(row, candidate, duration):
 
 
 def validate_review_snapshot(review):
-    if not isinstance(review, dict) or len(review) > 5:
+    if not isinstance(review, dict) or len(review) > 64:
         raise ValueError("便携工程的备选画面格式无效。")
     for key, row in review.items():
         if not re.fullmatch(r"r\d{4}", key) or not isinstance(row, dict):
@@ -303,9 +303,35 @@ def thaw_offer(row, frozen):
     return choices
 
 
+def suggest_composition(row):
+    """Choose where the viewer needs to look; a decorative cue alone keeps the presenter full-size."""
+    if row["mode"] == "none" or not row["candidates"]:
+        return "presenter"
+    if re.search(r"第一步|第二步|先.{1,45}(?:再|然后)|打开|点击|拖动|拖入|导入|导出|对比|前后|从.+到|演示|展示|操作|看.{0,5}(?:屏幕|界面|细节)", row["quote"]):
+        return "demo"
+    candidate = row["candidates"][0]
+    return "demo" if candidate.get("treatment") or candidate.get("kit") else "presenter"
+
+
+def row_composition(project_mode, row, selection):
+    override = selection.get("composition")
+    if override is not None and override not in ("presenter", "demo"):
+        raise ValueError("原句的画面主次无效。")
+    suggestion = selection.get("suggestedComposition", row["suggestedComposition"])
+    if suggestion not in ("presenter", "demo"):
+        raise ValueError("原句的自动画面安排无效。")
+    if row["mode"] == "none":
+        return "presenter"
+    return override or (suggestion if project_mode == "mixed" else project_mode or "presenter")
+
+
 def build(source, *, fresh=False, public_only=False):
     original = source
     source, cues = inputs.input_source(source)
+    if "composition" in original:
+        if original["composition"] not in ("presenter", "demo", "mixed"):
+            raise ValueError("请选择人物为主、演示为主或两种穿插。")
+        source["composition"] = original["composition"]
     frozen = None if fresh or "reviewSnapshot" not in original else validate_review_snapshot(original["reviewSnapshot"])
     if public_only and (original.get("personalSnapshot") or any(
             personal.CODE.fullmatch(code)
@@ -362,17 +388,28 @@ def build(source, *, fresh=False, public_only=False):
     if frozen is not None and {row["id"] for row in rows if row["mode"] == "auto"} != set(frozen):
         raise ValueError("便携工程的候选画面与原句不匹配。")
     seen = set()
+    detailed = source.get("composition") in ("mixed", "demo")
+    limit = 64 if detailed else 5
+    accepted = 0
     for _points, reason, candidates, row in sorted(ranked, key=lambda item: -item[0]):
         strongest = candidates[0]["codes"][0]
-        if strongest in seen:
+        if not detailed and strongest in seen:
             continue
         seen.add(strongest)
         row.update(mode="auto", reason=reason, candidates=candidates)
-        if len(seen) == 5:
+        accepted += 1
+        if accepted >= limit:
             break
     for row in rows:
+        row["suggestedComposition"] = suggest_composition(row)
+        direction = row_composition(source.get("composition"), row, {})
+        if direction == "demo":
+            row["reason"] = row["reason"].replace("叠加「", "放大展示「").replace("」的小图", "」的细节")
         for choice in row["candidates"]:
-            choice["placement"] = default_place(row, choice, source.get("duration"))
+            place = default_place(row, choice, source.get("duration"))
+            if direction == "demo":
+                place["scale"] = .30  # In this layout, placement controls the presenter inset.
+            choice["placement"] = place
     return {"format": FORMAT, "libraryRelease": serve.VERSION, "source": source, "spoken": clean,
             "rows": rows, "warnings": warnings}
 
@@ -405,6 +442,10 @@ def review_choices(plan, decisions):
         if state not in ("adopted", "skipped", "pending"):
             raise ValueError("找不到这条审核状态。")
         summary = {k: row[k] for k in ("id", "quote", "time", "notes", "mode")}
+        direction = row_composition(plan["source"].get("composition"), row, selected)
+        if plan["source"].get("composition") == "mixed" or selected.get("composition"):
+            summary["composition"] = direction
+            summary["compositionOrigin"] = "user" if selected.get("composition") or row["mode"] == "none" else "auto"
         summary.update(state=row["mode"] if not row["candidates"] else state)
         summaries.append(summary)
         if state != "adopted" or not row["candidates"]:
@@ -412,7 +453,8 @@ def review_choices(plan, decisions):
         if type(choice) is not int or not 0 <= choice < len(row["candidates"]):
             raise ValueError("选择的替代版本已经无效，请重新试看。")
         candidate = row["candidates"][choice]
-        place = {**candidate["placement"], **{key: selected[key] for key in ("side", "scale", "start", "end")
+        place = {**candidate["placement"], "scale": .30 if direction == "demo" else .40,
+                 **{key: selected[key] for key in ("side", "scale", "start", "end")
                                                if key in selected}}
         if place["side"] not in ("left", "right") or not inputs.real_number(place["scale"]) or not .20 <= place["scale"] <= .65:
             raise ValueError("画面位置或缩放无效。")

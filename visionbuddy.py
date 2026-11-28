@@ -134,6 +134,7 @@ def parser():
     entry.add_argument("--desk", action="store_true", help="进入口播稿、SRT 或视频配画面")
     entry.add_argument("--mine", action="store_true", help="打开我的素材")
     plan = commands.add_parser("plan", help="从口播稿、SRT 或视频生成逐句推荐")
+    plan.add_argument("--composition", choices=("presenter", "demo", "mixed"), help="人物为主、演示为主或两种穿插")
     plan.add_argument("--script", type=Path)
     plan.add_argument("--srt", type=Path)
     plan.add_argument("--video", type=Path)

@@ -50,7 +50,10 @@ def run(args):
             state["decisions"] = json.loads(args.review.read_bytes())
         return save_project(desk_plan.build(state.get("source")), state, args.output)
     if args.command == "plan":
-        plan = desk_plan.build(source_from_arguments(args), fresh=True)
+        source = source_from_arguments(args)
+        if args.composition:
+            source["composition"] = args.composition
+        plan = desk_plan.build(source, fresh=True)
         return {**plan, **({"output": save_text(args.output, json_text(plan))} if args.output else {})}
     packet = json.loads(args.plan.read_bytes())
     if not isinstance(packet, dict):

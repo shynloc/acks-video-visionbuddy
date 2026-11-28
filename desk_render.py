@@ -277,6 +277,8 @@ def export(plan, decisions, destination, media="mov", *, state=None):
                         "inputKind": plan["source"]["kind"], "timeBasis": "source" if plan["source"]["kind"] != "script" else None,
                         "rows": summaries, "sourceDuration": plan["source"].get("duration"),
                         "recording": project.get("recording")}
+            if "composition" in plan["source"]:
+                timeline["composition"] = plan["source"]["composition"]
             bundle.writestr("时间与素材.json", render.json_text(timeline))
             bundle.writestr("审核选择.json", render.json_text(decisions))
             bundle.writestr("口播正文.txt", plan["spoken"])
@@ -297,13 +299,18 @@ def export(plan, decisions, destination, media="mov", *, state=None):
                     place = summary["placement"]
                     clock = (time_label(place["start"]) + " → " + time_label(place["end"])
                              if "start" in place else "待按原句对齐")
-                    lines.append(clock + "  " + summary["quote"] + "\n" + summary["annotation"])
+                    label = {"demo": "演示为主 · ", "presenter": "人物为主 · "}.get(summary.get("composition"), "")
+                    lines.append(clock + "  " + label + summary["quote"] + "\n" + summary["annotation"])
                 elif summary["state"] == "none":
                     lines.append("纯口播  " + summary["quote"])
             bundle.writestr("带画面标注的稿件.txt", "\n".join(marked) + "\n")
             if marked != workbench_marked:
                 bundle.writestr("工作台稿件.txt", "\n".join(workbench_marked) + "\n")
             write_assets(bundle, PROJECT, portable_refs, project)
+            if plan["source"].get("composition") == "mixed":
+                lines.insert(0, "两种穿插。依照每句标注切换，演示段的方位和宽度用于人物小窗，人物段用于辅助动画。")
+            if plan["source"].get("composition") == "demo":
+                lines.insert(0, "演示动画为主，人物画面为辅。按下列区间摆放演示，保留粗剪原声。时间清单中 side 和 scale 指人物小窗的位置和宽度。")
             bundle.writestr("原句对照.txt", "\n\n".join(lines) + "\n")
             if items:
                 bundle.writestr("素材搭配.json", render.json_text({

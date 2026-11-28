@@ -94,7 +94,10 @@ def transcribe_upload(handler, query):
                     raise ValueError("视频读取中断，请重试。")
                 size -= len(data)
                 file.write(data)
-        return planner.build(inputs.transcribe(video, model, language), fresh=True)
+        source = inputs.transcribe(video, model, language)
+        if "composition" in query:
+            source["composition"] = query["composition"][0]
+        return planner.build(source, fresh=True)
 
 
 def receive_bundle(handler, archive):

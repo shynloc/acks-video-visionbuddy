@@ -16,6 +16,9 @@
       <h1>给口播<span>配画面</span></h1>
       <p>从原句找到值得配图的地方，试看后把采用的画面一起带走。</p>
     </div>
+    <label class="composition-choice">你希望观众主要看什么？
+      <select id="composition"><option value="presenter">人物画面为主，演示动画为辅</option><option value="demo">演示动画为主，人物画面为辅</option><option value="mixed">两种穿插，按段落切换</option></select>
+    </label>
     <details class="intake" id="intake" open>
       <summary>口播素材 <span id="source-summary"></span></summary>
       <div class="intake-body">
@@ -79,6 +82,9 @@
           </div>
           <div class="proof-content">
             <div id="choices" class="choices" aria-label="画面版本"></div>
+            <label id="row-direction-field" hidden>这句主要看什么
+              <select id="row-direction"><option value="">跟随整片安排</option><option value="presenter">人物为主</option><option value="demo">演示为主</option></select>
+            </label>
             <div class="placement" id="placement" hidden>
               <label>出现 <input type="number" min="0" step="0.001" id="clip-start" inputmode="decimal" aria-label="画面起始秒数"></label>
               <label>结束 <input type="number" min="0" step="0.001" id="clip-end" inputmode="decimal" aria-label="画面结束秒数"></label>

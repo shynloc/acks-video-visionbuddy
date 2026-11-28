@@ -203,6 +203,8 @@ def validate_project_shape(project):
         raise ValueError("审核工程包含过多选择。")
     for key, value in project["decisions"].items():
         if (not ROW_CODE.fullmatch(key) or not isinstance(value, dict)
+                or value.get("composition") not in (None, "presenter", "demo")
+                or value.get("suggestedComposition", "presenter") not in ("presenter", "demo")
                 or value.get("state", "pending") not in ("pending", "adopted", "skipped")
                 or type(value.get("choice", 0)) is not int or not 0 <= value.get("choice", 0) <= 2):
             raise ValueError("审核工程选择格式无效。")

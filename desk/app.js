@@ -90,10 +90,17 @@ function current() {
   return row ? [row, row.candidates[decision(row).choice || 0]] : []
 }
 
+function rowDirection(row) {
+  if (!row || row.mode === 'none') return 'presenter'
+  const mode = plan.source.composition || 'presenter'
+  return decision(row).composition || (mode === 'mixed' ? (decision(row).suggestedComposition || row.suggestedComposition) : mode)
+}
+
 function placeFor(row, candidate) {
   const { side, scale, start, end } = decision(row)
   return {
     ...candidate.placement,
+    scale: rowDirection(row) === 'demo' ? .30 : .40,
     ...(side === undefined ? {} : { side }),
     ...(scale === undefined ? {} : { scale }),
     ...(start === undefined ? {} : { start }),
@@ -154,6 +161,7 @@ function paintVideo() {
   const place = placeFor(row, candidate)
   const within = player.currentTime >= place.start - .04 && player.currentTime <= place.end + .02
   overlay.hidden = !within
+  stage.classList.toggle('demo-active', within && rowDirection(row) === 'demo')
   if (within) {
     const total = sampleFrames(candidate, place)
     paint(Math.min(total - 1, Math.max(0, Math.floor((player.currentTime - place.start) * 25))), total)
@@ -215,9 +223,15 @@ function applyPlacement(row, candidate, populate = true) {
   if (populate) {
     $('clip-start').value = place.start ?? ''
     $('clip-end').value = place.end ?? ''
+    const demo = rowDirection(row) === 'demo'
+    for (const option of $('side').options) {
+      option.textContent = (option.value === 'left' ? '左' : '右') + (demo ? '下 · 人物' : '上 · 动画')
+    }
+    $('scale').setAttribute('aria-label', demo ? '人物宽度百分比' : '画面宽度百分比')
     $('side').value = place.side
     $('scale').value = Math.round(place.scale * 100)
   }
+  stage.dataset.side = place.side
   overlay.dataset.side = place.side
   stage.style.setProperty('--overlay-width', (place.scale * 100) + '%')
   paintVideo()
@@ -248,6 +262,10 @@ function lineList() {
     const label = element('span', states[state], 'state')
     label.dataset.state = state
     meta.append(element('time', timelineText(row), 'stamp'), label)
+    if (plan.source.composition === 'mixed' || decision(row).composition) {
+      const label = rowDirection(row) === 'demo' ? '演示为主' : '人物为主'
+      meta.append(element('span', (decision(row).composition ? '指定 · ' : '') + label, 'state'))
+    }
     if (row.mode === 'fixed') meta.append(element('span', '稿内指定', 'state'))
     button.append(meta, element('span', row.quote, 'line-quote'))
     button.onclick = () => { selectRow(row.id, true) }
@@ -291,6 +309,14 @@ async function selectRow(id, listFocus = false) {
   $('placement').hidden = !candidate || !row.time
   $('relink-video').hidden = !relinkAvailable() || matchesRecording()
   player.hidden = !useVideo(row)
+  stage.dataset.composition = rowDirection(row)
+  $('row-direction-field').hidden = !row || row.mode === 'none'
+  if (row) {
+    $('row-direction').value = decision(row).composition || ''
+    const automatic = plan.source.composition === 'mixed' ? (decision(row).suggestedComposition || row.suggestedComposition) : plan.source.composition
+    $('row-direction').options[0].text = '跟随整片安排（' + (automatic === 'demo' ? '演示为主' : '人物为主') + '）'
+  }
+  stage.classList.remove('demo-active')
   stage.classList.toggle('video', !player.hidden)
   stage.style.setProperty('--video-ratio', String(player.videoWidth / player.videoHeight || 16 / 9))
   stage.hidden = !candidate && player.hidden
@@ -298,6 +324,7 @@ async function selectRow(id, listFocus = false) {
   if (!candidate) {
     overlay.removeAttribute('srcdoc')
     if (row?.notes.length && row.mode !== 'none') message('review-status', row.notes.join('　'))
+    if (row && rowDirection(row) === 'demo') message('review-status', '这句已指定演示为主，请先补充对应的演示素材。')
     if (useVideo(row)) player.currentTime = row.time.start
     return
   }
@@ -310,6 +337,8 @@ async function selectRow(id, listFocus = false) {
     $('choices').append(button)
   }
   stage.style.setProperty('--overlay-aspect', candidate.aspect.join(' / '))
+  const videoAspect = player.videoWidth / player.videoHeight || 16 / 9
+  stage.style.setProperty('--demo-width', (60 * candidate.aspect[0] / candidate.aspect[1] / videoAspect) + '%')
   applyPlacement(row, candidate)
   statusControls(row, candidate)
   message('review-status', '正在准备透明小样…')
@@ -343,6 +372,7 @@ async function selectRow(id, listFocus = false) {
 
 function loadPlan(value, prior = {}, active = null, videoID = null) {
   plan = value
+  $('composition').value = plan.source.composition || 'presenter'
   recording = videoID
   decisions = prior
   const choices = plan.rows.filter(row => row.mode !== 'plain')
@@ -385,19 +415,20 @@ async function captionText(file) {
 }
 
 async function buildFromInput() {
-  if (mode === 'script') return (await request('plan', { fresh:true, source: { kind: 'script', text: $('script').value } })).json()
+  const composition = $('composition').value
+  if (mode === 'script') return (await request('plan', { fresh:true, source: { kind: 'script', text: $('script').value, composition } })).json()
   const attach = mode === 'srt' ? $('srt').files[0] : $('video-srt').files[0]
   if (mode === 'srt' && !attach) throw Error('请选择 SRT 字幕文件。')
   const duration = mode === 'video' && videoReady ? await videoReady : null
   if (mode === 'video' && !duration) throw Error('先选择已有视频。')
   if (attach) {
     if (attach.size > 500000) throw Error('SRT 文件过大，请使用对应的口播段落。')
-    return (await request('plan', { fresh:true, source: { kind: 'srt', text: await captionText(attach), duration } })).json()
+    return (await request('plan', { fresh:true, source: { kind: 'srt', text: await captionText(attach), duration, composition } })).json()
   }
   if (online) throw Error('请为视频选择配套 SRT。原片将在浏览器中播放。')
   if (!$('model').value) throw Error('本机没有可用的 Whisper 模型。可以先导入配套 SRT。')
   if ($('video-file').files[0].size > videoSize) throw Error('本机转写最多支持 2 GB。较大的视频可直接配套 SRT 试看。')
-  const params = new URLSearchParams({ model: $('model').value, language: $('language').value })
+  const params = new URLSearchParams({ model: $('model').value, language: $('language').value, composition })
   message('intake-status', '正在本机转写视频声音。完成后将按时间码推荐。')
   return (await request('transcribe?' + params.toString(), $('video-file').files[0], 'application/octet-stream')).json()
 }
@@ -406,19 +437,22 @@ async function submitPlan(event) {
   event.preventDefault()
   if (preparing) return
   preparing = true
+  $('composition').disabled = true
   $('plan-button').disabled = true
   for (const input of document.querySelectorAll('#intake-form input, #intake-form select, .mode button')) input.disabled = true
   message('intake-status', '正在读口播内容…')
   try {
     const result = await buildFromInput()
     message('intake-status')
-    loadPlan(result, {}, null, mode === 'video' ? videoIdentity() : null)
+    const identity = mode === 'video' ? videoIdentity() : null
+    loadPlan(result, {}, null, identity)
   } catch (error) {
     message('intake-status', error.message, true)
   } finally {
     for (const input of document.querySelectorAll('#intake-form input, #intake-form select, .mode button')) input.disabled = false
     $('plan-button').disabled = false
     preparing = false
+    $('composition').disabled = false
   }
 }
 
@@ -525,6 +559,23 @@ $('relink-video').onclick = () => {
   $('relink-video').hidden = true
   message('intake-status','已关联选中的原片。')
   if (selected) selectRow(selected)
+}
+$('composition').onchange = () => {
+  if (!plan) return
+  const composition = $('composition').value
+  // Freeze offers before changing the layout. Accepted variants must survive reopening.
+  plan.source.reviewSnapshot = Object.fromEntries(plan.rows.filter(row => row.mode === 'auto').map(row => [
+    row.id, {reason: row.reason, candidates: row.candidates.map(({codes, labels, versionReason}) =>
+      ({codes, labels, versionReason}))}
+  ]))
+  plan.source.composition = composition
+  selectRow(selected)
+}
+$('row-direction').onchange = () => {
+  const [row] = current()
+  if (!row) return
+  updateDecision(row, { composition: $('row-direction').value || undefined })
+  selectRow(row.id)
 }
 $('intake-form').onsubmit = submitPlan
 $('plan-button').disabled = false
