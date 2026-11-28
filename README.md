@@ -32,7 +32,7 @@ VisionBuddy 1.3.1 收录 108 个动效、15 个演示、35 个 3D 物件、57 �
 
 ## 安装独立 Skill
 
-将 `visionbuddy-skill-v版本号.zip` 解压到 Codex 的 Skill 目录，校对目录结构为 `visionbuddy/SKILL.md`。Windows 可用 PowerShell 的 `Expand-Archive`，macOS 可用 `unzip`。本机 Codex 可放在 `~/.codex/skills/` 或当前项目的 `.agents/skills/`。重新打开 Codex 对话后使用 `$visionbuddy`。也可以解压到普通目录，直接运行同一个命令行。Skill ZIP 已带对应的离线库，无需另外下载。 [下载独立 Skill 1.3.0](https://github.com/shynloc/acks-video-visionbuddy/releases/tag/skill-v1.3.0)
+将 `visionbuddy-skill-v版本号.zip` 解压到 Codex 的 Skill 目录，校对目录结构为 `visionbuddy/SKILL.md`。Windows 可用 PowerShell 的 `Expand-Archive`，macOS 可用 `unzip`。本机 Codex 可放在 `~/.codex/skills/` 或当前项目的 `.agents/skills/`。重新打开 Codex 对话后使用 `$visionbuddy`。也可以解压到普通目录，直接运行同一个命令行。Skill ZIP 已带对应的离线库，无需另外下载。 [下载独立 Skill 1.4.0](https://github.com/shynloc/acks-video-visionbuddy/releases/tag/skill-v1.4.0)
 
 以下命令从解压后的 `visionbuddy` 目录运行。macOS 可把 `python` 换成 `python3`。
 
@@ -133,7 +133,7 @@ python -X utf8 visionbuddy.py my-receive 分享素材.zip
 
 在代码目录运行 `python tools/release.py --output dist`。输出包括离线 ZIP、版本清单和 SHA-256。验证下载的 ZIP 可运行 `python tools/release.py --verify dist/visionbuddy-v1.3.1.zip`。
 
-构建独立 Skill 用 `python -X utf8 tools/skill_release.py --output dist`，会生成版本化 Skill ZIP 及 SHA-256。可用 `python -X utf8 tools/skill_release.py --verify dist/visionbuddy-skill-v1.3.0.zip` 检查运行文件和素材清单。
+构建独立 Skill 用 `python -X utf8 tools/skill_release.py --output dist`，会生成版本化 Skill ZIP 及 SHA-256。可用 `python -X utf8 tools/skill_release.py --verify dist/visionbuddy-skill-v1.4.0.zip` 检查运行文件和素材清单。
 
 运行 `python serve.py --port 8772` 可以在本机打开网站。静态文件与组合 PNG 通过同一端口提供服务，`/latest.json` 指出当前发布版本。发布基线与文件校验值记录在清单中。
 

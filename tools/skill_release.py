@@ -46,7 +46,7 @@ def verify(path):
         if info["libraryRelease"] != manifest["libraryRelease"]:
             raise ValueError("Skill 包的版本记录不一致。")
         members = {**manifest["files"], **info["runtime"]}
-        layouts = {"1.0.0": FIRST_SKILL, "1.1.0": REVIEW_SKILL, "1.2.0": PERSONAL_SKILL, SKILL_VERSION: SKILL_FILES}
+        layouts = {"1.0.0": FIRST_SKILL, "1.1.0": REVIEW_SKILL, "1.2.0": PERSONAL_SKILL, "1.3.0": SKILL_FILES, SKILL_VERSION: SKILL_FILES}
         required = RUNTIME_FILES + layouts.get(info["skillVersion"], ())
         if set(info["runtime"]) != set(required):
             raise ValueError("Skill 包缺少运行文件。")

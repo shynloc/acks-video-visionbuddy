@@ -16,7 +16,7 @@ import webbrowser
 import serve
 import skill_catalog as catalog
 
-SKILL_VERSION = "1.3.0"
+SKILL_VERSION = "1.4.0"
 SCHEMA_VERSION = 1
 SELECTION_SCRIPT = """
 <script>
